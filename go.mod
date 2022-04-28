@@ -1,4 +1,4 @@
-module tp_proto
+module github.com/devideal/tp_proto
 
 go 1.18
 

@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "git@github.com:devideal/tp_proto.git";
+option go_package = "github.com/devideal/tp_proto";
 package tp;
 
 service TipsPanel{

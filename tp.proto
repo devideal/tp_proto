@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option go_package = "git@github.com:devideal/tp_proto.git";
+package tp;
+
+service TipsPanel{
+    rpc GetLeague(Name) returns (League){}
+    //TODO: other rpc's
+}
+
+message Name{
+    string value = 1;
+}
+
+message League{
+    string id = 1;
+    string name = 2;
+    string countryId = 3;
+}
+

@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 option go_package = "github.com/devideal/tp_proto";
-package tp;
+package tp_proto;
 
 service TipsPanel{
     rpc GetLeague(Name) returns (League){}

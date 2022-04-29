@@ -1,5 +1,7 @@
 package tp_proto
 
-// func main() {
-// 	fmt.Println("hello world!")
-// }
+import "fmt"
+
+func Tp_proto() {
+	fmt.Println("hello world!")
+}

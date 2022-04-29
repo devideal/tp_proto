@@ -35,7 +35,7 @@ func NewTipsPanelClient(cc grpc.ClientConnInterface) TipsPanelClient {
 
 func (c *tipsPanelClient) GetLeague(ctx context.Context, in *Name, opts ...grpc.CallOption) (*League, error) {
 	out := new(League)
-	err := c.cc.Invoke(ctx, "/tp.TipsPanel/GetLeague", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/tp_proto.TipsPanel/GetLeague", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -80,7 +80,7 @@ func _TipsPanel_GetLeague_Handler(srv interface{}, ctx context.Context, dec func
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/tp.TipsPanel/GetLeague",
+		FullMethod: "/tp_proto.TipsPanel/GetLeague",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(TipsPanelServer).GetLeague(ctx, req.(*Name))
@@ -92,7 +92,7 @@ func _TipsPanel_GetLeague_Handler(srv interface{}, ctx context.Context, dec func
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var TipsPanel_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "tp.TipsPanel",
+	ServiceName: "tp_proto.TipsPanel",
 	HandlerType: (*TipsPanelServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

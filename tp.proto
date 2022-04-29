@@ -5,7 +5,7 @@ package tp_proto;
 
 service TipsPanel{
     rpc GetLeague(Name) returns (League){}
-    //TODO: other rpc's
+    rpc GetCountry(Id) returns (Country){}
 }
 
 message Name{
@@ -16,5 +16,12 @@ message League{
     string id = 1;
     string name = 2;
     string countryId = 3;
+}
+message Id{
+    string value =1;
+}
+message Country{
+    string id = 1;
+    string name = 2;
 }
 

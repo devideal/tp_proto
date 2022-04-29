@@ -23,6 +23,7 @@ const _ = grpc.SupportPackageIsVersion7
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type TipsPanelClient interface {
 	GetLeague(ctx context.Context, in *Name, opts ...grpc.CallOption) (*League, error)
+	GetCountry(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Country, error)
 }
 
 type tipsPanelClient struct {
@@ -42,11 +43,21 @@ func (c *tipsPanelClient) GetLeague(ctx context.Context, in *Name, opts ...grpc.
 	return out, nil
 }
 
+func (c *tipsPanelClient) GetCountry(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Country, error) {
+	out := new(Country)
+	err := c.cc.Invoke(ctx, "/tp_proto.TipsPanel/GetCountry", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // TipsPanelServer is the server API for TipsPanel service.
 // All implementations must embed UnimplementedTipsPanelServer
 // for forward compatibility
 type TipsPanelServer interface {
 	GetLeague(context.Context, *Name) (*League, error)
+	GetCountry(context.Context, *Id) (*Country, error)
 	mustEmbedUnimplementedTipsPanelServer()
 }
 
@@ -56,6 +67,9 @@ type UnimplementedTipsPanelServer struct {
 
 func (UnimplementedTipsPanelServer) GetLeague(context.Context, *Name) (*League, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetLeague not implemented")
+}
+func (UnimplementedTipsPanelServer) GetCountry(context.Context, *Id) (*Country, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetCountry not implemented")
 }
 func (UnimplementedTipsPanelServer) mustEmbedUnimplementedTipsPanelServer() {}
 
@@ -88,6 +102,24 @@ func _TipsPanel_GetLeague_Handler(srv interface{}, ctx context.Context, dec func
 	return interceptor(ctx, in, info, handler)
 }
 
+func _TipsPanel_GetCountry_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Id)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TipsPanelServer).GetCountry(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/tp_proto.TipsPanel/GetCountry",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TipsPanelServer).GetCountry(ctx, req.(*Id))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // TipsPanel_ServiceDesc is the grpc.ServiceDesc for TipsPanel service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -98,6 +130,10 @@ var TipsPanel_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetLeague",
 			Handler:    _TipsPanel_GetLeague_Handler,
+		},
+		{
+			MethodName: "GetCountry",
+			Handler:    _TipsPanel_GetCountry_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

@@ -1,16 +1,25 @@
 syntax = "proto3";
+import "google/protobuf/timestamp.proto";
 
 option go_package = "github.com/devideal/tp_proto";
 package tp_proto;
 
 service TipsPanel{
-    rpc GetLeague(Name) returns (League){}
+    rpc GetLeague(Id) returns (League){}
     rpc GetCountry(Id) returns (Country){}
     rpc GetMatch(Id) returns (Match){}
+    rpc GetApplication(Id) returns (Application){}
+    rpc GetBet(Id) returns (Bet){}
+    rpc GetBranch(Id) returns (Branch){}
+    rpc GetCoupon(Id) returns (Coupon){}
 }
 
 message Name{
     string value = 1;
+}
+
+message Id{
+    string value =1;
 }
 
 message League{
@@ -18,9 +27,7 @@ message League{
     string name = 2;
     string countryId = 3;
 }
-message Id{
-    string value =1;
-}
+
 message Country{
     string id = 1;
     string name = 2;
@@ -35,4 +42,35 @@ message Match{
     string date =6;
     string result=7;
     bool end =8;
+}
+
+message Application{
+    string id=1;
+    string name=2;
+    bool isActive=3;
+    repeated string branchId=4;
+}
+
+message Bet{
+    string id=1;
+    string matchId=2;
+    string prediction=3;
+    double ratio=4;
+    optional bool win=5;
+}
+
+message Branch{
+    string id=1;
+    string name=2;
+    string description=3;
+}
+
+message Coupon{
+    string id=1;
+    repeated string betId=2;
+    string branchId=3;
+    string applicationId=4;
+    google.protobuf.Timestamp date=5;
+    bool isVisible=6;
+    optional bool end=7;
 }

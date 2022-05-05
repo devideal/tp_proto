@@ -22,9 +22,13 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type TipsPanelClient interface {
-	GetLeague(ctx context.Context, in *Name, opts ...grpc.CallOption) (*League, error)
+	GetLeague(ctx context.Context, in *Id, opts ...grpc.CallOption) (*League, error)
 	GetCountry(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Country, error)
 	GetMatch(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Match, error)
+	GetApplication(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Application, error)
+	GetBet(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Bet, error)
+	GetBranch(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Branch, error)
+	GetCoupon(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Coupon, error)
 }
 
 type tipsPanelClient struct {
@@ -35,7 +39,7 @@ func NewTipsPanelClient(cc grpc.ClientConnInterface) TipsPanelClient {
 	return &tipsPanelClient{cc}
 }
 
-func (c *tipsPanelClient) GetLeague(ctx context.Context, in *Name, opts ...grpc.CallOption) (*League, error) {
+func (c *tipsPanelClient) GetLeague(ctx context.Context, in *Id, opts ...grpc.CallOption) (*League, error) {
 	out := new(League)
 	err := c.cc.Invoke(ctx, "/tp_proto.TipsPanel/GetLeague", in, out, opts...)
 	if err != nil {
@@ -62,13 +66,53 @@ func (c *tipsPanelClient) GetMatch(ctx context.Context, in *Id, opts ...grpc.Cal
 	return out, nil
 }
 
+func (c *tipsPanelClient) GetApplication(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Application, error) {
+	out := new(Application)
+	err := c.cc.Invoke(ctx, "/tp_proto.TipsPanel/GetApplication", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *tipsPanelClient) GetBet(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Bet, error) {
+	out := new(Bet)
+	err := c.cc.Invoke(ctx, "/tp_proto.TipsPanel/GetBet", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *tipsPanelClient) GetBranch(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Branch, error) {
+	out := new(Branch)
+	err := c.cc.Invoke(ctx, "/tp_proto.TipsPanel/GetBranch", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *tipsPanelClient) GetCoupon(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Coupon, error) {
+	out := new(Coupon)
+	err := c.cc.Invoke(ctx, "/tp_proto.TipsPanel/GetCoupon", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // TipsPanelServer is the server API for TipsPanel service.
 // All implementations must embed UnimplementedTipsPanelServer
 // for forward compatibility
 type TipsPanelServer interface {
-	GetLeague(context.Context, *Name) (*League, error)
+	GetLeague(context.Context, *Id) (*League, error)
 	GetCountry(context.Context, *Id) (*Country, error)
 	GetMatch(context.Context, *Id) (*Match, error)
+	GetApplication(context.Context, *Id) (*Application, error)
+	GetBet(context.Context, *Id) (*Bet, error)
+	GetBranch(context.Context, *Id) (*Branch, error)
+	GetCoupon(context.Context, *Id) (*Coupon, error)
 	mustEmbedUnimplementedTipsPanelServer()
 }
 
@@ -76,7 +120,7 @@ type TipsPanelServer interface {
 type UnimplementedTipsPanelServer struct {
 }
 
-func (UnimplementedTipsPanelServer) GetLeague(context.Context, *Name) (*League, error) {
+func (UnimplementedTipsPanelServer) GetLeague(context.Context, *Id) (*League, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetLeague not implemented")
 }
 func (UnimplementedTipsPanelServer) GetCountry(context.Context, *Id) (*Country, error) {
@@ -84,6 +128,18 @@ func (UnimplementedTipsPanelServer) GetCountry(context.Context, *Id) (*Country, 
 }
 func (UnimplementedTipsPanelServer) GetMatch(context.Context, *Id) (*Match, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetMatch not implemented")
+}
+func (UnimplementedTipsPanelServer) GetApplication(context.Context, *Id) (*Application, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetApplication not implemented")
+}
+func (UnimplementedTipsPanelServer) GetBet(context.Context, *Id) (*Bet, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetBet not implemented")
+}
+func (UnimplementedTipsPanelServer) GetBranch(context.Context, *Id) (*Branch, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetBranch not implemented")
+}
+func (UnimplementedTipsPanelServer) GetCoupon(context.Context, *Id) (*Coupon, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetCoupon not implemented")
 }
 func (UnimplementedTipsPanelServer) mustEmbedUnimplementedTipsPanelServer() {}
 
@@ -99,7 +155,7 @@ func RegisterTipsPanelServer(s grpc.ServiceRegistrar, srv TipsPanelServer) {
 }
 
 func _TipsPanel_GetLeague_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(Name)
+	in := new(Id)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -111,7 +167,7 @@ func _TipsPanel_GetLeague_Handler(srv interface{}, ctx context.Context, dec func
 		FullMethod: "/tp_proto.TipsPanel/GetLeague",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(TipsPanelServer).GetLeague(ctx, req.(*Name))
+		return srv.(TipsPanelServer).GetLeague(ctx, req.(*Id))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -152,6 +208,78 @@ func _TipsPanel_GetMatch_Handler(srv interface{}, ctx context.Context, dec func(
 	return interceptor(ctx, in, info, handler)
 }
 
+func _TipsPanel_GetApplication_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Id)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TipsPanelServer).GetApplication(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/tp_proto.TipsPanel/GetApplication",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TipsPanelServer).GetApplication(ctx, req.(*Id))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _TipsPanel_GetBet_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Id)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TipsPanelServer).GetBet(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/tp_proto.TipsPanel/GetBet",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TipsPanelServer).GetBet(ctx, req.(*Id))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _TipsPanel_GetBranch_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Id)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TipsPanelServer).GetBranch(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/tp_proto.TipsPanel/GetBranch",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TipsPanelServer).GetBranch(ctx, req.(*Id))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _TipsPanel_GetCoupon_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Id)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TipsPanelServer).GetCoupon(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/tp_proto.TipsPanel/GetCoupon",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TipsPanelServer).GetCoupon(ctx, req.(*Id))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // TipsPanel_ServiceDesc is the grpc.ServiceDesc for TipsPanel service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -170,6 +298,22 @@ var TipsPanel_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetMatch",
 			Handler:    _TipsPanel_GetMatch_Handler,
+		},
+		{
+			MethodName: "GetApplication",
+			Handler:    _TipsPanel_GetApplication_Handler,
+		},
+		{
+			MethodName: "GetBet",
+			Handler:    _TipsPanel_GetBet_Handler,
+		},
+		{
+			MethodName: "GetBranch",
+			Handler:    _TipsPanel_GetBranch_Handler,
+		},
+		{
+			MethodName: "GetCoupon",
+			Handler:    _TipsPanel_GetCoupon_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

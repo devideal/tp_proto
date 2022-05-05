@@ -30,6 +30,7 @@ type TipsPanelClient interface {
 	GetBranch(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Branch, error)
 	GetCoupon(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Coupon, error)
 	GetUser(ctx context.Context, in *Id, opts ...grpc.CallOption) (*User, error)
+	ValidatePasswordHash(ctx context.Context, in *Passwordhash, opts ...grpc.CallOption) (*Bool, error)
 }
 
 type tipsPanelClient struct {
@@ -112,6 +113,15 @@ func (c *tipsPanelClient) GetUser(ctx context.Context, in *Id, opts ...grpc.Call
 	return out, nil
 }
 
+func (c *tipsPanelClient) ValidatePasswordHash(ctx context.Context, in *Passwordhash, opts ...grpc.CallOption) (*Bool, error) {
+	out := new(Bool)
+	err := c.cc.Invoke(ctx, "/tp_proto.TipsPanel/ValidatePasswordHash", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // TipsPanelServer is the server API for TipsPanel service.
 // All implementations must embed UnimplementedTipsPanelServer
 // for forward compatibility
@@ -124,6 +134,7 @@ type TipsPanelServer interface {
 	GetBranch(context.Context, *Id) (*Branch, error)
 	GetCoupon(context.Context, *Id) (*Coupon, error)
 	GetUser(context.Context, *Id) (*User, error)
+	ValidatePasswordHash(context.Context, *Passwordhash) (*Bool, error)
 	mustEmbedUnimplementedTipsPanelServer()
 }
 
@@ -154,6 +165,9 @@ func (UnimplementedTipsPanelServer) GetCoupon(context.Context, *Id) (*Coupon, er
 }
 func (UnimplementedTipsPanelServer) GetUser(context.Context, *Id) (*User, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetUser not implemented")
+}
+func (UnimplementedTipsPanelServer) ValidatePasswordHash(context.Context, *Passwordhash) (*Bool, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ValidatePasswordHash not implemented")
 }
 func (UnimplementedTipsPanelServer) mustEmbedUnimplementedTipsPanelServer() {}
 
@@ -312,6 +326,24 @@ func _TipsPanel_GetUser_Handler(srv interface{}, ctx context.Context, dec func(i
 	return interceptor(ctx, in, info, handler)
 }
 
+func _TipsPanel_ValidatePasswordHash_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Passwordhash)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TipsPanelServer).ValidatePasswordHash(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/tp_proto.TipsPanel/ValidatePasswordHash",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TipsPanelServer).ValidatePasswordHash(ctx, req.(*Passwordhash))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // TipsPanel_ServiceDesc is the grpc.ServiceDesc for TipsPanel service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -350,6 +382,10 @@ var TipsPanel_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetUser",
 			Handler:    _TipsPanel_GetUser_Handler,
+		},
+		{
+			MethodName: "ValidatePasswordHash",
+			Handler:    _TipsPanel_ValidatePasswordHash_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

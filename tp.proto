@@ -12,7 +12,7 @@ service TipsPanel{
     rpc GetBranch(Id) returns (Branch){}
     rpc GetCoupon(Id) returns (Coupon){}
     rpc GetUser(Id) returns (User){}
-    rpc ValidatePasswordHash(Passwordhash) returns (Bool){}
+    rpc AddUser(User) returns (Bool){}
 }
 
 message Name{
@@ -25,10 +25,6 @@ message Id{
 
 message Bool{
     bool value=1;
-}
-
-message Passwordhash{
-    string hash=1;
 }
 
 message League{

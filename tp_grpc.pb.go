@@ -29,6 +29,7 @@ type TipsPanelClient interface {
 	GetBet(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Bet, error)
 	GetBranch(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Branch, error)
 	GetCoupon(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Coupon, error)
+	GetUser(ctx context.Context, in *Id, opts ...grpc.CallOption) (*User, error)
 }
 
 type tipsPanelClient struct {
@@ -102,6 +103,15 @@ func (c *tipsPanelClient) GetCoupon(ctx context.Context, in *Id, opts ...grpc.Ca
 	return out, nil
 }
 
+func (c *tipsPanelClient) GetUser(ctx context.Context, in *Id, opts ...grpc.CallOption) (*User, error) {
+	out := new(User)
+	err := c.cc.Invoke(ctx, "/tp_proto.TipsPanel/GetUser", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // TipsPanelServer is the server API for TipsPanel service.
 // All implementations must embed UnimplementedTipsPanelServer
 // for forward compatibility
@@ -113,6 +123,7 @@ type TipsPanelServer interface {
 	GetBet(context.Context, *Id) (*Bet, error)
 	GetBranch(context.Context, *Id) (*Branch, error)
 	GetCoupon(context.Context, *Id) (*Coupon, error)
+	GetUser(context.Context, *Id) (*User, error)
 	mustEmbedUnimplementedTipsPanelServer()
 }
 
@@ -140,6 +151,9 @@ func (UnimplementedTipsPanelServer) GetBranch(context.Context, *Id) (*Branch, er
 }
 func (UnimplementedTipsPanelServer) GetCoupon(context.Context, *Id) (*Coupon, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetCoupon not implemented")
+}
+func (UnimplementedTipsPanelServer) GetUser(context.Context, *Id) (*User, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetUser not implemented")
 }
 func (UnimplementedTipsPanelServer) mustEmbedUnimplementedTipsPanelServer() {}
 
@@ -280,6 +294,24 @@ func _TipsPanel_GetCoupon_Handler(srv interface{}, ctx context.Context, dec func
 	return interceptor(ctx, in, info, handler)
 }
 
+func _TipsPanel_GetUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Id)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TipsPanelServer).GetUser(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/tp_proto.TipsPanel/GetUser",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TipsPanelServer).GetUser(ctx, req.(*Id))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // TipsPanel_ServiceDesc is the grpc.ServiceDesc for TipsPanel service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -314,6 +346,10 @@ var TipsPanel_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetCoupon",
 			Handler:    _TipsPanel_GetCoupon_Handler,
+		},
+		{
+			MethodName: "GetUser",
+			Handler:    _TipsPanel_GetUser_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

@@ -11,6 +11,7 @@ service TipsPanel{
     rpc GetBet(Id) returns (Bet){}
     rpc GetBranch(Id) returns (Branch){}
     rpc GetCoupon(Id) returns (Coupon){}
+    rpc GetUser(Id) returns (User){}
 }
 
 message Name{
@@ -72,4 +73,12 @@ message Coupon{
     string date=5;
     bool isVisible=6;
     optional bool end=7;
+}
+
+message User{
+    string id=1;
+    string email=2;
+    string username=3;
+    string passwordhash=4;
+    int32 role=5;
 }

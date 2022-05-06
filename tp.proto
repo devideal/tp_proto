@@ -12,6 +12,7 @@ service TipsPanel{
     rpc GetBranch(Id) returns (Branch){}
     rpc GetCoupon(Id) returns (Coupon){}
     rpc GetUser(Id) returns (User){}
+    rpc GetUserByUserName(Name) returns (User){}
     rpc AddUser(User) returns (Bool){}
 }
 

@@ -30,6 +30,8 @@ type TipsPanelClient interface {
 	GetBranch(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Branch, error)
 	GetCoupon(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Coupon, error)
 	GetUser(ctx context.Context, in *Id, opts ...grpc.CallOption) (*User, error)
+	GetUserByUserName(ctx context.Context, in *Name, opts ...grpc.CallOption) (*User, error)
+	AddUser(ctx context.Context, in *User, opts ...grpc.CallOption) (*Bool, error)
 }
 
 type tipsPanelClient struct {
@@ -112,6 +114,24 @@ func (c *tipsPanelClient) GetUser(ctx context.Context, in *Id, opts ...grpc.Call
 	return out, nil
 }
 
+func (c *tipsPanelClient) GetUserByUserName(ctx context.Context, in *Name, opts ...grpc.CallOption) (*User, error) {
+	out := new(User)
+	err := c.cc.Invoke(ctx, "/tp_proto.TipsPanel/GetUserByUserName", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *tipsPanelClient) AddUser(ctx context.Context, in *User, opts ...grpc.CallOption) (*Bool, error) {
+	out := new(Bool)
+	err := c.cc.Invoke(ctx, "/tp_proto.TipsPanel/AddUser", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // TipsPanelServer is the server API for TipsPanel service.
 // All implementations must embed UnimplementedTipsPanelServer
 // for forward compatibility
@@ -124,6 +144,8 @@ type TipsPanelServer interface {
 	GetBranch(context.Context, *Id) (*Branch, error)
 	GetCoupon(context.Context, *Id) (*Coupon, error)
 	GetUser(context.Context, *Id) (*User, error)
+	GetUserByUserName(context.Context, *Name) (*User, error)
+	AddUser(context.Context, *User) (*Bool, error)
 	mustEmbedUnimplementedTipsPanelServer()
 }
 
@@ -154,6 +176,12 @@ func (UnimplementedTipsPanelServer) GetCoupon(context.Context, *Id) (*Coupon, er
 }
 func (UnimplementedTipsPanelServer) GetUser(context.Context, *Id) (*User, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetUser not implemented")
+}
+func (UnimplementedTipsPanelServer) GetUserByUserName(context.Context, *Name) (*User, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetUserByUserName not implemented")
+}
+func (UnimplementedTipsPanelServer) AddUser(context.Context, *User) (*Bool, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method AddUser not implemented")
 }
 func (UnimplementedTipsPanelServer) mustEmbedUnimplementedTipsPanelServer() {}
 
@@ -312,6 +340,42 @@ func _TipsPanel_GetUser_Handler(srv interface{}, ctx context.Context, dec func(i
 	return interceptor(ctx, in, info, handler)
 }
 
+func _TipsPanel_GetUserByUserName_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Name)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TipsPanelServer).GetUserByUserName(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/tp_proto.TipsPanel/GetUserByUserName",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TipsPanelServer).GetUserByUserName(ctx, req.(*Name))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _TipsPanel_AddUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(User)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TipsPanelServer).AddUser(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/tp_proto.TipsPanel/AddUser",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TipsPanelServer).AddUser(ctx, req.(*User))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // TipsPanel_ServiceDesc is the grpc.ServiceDesc for TipsPanel service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -350,6 +414,14 @@ var TipsPanel_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetUser",
 			Handler:    _TipsPanel_GetUser_Handler,
+		},
+		{
+			MethodName: "GetUserByUserName",
+			Handler:    _TipsPanel_GetUserByUserName_Handler,
+		},
+		{
+			MethodName: "AddUser",
+			Handler:    _TipsPanel_AddUser_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

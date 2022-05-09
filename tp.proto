@@ -31,7 +31,7 @@ message Bool{
 message League{
     string id = 1;
     string name = 2;
-    string countryId = 3;
+    Country country = 3;
 }
 
 message Country{
@@ -41,7 +41,7 @@ message Country{
 
 message Match{
     string id =1;
-    string leagueId=2;
+    League league=2;
     int32 week=3;
     string host =4;
     string guest =5;
@@ -54,12 +54,12 @@ message Application{
     string id=1;
     string name=2;
     bool isActive=3;
-    repeated string branchId=4;
+    repeated Branch branch=4;
 }
 
 message Bet{
     string id=1;
-    string matchId=2;
+    Match match=2;
     string prediction=3;
     double ratio=4;
     optional bool win=5;
@@ -73,9 +73,9 @@ message Branch{
 
 message Coupon{
     string id=1;
-    repeated string betId=2;
-    string branchId=3;
-    string applicationId=4;
+    repeated Bet bets=2;
+    Branch branch=3;
+    Application application=4;
     string date=5;
     bool isVisible=6;
     optional bool end=7;

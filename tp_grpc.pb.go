@@ -32,6 +32,10 @@ type TipsPanelClient interface {
 	GetUser(ctx context.Context, in *Id, opts ...grpc.CallOption) (*User, error)
 	GetUserByUserName(ctx context.Context, in *Name, opts ...grpc.CallOption) (*User, error)
 	AddUser(ctx context.Context, in *User, opts ...grpc.CallOption) (*Bool, error)
+	AddApplication(ctx context.Context, in *Application, opts ...grpc.CallOption) (*Bool, error)
+	AddBranch(ctx context.Context, in *Branch, opts ...grpc.CallOption) (*Bool, error)
+	AddCoupon(ctx context.Context, in *Coupon, opts ...grpc.CallOption) (*Bool, error)
+	AddMatch(ctx context.Context, in *Match, opts ...grpc.CallOption) (*Bool, error)
 }
 
 type tipsPanelClient struct {
@@ -132,6 +136,42 @@ func (c *tipsPanelClient) AddUser(ctx context.Context, in *User, opts ...grpc.Ca
 	return out, nil
 }
 
+func (c *tipsPanelClient) AddApplication(ctx context.Context, in *Application, opts ...grpc.CallOption) (*Bool, error) {
+	out := new(Bool)
+	err := c.cc.Invoke(ctx, "/tp_proto.TipsPanel/AddApplication", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *tipsPanelClient) AddBranch(ctx context.Context, in *Branch, opts ...grpc.CallOption) (*Bool, error) {
+	out := new(Bool)
+	err := c.cc.Invoke(ctx, "/tp_proto.TipsPanel/AddBranch", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *tipsPanelClient) AddCoupon(ctx context.Context, in *Coupon, opts ...grpc.CallOption) (*Bool, error) {
+	out := new(Bool)
+	err := c.cc.Invoke(ctx, "/tp_proto.TipsPanel/AddCoupon", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *tipsPanelClient) AddMatch(ctx context.Context, in *Match, opts ...grpc.CallOption) (*Bool, error) {
+	out := new(Bool)
+	err := c.cc.Invoke(ctx, "/tp_proto.TipsPanel/AddMatch", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // TipsPanelServer is the server API for TipsPanel service.
 // All implementations must embed UnimplementedTipsPanelServer
 // for forward compatibility
@@ -146,6 +186,10 @@ type TipsPanelServer interface {
 	GetUser(context.Context, *Id) (*User, error)
 	GetUserByUserName(context.Context, *Name) (*User, error)
 	AddUser(context.Context, *User) (*Bool, error)
+	AddApplication(context.Context, *Application) (*Bool, error)
+	AddBranch(context.Context, *Branch) (*Bool, error)
+	AddCoupon(context.Context, *Coupon) (*Bool, error)
+	AddMatch(context.Context, *Match) (*Bool, error)
 	mustEmbedUnimplementedTipsPanelServer()
 }
 
@@ -182,6 +226,18 @@ func (UnimplementedTipsPanelServer) GetUserByUserName(context.Context, *Name) (*
 }
 func (UnimplementedTipsPanelServer) AddUser(context.Context, *User) (*Bool, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AddUser not implemented")
+}
+func (UnimplementedTipsPanelServer) AddApplication(context.Context, *Application) (*Bool, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method AddApplication not implemented")
+}
+func (UnimplementedTipsPanelServer) AddBranch(context.Context, *Branch) (*Bool, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method AddBranch not implemented")
+}
+func (UnimplementedTipsPanelServer) AddCoupon(context.Context, *Coupon) (*Bool, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method AddCoupon not implemented")
+}
+func (UnimplementedTipsPanelServer) AddMatch(context.Context, *Match) (*Bool, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method AddMatch not implemented")
 }
 func (UnimplementedTipsPanelServer) mustEmbedUnimplementedTipsPanelServer() {}
 
@@ -376,6 +432,78 @@ func _TipsPanel_AddUser_Handler(srv interface{}, ctx context.Context, dec func(i
 	return interceptor(ctx, in, info, handler)
 }
 
+func _TipsPanel_AddApplication_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Application)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TipsPanelServer).AddApplication(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/tp_proto.TipsPanel/AddApplication",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TipsPanelServer).AddApplication(ctx, req.(*Application))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _TipsPanel_AddBranch_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Branch)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TipsPanelServer).AddBranch(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/tp_proto.TipsPanel/AddBranch",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TipsPanelServer).AddBranch(ctx, req.(*Branch))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _TipsPanel_AddCoupon_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Coupon)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TipsPanelServer).AddCoupon(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/tp_proto.TipsPanel/AddCoupon",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TipsPanelServer).AddCoupon(ctx, req.(*Coupon))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _TipsPanel_AddMatch_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Match)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TipsPanelServer).AddMatch(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/tp_proto.TipsPanel/AddMatch",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TipsPanelServer).AddMatch(ctx, req.(*Match))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // TipsPanel_ServiceDesc is the grpc.ServiceDesc for TipsPanel service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -422,6 +550,22 @@ var TipsPanel_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "AddUser",
 			Handler:    _TipsPanel_AddUser_Handler,
+		},
+		{
+			MethodName: "AddApplication",
+			Handler:    _TipsPanel_AddApplication_Handler,
+		},
+		{
+			MethodName: "AddBranch",
+			Handler:    _TipsPanel_AddBranch_Handler,
+		},
+		{
+			MethodName: "AddCoupon",
+			Handler:    _TipsPanel_AddCoupon_Handler,
+		},
+		{
+			MethodName: "AddMatch",
+			Handler:    _TipsPanel_AddMatch_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

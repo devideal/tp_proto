@@ -7,3 +7,10 @@ environment:
 dependencies: 
   grpc: ^3.0.2
   protobuf: ^2.0.1
+dev_dependencies: {build_runner: ^2.1.11, protoc_builder: ^0.2.1+1}
+targets:
+  $default:
+    sources:
+      - $package$
+      - lib/$lib$
+      - tp.proto

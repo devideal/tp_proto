@@ -5,7 +5,6 @@
 // @dart = 2.12
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
-import 'dart:async' as $async;
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -919,55 +918,5 @@ class User extends $pb.GeneratedMessage {
   $core.bool hasRole() => $_has(4);
   @$pb.TagNumber(5)
   void clearRole() => clearField(5);
-}
-
-class TipsPanelApi {
-  $pb.RpcClient _client;
-  TipsPanelApi(this._client);
-
-  $async.Future<League> getLeague($pb.ClientContext? ctx, Id request) {
-    var emptyResponse = League();
-    return _client.invoke<League>(ctx, 'TipsPanel', 'GetLeague', request, emptyResponse);
-  }
-  $async.Future<Country> getCountry($pb.ClientContext? ctx, Id request) {
-    var emptyResponse = Country();
-    return _client.invoke<Country>(ctx, 'TipsPanel', 'GetCountry', request, emptyResponse);
-  }
-  $async.Future<Match> getMatch($pb.ClientContext? ctx, Id request) {
-    var emptyResponse = Match();
-    return _client.invoke<Match>(ctx, 'TipsPanel', 'GetMatch', request, emptyResponse);
-  }
-  $async.Future<Application> getApplication($pb.ClientContext? ctx, Id request) {
-    var emptyResponse = Application();
-    return _client.invoke<Application>(ctx, 'TipsPanel', 'GetApplication', request, emptyResponse);
-  }
-  $async.Future<Coupon> getCoupon($pb.ClientContext? ctx, Id request) {
-    var emptyResponse = Coupon();
-    return _client.invoke<Coupon>(ctx, 'TipsPanel', 'GetCoupon', request, emptyResponse);
-  }
-  $async.Future<User> getUser($pb.ClientContext? ctx, Id request) {
-    var emptyResponse = User();
-    return _client.invoke<User>(ctx, 'TipsPanel', 'GetUser', request, emptyResponse);
-  }
-  $async.Future<User> getUserByUserName($pb.ClientContext? ctx, Name request) {
-    var emptyResponse = User();
-    return _client.invoke<User>(ctx, 'TipsPanel', 'GetUserByUserName', request, emptyResponse);
-  }
-  $async.Future<Bool> addUser($pb.ClientContext? ctx, User request) {
-    var emptyResponse = Bool();
-    return _client.invoke<Bool>(ctx, 'TipsPanel', 'AddUser', request, emptyResponse);
-  }
-  $async.Future<Bool> addApplication($pb.ClientContext? ctx, Application request) {
-    var emptyResponse = Bool();
-    return _client.invoke<Bool>(ctx, 'TipsPanel', 'AddApplication', request, emptyResponse);
-  }
-  $async.Future<Bool> addCoupon($pb.ClientContext? ctx, Coupon request) {
-    var emptyResponse = Bool();
-    return _client.invoke<Bool>(ctx, 'TipsPanel', 'AddCoupon', request, emptyResponse);
-  }
-  $async.Future<Bool> addMatch($pb.ClientContext? ctx, Match request) {
-    var emptyResponse = Bool();
-    return _client.invoke<Bool>(ctx, 'TipsPanel', 'AddMatch', request, emptyResponse);
-  }
 }
 

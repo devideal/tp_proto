@@ -154,7 +154,7 @@ class League extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'League', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
-    ..aOM<Country>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'country', subBuilder: Country.create)
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'countryId', protoName: 'countryId')
     ..hasRequiredFields = false
   ;
 
@@ -162,7 +162,7 @@ class League extends $pb.GeneratedMessage {
   factory League({
     $core.String? id,
     $core.String? name,
-    Country? country,
+    $core.String? countryId,
   }) {
     final _result = create();
     if (id != null) {
@@ -171,8 +171,8 @@ class League extends $pb.GeneratedMessage {
     if (name != null) {
       _result.name = name;
     }
-    if (country != null) {
-      _result.country = country;
+    if (countryId != null) {
+      _result.countryId = countryId;
     }
     return _result;
   }
@@ -216,15 +216,13 @@ class League extends $pb.GeneratedMessage {
   void clearName() => clearField(2);
 
   @$pb.TagNumber(3)
-  Country get country => $_getN(2);
+  $core.String get countryId => $_getSZ(2);
   @$pb.TagNumber(3)
-  set country(Country v) { setField(3, v); }
+  set countryId($core.String v) { $_setString(2, v); }
   @$pb.TagNumber(3)
-  $core.bool hasCountry() => $_has(2);
+  $core.bool hasCountryId() => $_has(2);
   @$pb.TagNumber(3)
-  void clearCountry() => clearField(3);
-  @$pb.TagNumber(3)
-  Country ensureCountry() => $_ensure(2);
+  void clearCountryId() => clearField(3);
 }
 
 class Country extends $pb.GeneratedMessage {
@@ -291,7 +289,7 @@ class Country extends $pb.GeneratedMessage {
 class Match extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Match', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
-    ..aOM<League>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'league', subBuilder: League.create)
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'leagueId', protoName: 'leagueId')
     ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'week', $pb.PbFieldType.O3)
     ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'host')
     ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'guest')
@@ -304,7 +302,7 @@ class Match extends $pb.GeneratedMessage {
   Match._() : super();
   factory Match({
     $core.String? id,
-    League? league,
+    $core.String? leagueId,
     $core.int? week,
     $core.String? host,
     $core.String? guest,
@@ -316,8 +314,8 @@ class Match extends $pb.GeneratedMessage {
     if (id != null) {
       _result.id = id;
     }
-    if (league != null) {
-      _result.league = league;
+    if (leagueId != null) {
+      _result.leagueId = leagueId;
     }
     if (week != null) {
       _result.week = week;
@@ -370,15 +368,13 @@ class Match extends $pb.GeneratedMessage {
   void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
-  League get league => $_getN(1);
+  $core.String get leagueId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set league(League v) { setField(2, v); }
+  set leagueId($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasLeague() => $_has(1);
+  $core.bool hasLeagueId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearLeague() => clearField(2);
-  @$pb.TagNumber(2)
-  League ensureLeague() => $_ensure(1);
+  void clearLeagueId() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.int get week => $_getIZ(2);
@@ -521,7 +517,7 @@ class Application extends $pb.GeneratedMessage {
 class Bet extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Bet', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
-    ..aOM<Match>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'match', subBuilder: Match.create)
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'matchId', protoName: 'matchId')
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'prediction')
     ..a<$core.double>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ratio', $pb.PbFieldType.OD)
     ..aOB(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'win')
@@ -531,7 +527,7 @@ class Bet extends $pb.GeneratedMessage {
   Bet._() : super();
   factory Bet({
     $core.String? id,
-    Match? match,
+    $core.String? matchId,
     $core.String? prediction,
     $core.double? ratio,
     $core.bool? win,
@@ -540,8 +536,8 @@ class Bet extends $pb.GeneratedMessage {
     if (id != null) {
       _result.id = id;
     }
-    if (match != null) {
-      _result.match = match;
+    if (matchId != null) {
+      _result.matchId = matchId;
     }
     if (prediction != null) {
       _result.prediction = prediction;
@@ -585,15 +581,13 @@ class Bet extends $pb.GeneratedMessage {
   void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
-  Match get match => $_getN(1);
+  $core.String get matchId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set match(Match v) { setField(2, v); }
+  set matchId($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasMatch() => $_has(1);
+  $core.bool hasMatchId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearMatch() => clearField(2);
-  @$pb.TagNumber(2)
-  Match ensureMatch() => $_ensure(1);
+  void clearMatchId() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.String get prediction => $_getSZ(2);
@@ -702,8 +696,8 @@ class Coupon extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Coupon', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
     ..pc<Bet>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bets', $pb.PbFieldType.PM, subBuilder: Bet.create)
-    ..aOM<Branch>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'branch', subBuilder: Branch.create)
-    ..aOM<Application>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'application', subBuilder: Application.create)
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'branchId', protoName: 'branchId')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'applicationId', protoName: 'applicationId')
     ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'date')
     ..aOB(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isVisible', protoName: 'isVisible')
     ..aOB(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'end')
@@ -714,8 +708,8 @@ class Coupon extends $pb.GeneratedMessage {
   factory Coupon({
     $core.String? id,
     $core.Iterable<Bet>? bets,
-    Branch? branch,
-    Application? application,
+    $core.String? branchId,
+    $core.String? applicationId,
     $core.String? date,
     $core.bool? isVisible,
     $core.bool? end,
@@ -727,11 +721,11 @@ class Coupon extends $pb.GeneratedMessage {
     if (bets != null) {
       _result.bets.addAll(bets);
     }
-    if (branch != null) {
-      _result.branch = branch;
+    if (branchId != null) {
+      _result.branchId = branchId;
     }
-    if (application != null) {
-      _result.application = application;
+    if (applicationId != null) {
+      _result.applicationId = applicationId;
     }
     if (date != null) {
       _result.date = date;
@@ -778,26 +772,22 @@ class Coupon extends $pb.GeneratedMessage {
   $core.List<Bet> get bets => $_getList(1);
 
   @$pb.TagNumber(3)
-  Branch get branch => $_getN(2);
+  $core.String get branchId => $_getSZ(2);
   @$pb.TagNumber(3)
-  set branch(Branch v) { setField(3, v); }
+  set branchId($core.String v) { $_setString(2, v); }
   @$pb.TagNumber(3)
-  $core.bool hasBranch() => $_has(2);
+  $core.bool hasBranchId() => $_has(2);
   @$pb.TagNumber(3)
-  void clearBranch() => clearField(3);
-  @$pb.TagNumber(3)
-  Branch ensureBranch() => $_ensure(2);
+  void clearBranchId() => clearField(3);
 
   @$pb.TagNumber(4)
-  Application get application => $_getN(3);
+  $core.String get applicationId => $_getSZ(3);
   @$pb.TagNumber(4)
-  set application(Application v) { setField(4, v); }
+  set applicationId($core.String v) { $_setString(3, v); }
   @$pb.TagNumber(4)
-  $core.bool hasApplication() => $_has(3);
+  $core.bool hasApplicationId() => $_has(3);
   @$pb.TagNumber(4)
-  void clearApplication() => clearField(4);
-  @$pb.TagNumber(4)
-  Application ensureApplication() => $_ensure(3);
+  void clearApplicationId() => clearField(4);
 
   @$pb.TagNumber(5)
   $core.String get date => $_getSZ(4);

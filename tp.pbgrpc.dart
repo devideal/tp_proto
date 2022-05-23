@@ -30,14 +30,6 @@ class TipsPanelClient extends $grpc.Client {
       '/tp_proto.TipsPanel/GetApplication',
       ($0.Id value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Application.fromBuffer(value));
-  static final _$getBet = $grpc.ClientMethod<$0.Id, $0.Bet>(
-      '/tp_proto.TipsPanel/GetBet',
-      ($0.Id value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.Bet.fromBuffer(value));
-  static final _$getBranch = $grpc.ClientMethod<$0.Id, $0.Branch>(
-      '/tp_proto.TipsPanel/GetBranch',
-      ($0.Id value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.Branch.fromBuffer(value));
   static final _$getCoupon = $grpc.ClientMethod<$0.Id, $0.Coupon>(
       '/tp_proto.TipsPanel/GetCoupon',
       ($0.Id value) => value.writeToBuffer(),
@@ -57,10 +49,6 @@ class TipsPanelClient extends $grpc.Client {
   static final _$addApplication = $grpc.ClientMethod<$0.Application, $0.Bool>(
       '/tp_proto.TipsPanel/AddApplication',
       ($0.Application value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.Bool.fromBuffer(value));
-  static final _$addBranch = $grpc.ClientMethod<$0.Branch, $0.Bool>(
-      '/tp_proto.TipsPanel/AddBranch',
-      ($0.Branch value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Bool.fromBuffer(value));
   static final _$addCoupon = $grpc.ClientMethod<$0.Coupon, $0.Bool>(
       '/tp_proto.TipsPanel/AddCoupon',
@@ -96,16 +84,6 @@ class TipsPanelClient extends $grpc.Client {
     return $createUnaryCall(_$getApplication, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.Bet> getBet($0.Id request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$getBet, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$0.Branch> getBranch($0.Id request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$getBranch, request, options: options);
-  }
-
   $grpc.ResponseFuture<$0.Coupon> getCoupon($0.Id request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getCoupon, request, options: options);
@@ -129,11 +107,6 @@ class TipsPanelClient extends $grpc.Client {
   $grpc.ResponseFuture<$0.Bool> addApplication($0.Application request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$addApplication, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$0.Bool> addBranch($0.Branch request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$addBranch, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Bool> addCoupon($0.Coupon request,
@@ -179,20 +152,6 @@ abstract class TipsPanelServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.Id.fromBuffer(value),
         ($0.Application value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.Id, $0.Bet>(
-        'GetBet',
-        getBet_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) => $0.Id.fromBuffer(value),
-        ($0.Bet value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.Id, $0.Branch>(
-        'GetBranch',
-        getBranch_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) => $0.Id.fromBuffer(value),
-        ($0.Branch value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.Id, $0.Coupon>(
         'GetCoupon',
         getCoupon_Pre,
@@ -227,13 +186,6 @@ abstract class TipsPanelServiceBase extends $grpc.Service {
         false,
         false,
         ($core.List<$core.int> value) => $0.Application.fromBuffer(value),
-        ($0.Bool value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.Branch, $0.Bool>(
-        'AddBranch',
-        addBranch_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) => $0.Branch.fromBuffer(value),
         ($0.Bool value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.Coupon, $0.Bool>(
         'AddCoupon',
@@ -271,16 +223,6 @@ abstract class TipsPanelServiceBase extends $grpc.Service {
     return getApplication(call, await request);
   }
 
-  $async.Future<$0.Bet> getBet_Pre(
-      $grpc.ServiceCall call, $async.Future<$0.Id> request) async {
-    return getBet(call, await request);
-  }
-
-  $async.Future<$0.Branch> getBranch_Pre(
-      $grpc.ServiceCall call, $async.Future<$0.Id> request) async {
-    return getBranch(call, await request);
-  }
-
   $async.Future<$0.Coupon> getCoupon_Pre(
       $grpc.ServiceCall call, $async.Future<$0.Id> request) async {
     return getCoupon(call, await request);
@@ -306,11 +248,6 @@ abstract class TipsPanelServiceBase extends $grpc.Service {
     return addApplication(call, await request);
   }
 
-  $async.Future<$0.Bool> addBranch_Pre(
-      $grpc.ServiceCall call, $async.Future<$0.Branch> request) async {
-    return addBranch(call, await request);
-  }
-
   $async.Future<$0.Bool> addCoupon_Pre(
       $grpc.ServiceCall call, $async.Future<$0.Coupon> request) async {
     return addCoupon(call, await request);
@@ -326,8 +263,6 @@ abstract class TipsPanelServiceBase extends $grpc.Service {
   $async.Future<$0.Match> getMatch($grpc.ServiceCall call, $0.Id request);
   $async.Future<$0.Application> getApplication(
       $grpc.ServiceCall call, $0.Id request);
-  $async.Future<$0.Bet> getBet($grpc.ServiceCall call, $0.Id request);
-  $async.Future<$0.Branch> getBranch($grpc.ServiceCall call, $0.Id request);
   $async.Future<$0.Coupon> getCoupon($grpc.ServiceCall call, $0.Id request);
   $async.Future<$0.User> getUser($grpc.ServiceCall call, $0.Id request);
   $async.Future<$0.User> getUserByUserName(
@@ -335,7 +270,6 @@ abstract class TipsPanelServiceBase extends $grpc.Service {
   $async.Future<$0.Bool> addUser($grpc.ServiceCall call, $0.User request);
   $async.Future<$0.Bool> addApplication(
       $grpc.ServiceCall call, $0.Application request);
-  $async.Future<$0.Bool> addBranch($grpc.ServiceCall call, $0.Branch request);
   $async.Future<$0.Bool> addCoupon($grpc.ServiceCall call, $0.Coupon request);
   $async.Future<$0.Bool> addMatch($grpc.ServiceCall call, $0.Match request);
 }

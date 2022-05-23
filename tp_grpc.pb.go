@@ -26,14 +26,11 @@ type TipsPanelClient interface {
 	GetCountry(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Country, error)
 	GetMatch(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Match, error)
 	GetApplication(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Application, error)
-	GetBet(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Bet, error)
-	GetBranch(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Branch, error)
 	GetCoupon(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Coupon, error)
 	GetUser(ctx context.Context, in *Id, opts ...grpc.CallOption) (*User, error)
 	GetUserByUserName(ctx context.Context, in *Name, opts ...grpc.CallOption) (*User, error)
 	AddUser(ctx context.Context, in *User, opts ...grpc.CallOption) (*Bool, error)
 	AddApplication(ctx context.Context, in *Application, opts ...grpc.CallOption) (*Bool, error)
-	AddBranch(ctx context.Context, in *Branch, opts ...grpc.CallOption) (*Bool, error)
 	AddCoupon(ctx context.Context, in *Coupon, opts ...grpc.CallOption) (*Bool, error)
 	AddMatch(ctx context.Context, in *Match, opts ...grpc.CallOption) (*Bool, error)
 }
@@ -76,24 +73,6 @@ func (c *tipsPanelClient) GetMatch(ctx context.Context, in *Id, opts ...grpc.Cal
 func (c *tipsPanelClient) GetApplication(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Application, error) {
 	out := new(Application)
 	err := c.cc.Invoke(ctx, "/tp_proto.TipsPanel/GetApplication", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *tipsPanelClient) GetBet(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Bet, error) {
-	out := new(Bet)
-	err := c.cc.Invoke(ctx, "/tp_proto.TipsPanel/GetBet", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *tipsPanelClient) GetBranch(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Branch, error) {
-	out := new(Branch)
-	err := c.cc.Invoke(ctx, "/tp_proto.TipsPanel/GetBranch", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -145,15 +124,6 @@ func (c *tipsPanelClient) AddApplication(ctx context.Context, in *Application, o
 	return out, nil
 }
 
-func (c *tipsPanelClient) AddBranch(ctx context.Context, in *Branch, opts ...grpc.CallOption) (*Bool, error) {
-	out := new(Bool)
-	err := c.cc.Invoke(ctx, "/tp_proto.TipsPanel/AddBranch", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 func (c *tipsPanelClient) AddCoupon(ctx context.Context, in *Coupon, opts ...grpc.CallOption) (*Bool, error) {
 	out := new(Bool)
 	err := c.cc.Invoke(ctx, "/tp_proto.TipsPanel/AddCoupon", in, out, opts...)
@@ -180,14 +150,11 @@ type TipsPanelServer interface {
 	GetCountry(context.Context, *Id) (*Country, error)
 	GetMatch(context.Context, *Id) (*Match, error)
 	GetApplication(context.Context, *Id) (*Application, error)
-	GetBet(context.Context, *Id) (*Bet, error)
-	GetBranch(context.Context, *Id) (*Branch, error)
 	GetCoupon(context.Context, *Id) (*Coupon, error)
 	GetUser(context.Context, *Id) (*User, error)
 	GetUserByUserName(context.Context, *Name) (*User, error)
 	AddUser(context.Context, *User) (*Bool, error)
 	AddApplication(context.Context, *Application) (*Bool, error)
-	AddBranch(context.Context, *Branch) (*Bool, error)
 	AddCoupon(context.Context, *Coupon) (*Bool, error)
 	AddMatch(context.Context, *Match) (*Bool, error)
 	mustEmbedUnimplementedTipsPanelServer()
@@ -209,12 +176,6 @@ func (UnimplementedTipsPanelServer) GetMatch(context.Context, *Id) (*Match, erro
 func (UnimplementedTipsPanelServer) GetApplication(context.Context, *Id) (*Application, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetApplication not implemented")
 }
-func (UnimplementedTipsPanelServer) GetBet(context.Context, *Id) (*Bet, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetBet not implemented")
-}
-func (UnimplementedTipsPanelServer) GetBranch(context.Context, *Id) (*Branch, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetBranch not implemented")
-}
 func (UnimplementedTipsPanelServer) GetCoupon(context.Context, *Id) (*Coupon, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetCoupon not implemented")
 }
@@ -229,9 +190,6 @@ func (UnimplementedTipsPanelServer) AddUser(context.Context, *User) (*Bool, erro
 }
 func (UnimplementedTipsPanelServer) AddApplication(context.Context, *Application) (*Bool, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AddApplication not implemented")
-}
-func (UnimplementedTipsPanelServer) AddBranch(context.Context, *Branch) (*Bool, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method AddBranch not implemented")
 }
 func (UnimplementedTipsPanelServer) AddCoupon(context.Context, *Coupon) (*Bool, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AddCoupon not implemented")
@@ -320,42 +278,6 @@ func _TipsPanel_GetApplication_Handler(srv interface{}, ctx context.Context, dec
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(TipsPanelServer).GetApplication(ctx, req.(*Id))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _TipsPanel_GetBet_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(Id)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(TipsPanelServer).GetBet(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/tp_proto.TipsPanel/GetBet",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(TipsPanelServer).GetBet(ctx, req.(*Id))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _TipsPanel_GetBranch_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(Id)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(TipsPanelServer).GetBranch(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/tp_proto.TipsPanel/GetBranch",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(TipsPanelServer).GetBranch(ctx, req.(*Id))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -450,24 +372,6 @@ func _TipsPanel_AddApplication_Handler(srv interface{}, ctx context.Context, dec
 	return interceptor(ctx, in, info, handler)
 }
 
-func _TipsPanel_AddBranch_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(Branch)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(TipsPanelServer).AddBranch(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/tp_proto.TipsPanel/AddBranch",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(TipsPanelServer).AddBranch(ctx, req.(*Branch))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 func _TipsPanel_AddCoupon_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(Coupon)
 	if err := dec(in); err != nil {
@@ -528,14 +432,6 @@ var TipsPanel_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _TipsPanel_GetApplication_Handler,
 		},
 		{
-			MethodName: "GetBet",
-			Handler:    _TipsPanel_GetBet_Handler,
-		},
-		{
-			MethodName: "GetBranch",
-			Handler:    _TipsPanel_GetBranch_Handler,
-		},
-		{
 			MethodName: "GetCoupon",
 			Handler:    _TipsPanel_GetCoupon_Handler,
 		},
@@ -554,10 +450,6 @@ var TipsPanel_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "AddApplication",
 			Handler:    _TipsPanel_AddApplication_Handler,
-		},
-		{
-			MethodName: "AddBranch",
-			Handler:    _TipsPanel_AddBranch_Handler,
 		},
 		{
 			MethodName: "AddCoupon",

@@ -8,14 +8,11 @@ service TipsPanel{
     rpc GetCountry(Id) returns (Country){}
     rpc GetMatch(Id) returns (Match){}
     rpc GetApplication(Id) returns (Application){}
-    rpc GetBet(Id) returns (Bet){}
-    rpc GetBranch(Id) returns (Branch){}
     rpc GetCoupon(Id) returns (Coupon){}
     rpc GetUser(Id) returns (User){}
     rpc GetUserByUserName(Name) returns (User){}
     rpc AddUser(User) returns (Bool){}
     rpc AddApplication(Application) returns (Bool){}
-    rpc AddBranch(Branch) returns (Bool){}
     rpc AddCoupon(Coupon) returns (Bool){}
     rpc AddMatch(Match) returns (Bool){}
 }
@@ -35,7 +32,7 @@ message Bool{
 message League{
     string id = 1;
     string name = 2;
-    Country country = 3;
+    string countryId = 3;
 }
 
 message Country{
@@ -45,7 +42,7 @@ message Country{
 
 message Match{
     string id =1;
-    League league=2;
+    string leagueId=2;
     int32 week=3;
     string host =4;
     string guest =5;
@@ -63,7 +60,7 @@ message Application{
 
 message Bet{
     string id=1;
-    Match match=2;
+    string matchId=2;
     string prediction=3;
     double ratio=4;
     optional bool win=5;
@@ -78,8 +75,8 @@ message Branch{
 message Coupon{
     string id=1;
     repeated Bet bets=2;
-    Branch branch=3;
-    Application application=4;
+    string branchId=3;
+    string applicationId=4;
     string date=5;
     bool isVisible=6;
     optional bool end=7;

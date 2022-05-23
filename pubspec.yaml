@@ -1,0 +1,6 @@
+name: tp_proto
+version: 1.0.0
+
+environment:
+  sdk: '>=2.10.0 <3.0.0'
+dependencies: {grpc: ^3.0.2, protobuf: ^2.0.1, protoc_plugin: ^20.0.0}

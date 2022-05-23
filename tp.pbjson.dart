@@ -153,3 +153,37 @@ const User$json = const {
 
 /// Descriptor for `User`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List userDescriptor = $convert.base64Decode('CgRVc2VyEg4KAmlkGAEgASgJUgJpZBIUCgVlbWFpbBgCIAEoCVIFZW1haWwSGgoIdXNlcm5hbWUYAyABKAlSCHVzZXJuYW1lEiIKDHBhc3N3b3JkaGFzaBgEIAEoCVIMcGFzc3dvcmRoYXNoEhIKBHJvbGUYBSABKAVSBHJvbGU=');
+const $core.Map<$core.String, $core.dynamic> TipsPanelServiceBase$json = const {
+  '1': 'TipsPanel',
+  '2': const [
+    const {'1': 'GetLeague', '2': '.tp_proto.Id', '3': '.tp_proto.League', '4': const {}},
+    const {'1': 'GetCountry', '2': '.tp_proto.Id', '3': '.tp_proto.Country', '4': const {}},
+    const {'1': 'GetMatch', '2': '.tp_proto.Id', '3': '.tp_proto.Match', '4': const {}},
+    const {'1': 'GetApplication', '2': '.tp_proto.Id', '3': '.tp_proto.Application', '4': const {}},
+    const {'1': 'GetCoupon', '2': '.tp_proto.Id', '3': '.tp_proto.Coupon', '4': const {}},
+    const {'1': 'GetUser', '2': '.tp_proto.Id', '3': '.tp_proto.User', '4': const {}},
+    const {'1': 'GetUserByUserName', '2': '.tp_proto.Name', '3': '.tp_proto.User', '4': const {}},
+    const {'1': 'AddUser', '2': '.tp_proto.User', '3': '.tp_proto.Bool', '4': const {}},
+    const {'1': 'AddApplication', '2': '.tp_proto.Application', '3': '.tp_proto.Bool', '4': const {}},
+    const {'1': 'AddCoupon', '2': '.tp_proto.Coupon', '3': '.tp_proto.Bool', '4': const {}},
+    const {'1': 'AddMatch', '2': '.tp_proto.Match', '3': '.tp_proto.Bool', '4': const {}},
+  ],
+};
+
+@$core.Deprecated('Use tipsPanelServiceDescriptor instead')
+const $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> TipsPanelServiceBase$messageJson = const {
+  '.tp_proto.Id': Id$json,
+  '.tp_proto.League': League$json,
+  '.tp_proto.Country': Country$json,
+  '.tp_proto.Match': Match$json,
+  '.tp_proto.Application': Application$json,
+  '.tp_proto.Branch': Branch$json,
+  '.tp_proto.Coupon': Coupon$json,
+  '.tp_proto.Bet': Bet$json,
+  '.tp_proto.User': User$json,
+  '.tp_proto.Name': Name$json,
+  '.tp_proto.Bool': Bool$json,
+};
+
+/// Descriptor for `TipsPanel`. Decode as a `google.protobuf.ServiceDescriptorProto`.
+final $typed_data.Uint8List tipsPanelServiceDescriptor = $convert.base64Decode('CglUaXBzUGFuZWwSLQoJR2V0TGVhZ3VlEgwudHBfcHJvdG8uSWQaEC50cF9wcm90by5MZWFndWUiABIvCgpHZXRDb3VudHJ5EgwudHBfcHJvdG8uSWQaES50cF9wcm90by5Db3VudHJ5IgASKwoIR2V0TWF0Y2gSDC50cF9wcm90by5JZBoPLnRwX3Byb3RvLk1hdGNoIgASNwoOR2V0QXBwbGljYXRpb24SDC50cF9wcm90by5JZBoVLnRwX3Byb3RvLkFwcGxpY2F0aW9uIgASLQoJR2V0Q291cG9uEgwudHBfcHJvdG8uSWQaEC50cF9wcm90by5Db3Vwb24iABIpCgdHZXRVc2VyEgwudHBfcHJvdG8uSWQaDi50cF9wcm90by5Vc2VyIgASNQoRR2V0VXNlckJ5VXNlck5hbWUSDi50cF9wcm90by5OYW1lGg4udHBfcHJvdG8uVXNlciIAEisKB0FkZFVzZXISDi50cF9wcm90by5Vc2VyGg4udHBfcHJvdG8uQm9vbCIAEjkKDkFkZEFwcGxpY2F0aW9uEhUudHBfcHJvdG8uQXBwbGljYXRpb24aDi50cF9wcm90by5Cb29sIgASLwoJQWRkQ291cG9uEhAudHBfcHJvdG8uQ291cG9uGg4udHBfcHJvdG8uQm9vbCIAEi0KCEFkZE1hdGNoEg8udHBfcHJvdG8uTWF0Y2gaDi50cF9wcm90by5Cb29sIgA=');

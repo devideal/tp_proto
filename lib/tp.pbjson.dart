@@ -50,6 +50,16 @@ const League$json = const {
 
 /// Descriptor for `League`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List leagueDescriptor = $convert.base64Decode('CgZMZWFndWUSDgoCaWQYASABKAlSAmlkEhIKBG5hbWUYAiABKAlSBG5hbWUSHAoJY291bnRyeUlkGAMgASgJUgljb3VudHJ5SWQ=');
+@$core.Deprecated('Use leaguesPackageDescriptor instead')
+const LeaguesPackage$json = const {
+  '1': 'LeaguesPackage',
+  '2': const [
+    const {'1': 'leagues', '3': 1, '4': 3, '5': 11, '6': '.tp_proto.League', '10': 'leagues'},
+  ],
+};
+
+/// Descriptor for `LeaguesPackage`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List leaguesPackageDescriptor = $convert.base64Decode('Cg5MZWFndWVzUGFja2FnZRIqCgdsZWFndWVzGAEgAygLMhAudHBfcHJvdG8uTGVhZ3VlUgdsZWFndWVz');
 @$core.Deprecated('Use countryDescriptor instead')
 const Country$json = const {
   '1': 'Country',
@@ -61,6 +71,16 @@ const Country$json = const {
 
 /// Descriptor for `Country`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List countryDescriptor = $convert.base64Decode('CgdDb3VudHJ5Eg4KAmlkGAEgASgJUgJpZBISCgRuYW1lGAIgASgJUgRuYW1l');
+@$core.Deprecated('Use countriesPackageDescriptor instead')
+const CountriesPackage$json = const {
+  '1': 'CountriesPackage',
+  '2': const [
+    const {'1': 'countries', '3': 1, '4': 3, '5': 11, '6': '.tp_proto.Country', '10': 'countries'},
+  ],
+};
+
+/// Descriptor for `CountriesPackage`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List countriesPackageDescriptor = $convert.base64Decode('ChBDb3VudHJpZXNQYWNrYWdlEi8KCWNvdW50cmllcxgBIAMoCzIRLnRwX3Byb3RvLkNvdW50cnlSCWNvdW50cmllcw==');
 @$core.Deprecated('Use matchDescriptor instead')
 const Match$json = const {
   '1': 'Match',
@@ -78,6 +98,16 @@ const Match$json = const {
 
 /// Descriptor for `Match`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List matchDescriptor = $convert.base64Decode('CgVNYXRjaBIOCgJpZBgBIAEoCVICaWQSGgoIbGVhZ3VlSWQYAiABKAlSCGxlYWd1ZUlkEhIKBHdlZWsYAyABKAVSBHdlZWsSEgoEaG9zdBgEIAEoCVIEaG9zdBIUCgVndWVzdBgFIAEoCVIFZ3Vlc3QSEgoEZGF0ZRgGIAEoCVIEZGF0ZRIWCgZyZXN1bHQYByABKAlSBnJlc3VsdBIQCgNlbmQYCCABKAhSA2VuZA==');
+@$core.Deprecated('Use matchesPackageDescriptor instead')
+const MatchesPackage$json = const {
+  '1': 'MatchesPackage',
+  '2': const [
+    const {'1': 'matches', '3': 1, '4': 3, '5': 11, '6': '.tp_proto.Match', '10': 'matches'},
+  ],
+};
+
+/// Descriptor for `MatchesPackage`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List matchesPackageDescriptor = $convert.base64Decode('Cg5NYXRjaGVzUGFja2FnZRIpCgdtYXRjaGVzGAEgAygLMg8udHBfcHJvdG8uTWF0Y2hSB21hdGNoZXM=');
 @$core.Deprecated('Use applicationDescriptor instead')
 const Application$json = const {
   '1': 'Application',
@@ -91,6 +121,16 @@ const Application$json = const {
 
 /// Descriptor for `Application`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List applicationDescriptor = $convert.base64Decode('CgtBcHBsaWNhdGlvbhIOCgJpZBgBIAEoCVICaWQSEgoEbmFtZRgCIAEoCVIEbmFtZRIaCghpc0FjdGl2ZRgDIAEoCFIIaXNBY3RpdmUSKAoGYnJhbmNoGAQgAygLMhAudHBfcHJvdG8uQnJhbmNoUgZicmFuY2g=');
+@$core.Deprecated('Use applicationsPackageDescriptor instead')
+const ApplicationsPackage$json = const {
+  '1': 'ApplicationsPackage',
+  '2': const [
+    const {'1': 'applications', '3': 1, '4': 3, '5': 11, '6': '.tp_proto.Application', '10': 'applications'},
+  ],
+};
+
+/// Descriptor for `ApplicationsPackage`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List applicationsPackageDescriptor = $convert.base64Decode('ChNBcHBsaWNhdGlvbnNQYWNrYWdlEjkKDGFwcGxpY2F0aW9ucxgBIAMoCzIVLnRwX3Byb3RvLkFwcGxpY2F0aW9uUgxhcHBsaWNhdGlvbnM=');
 @$core.Deprecated('Use betDescriptor instead')
 const Bet$json = const {
   '1': 'Bet',
@@ -139,6 +179,16 @@ const Coupon$json = const {
 
 /// Descriptor for `Coupon`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List couponDescriptor = $convert.base64Decode('CgZDb3Vwb24SDgoCaWQYASABKAlSAmlkEiEKBGJldHMYAiADKAsyDS50cF9wcm90by5CZXRSBGJldHMSGgoIYnJhbmNoSWQYAyABKAlSCGJyYW5jaElkEiQKDWFwcGxpY2F0aW9uSWQYBCABKAlSDWFwcGxpY2F0aW9uSWQSEgoEZGF0ZRgFIAEoCVIEZGF0ZRIcCglpc1Zpc2libGUYBiABKAhSCWlzVmlzaWJsZRIVCgNlbmQYByABKAhIAFIDZW5kiAEBQgYKBF9lbmQ=');
+@$core.Deprecated('Use couponsPackageDescriptor instead')
+const CouponsPackage$json = const {
+  '1': 'CouponsPackage',
+  '2': const [
+    const {'1': 'coupons', '3': 1, '4': 3, '5': 11, '6': '.tp_proto.Coupon', '10': 'coupons'},
+  ],
+};
+
+/// Descriptor for `CouponsPackage`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List couponsPackageDescriptor = $convert.base64Decode('Cg5Db3Vwb25zUGFja2FnZRIqCgdjb3Vwb25zGAEgAygLMhAudHBfcHJvdG8uQ291cG9uUgdjb3Vwb25z');
 @$core.Deprecated('Use userDescriptor instead')
 const User$json = const {
   '1': 'User',

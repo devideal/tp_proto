@@ -34,10 +34,16 @@ message League{
     string name = 2;
     string countryId = 3;
 }
+message LeaguesPackage{
+    repeated League leagues=1;
+}
 
 message Country{
     string id = 1;
     string name = 2;
+}
+message CountriesPackage{
+    repeated Country countries=1;
 }
 
 message Match{
@@ -50,12 +56,18 @@ message Match{
     string result=7;
     bool end =8;
 }
+message MatchesPackage{
+    repeated Match matches=1;
+}
 
 message Application{
     string id=1;
     string name=2;
     bool isActive=3;
     repeated Branch branch=4;
+}
+message ApplicationsPackage {
+    repeated Application applications=1;
 }
 
 message Bet{
@@ -80,6 +92,9 @@ message Coupon{
     string date=5;
     bool isVisible=6;
     optional bool end=7;
+}
+message CouponsPackage{
+    repeated Coupon coupons=1;
 }
 
 message User{

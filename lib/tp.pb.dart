@@ -559,7 +559,8 @@ class Application extends $pb.GeneratedMessage {
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
     ..aOB(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isActive', protoName: 'isActive')
-    ..pc<Branch>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'branch', $pb.PbFieldType.PM, subBuilder: Branch.create)
+    ..pc<Branch>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'branches', $pb.PbFieldType.PM, subBuilder: Branch.create)
+    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hiddenMessage', protoName: 'hiddenMessage')
     ..hasRequiredFields = false
   ;
 
@@ -568,7 +569,8 @@ class Application extends $pb.GeneratedMessage {
     $core.String? id,
     $core.String? name,
     $core.bool? isActive,
-    $core.Iterable<Branch>? branch,
+    $core.Iterable<Branch>? branches,
+    $core.String? hiddenMessage,
   }) {
     final _result = create();
     if (id != null) {
@@ -580,8 +582,11 @@ class Application extends $pb.GeneratedMessage {
     if (isActive != null) {
       _result.isActive = isActive;
     }
-    if (branch != null) {
-      _result.branch.addAll(branch);
+    if (branches != null) {
+      _result.branches.addAll(branches);
+    }
+    if (hiddenMessage != null) {
+      _result.hiddenMessage = hiddenMessage;
     }
     return _result;
   }
@@ -634,7 +639,16 @@ class Application extends $pb.GeneratedMessage {
   void clearIsActive() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.List<Branch> get branch => $_getList(3);
+  $core.List<Branch> get branches => $_getList(3);
+
+  @$pb.TagNumber(5)
+  $core.String get hiddenMessage => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set hiddenMessage($core.String v) { $_setString(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasHiddenMessage() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearHiddenMessage() => clearField(5);
 }
 
 class ApplicationsPackage extends $pb.GeneratedMessage {

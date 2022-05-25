@@ -115,12 +115,13 @@ const Application$json = const {
     const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
     const {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
     const {'1': 'isActive', '3': 3, '4': 1, '5': 8, '10': 'isActive'},
-    const {'1': 'branch', '3': 4, '4': 3, '5': 11, '6': '.tp_proto.Branch', '10': 'branch'},
+    const {'1': 'branches', '3': 4, '4': 3, '5': 11, '6': '.tp_proto.Branch', '10': 'branches'},
+    const {'1': 'hiddenMessage', '3': 5, '4': 1, '5': 9, '10': 'hiddenMessage'},
   ],
 };
 
 /// Descriptor for `Application`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List applicationDescriptor = $convert.base64Decode('CgtBcHBsaWNhdGlvbhIOCgJpZBgBIAEoCVICaWQSEgoEbmFtZRgCIAEoCVIEbmFtZRIaCghpc0FjdGl2ZRgDIAEoCFIIaXNBY3RpdmUSKAoGYnJhbmNoGAQgAygLMhAudHBfcHJvdG8uQnJhbmNoUgZicmFuY2g=');
+final $typed_data.Uint8List applicationDescriptor = $convert.base64Decode('CgtBcHBsaWNhdGlvbhIOCgJpZBgBIAEoCVICaWQSEgoEbmFtZRgCIAEoCVIEbmFtZRIaCghpc0FjdGl2ZRgDIAEoCFIIaXNBY3RpdmUSLAoIYnJhbmNoZXMYBCADKAsyEC50cF9wcm90by5CcmFuY2hSCGJyYW5jaGVzEiQKDWhpZGRlbk1lc3NhZ2UYBSABKAlSDWhpZGRlbk1lc3NhZ2U=');
 @$core.Deprecated('Use applicationsPackageDescriptor instead')
 const ApplicationsPackage$json = const {
   '1': 'ApplicationsPackage',

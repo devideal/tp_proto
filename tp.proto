@@ -64,7 +64,8 @@ message Application{
     string id=1;
     string name=2;
     bool isActive=3;
-    repeated Branch branch=4;
+    repeated Branch branches=4;
+    string hiddenMessage=5;
 }
 message ApplicationsPackage {
     repeated Application applications=1;

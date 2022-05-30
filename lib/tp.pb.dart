@@ -559,7 +559,7 @@ class Application extends $pb.GeneratedMessage {
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
     ..aOB(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isActive', protoName: 'isActive')
-    ..pc<Branch>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'branches', $pb.PbFieldType.PM, subBuilder: Branch.create)
+    ..aOM<BranchesPackage>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'branches', subBuilder: BranchesPackage.create)
     ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hiddenMessage', protoName: 'hiddenMessage')
     ..hasRequiredFields = false
   ;
@@ -569,7 +569,7 @@ class Application extends $pb.GeneratedMessage {
     $core.String? id,
     $core.String? name,
     $core.bool? isActive,
-    $core.Iterable<Branch>? branches,
+    BranchesPackage? branches,
     $core.String? hiddenMessage,
   }) {
     final _result = create();
@@ -583,7 +583,7 @@ class Application extends $pb.GeneratedMessage {
       _result.isActive = isActive;
     }
     if (branches != null) {
-      _result.branches.addAll(branches);
+      _result.branches = branches;
     }
     if (hiddenMessage != null) {
       _result.hiddenMessage = hiddenMessage;
@@ -639,7 +639,15 @@ class Application extends $pb.GeneratedMessage {
   void clearIsActive() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.List<Branch> get branches => $_getList(3);
+  BranchesPackage get branches => $_getN(3);
+  @$pb.TagNumber(4)
+  set branches(BranchesPackage v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasBranches() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearBranches() => clearField(4);
+  @$pb.TagNumber(4)
+  BranchesPackage ensureBranches() => $_ensure(3);
 
   @$pb.TagNumber(5)
   $core.String get hiddenMessage => $_getSZ(4);
@@ -690,6 +698,47 @@ class ApplicationsPackage extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(1)
   $core.List<Application> get applications => $_getList(0);
+}
+
+class BetPackage extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BetPackage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
+    ..pc<Bet>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bets', $pb.PbFieldType.PM, subBuilder: Bet.create)
+    ..hasRequiredFields = false
+  ;
+
+  BetPackage._() : super();
+  factory BetPackage({
+    $core.Iterable<Bet>? bets,
+  }) {
+    final _result = create();
+    if (bets != null) {
+      _result.bets.addAll(bets);
+    }
+    return _result;
+  }
+  factory BetPackage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory BetPackage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  BetPackage clone() => BetPackage()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  BetPackage copyWith(void Function(BetPackage) updates) => super.copyWith((message) => updates(message as BetPackage)) as BetPackage; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static BetPackage create() => BetPackage._();
+  BetPackage createEmptyInstance() => create();
+  static $pb.PbList<BetPackage> createRepeated() => $pb.PbList<BetPackage>();
+  @$core.pragma('dart2js:noInline')
+  static BetPackage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BetPackage>(create);
+  static BetPackage? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<Bet> get bets => $_getList(0);
 }
 
 class Bet extends $pb.GeneratedMessage {
@@ -795,6 +844,47 @@ class Bet extends $pb.GeneratedMessage {
   void clearWin() => clearField(5);
 }
 
+class BranchesPackage extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BranchesPackage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
+    ..pc<Branch>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'branches', $pb.PbFieldType.PM, subBuilder: Branch.create)
+    ..hasRequiredFields = false
+  ;
+
+  BranchesPackage._() : super();
+  factory BranchesPackage({
+    $core.Iterable<Branch>? branches,
+  }) {
+    final _result = create();
+    if (branches != null) {
+      _result.branches.addAll(branches);
+    }
+    return _result;
+  }
+  factory BranchesPackage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory BranchesPackage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  BranchesPackage clone() => BranchesPackage()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  BranchesPackage copyWith(void Function(BranchesPackage) updates) => super.copyWith((message) => updates(message as BranchesPackage)) as BranchesPackage; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static BranchesPackage create() => BranchesPackage._();
+  BranchesPackage createEmptyInstance() => create();
+  static $pb.PbList<BranchesPackage> createRepeated() => $pb.PbList<BranchesPackage>();
+  @$core.pragma('dart2js:noInline')
+  static BranchesPackage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BranchesPackage>(create);
+  static BranchesPackage? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<Branch> get branches => $_getList(0);
+}
+
 class Branch extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Branch', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
@@ -873,7 +963,7 @@ class Branch extends $pb.GeneratedMessage {
 class Coupon extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Coupon', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
-    ..pc<Bet>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bets', $pb.PbFieldType.PM, subBuilder: Bet.create)
+    ..aOM<BetPackage>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bets', subBuilder: BetPackage.create)
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'branchId', protoName: 'branchId')
     ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'applicationId', protoName: 'applicationId')
     ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'date')
@@ -885,7 +975,7 @@ class Coupon extends $pb.GeneratedMessage {
   Coupon._() : super();
   factory Coupon({
     $core.String? id,
-    $core.Iterable<Bet>? bets,
+    BetPackage? bets,
     $core.String? branchId,
     $core.String? applicationId,
     $core.String? date,
@@ -897,7 +987,7 @@ class Coupon extends $pb.GeneratedMessage {
       _result.id = id;
     }
     if (bets != null) {
-      _result.bets.addAll(bets);
+      _result.bets = bets;
     }
     if (branchId != null) {
       _result.branchId = branchId;
@@ -947,7 +1037,15 @@ class Coupon extends $pb.GeneratedMessage {
   void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<Bet> get bets => $_getList(1);
+  BetPackage get bets => $_getN(1);
+  @$pb.TagNumber(2)
+  set bets(BetPackage v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasBets() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearBets() => clearField(2);
+  @$pb.TagNumber(2)
+  BetPackage ensureBets() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $core.String get branchId => $_getSZ(2);

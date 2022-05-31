@@ -559,8 +559,8 @@ class Application extends $pb.GeneratedMessage {
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
     ..aOB(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isActive', protoName: 'isActive')
-    ..aOM<BranchesPackage>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'branches', subBuilder: BranchesPackage.create)
-    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hiddenMessage', protoName: 'hiddenMessage')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hiddenMessage', protoName: 'hiddenMessage')
+    ..pc<Branch>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'branches', $pb.PbFieldType.PM, subBuilder: Branch.create)
     ..hasRequiredFields = false
   ;
 
@@ -569,8 +569,8 @@ class Application extends $pb.GeneratedMessage {
     $core.String? id,
     $core.String? name,
     $core.bool? isActive,
-    BranchesPackage? branches,
     $core.String? hiddenMessage,
+    $core.Iterable<Branch>? branches,
   }) {
     final _result = create();
     if (id != null) {
@@ -582,11 +582,11 @@ class Application extends $pb.GeneratedMessage {
     if (isActive != null) {
       _result.isActive = isActive;
     }
-    if (branches != null) {
-      _result.branches = branches;
-    }
     if (hiddenMessage != null) {
       _result.hiddenMessage = hiddenMessage;
+    }
+    if (branches != null) {
+      _result.branches.addAll(branches);
     }
     return _result;
   }
@@ -639,24 +639,16 @@ class Application extends $pb.GeneratedMessage {
   void clearIsActive() => clearField(3);
 
   @$pb.TagNumber(4)
-  BranchesPackage get branches => $_getN(3);
+  $core.String get hiddenMessage => $_getSZ(3);
   @$pb.TagNumber(4)
-  set branches(BranchesPackage v) { setField(4, v); }
+  set hiddenMessage($core.String v) { $_setString(3, v); }
   @$pb.TagNumber(4)
-  $core.bool hasBranches() => $_has(3);
+  $core.bool hasHiddenMessage() => $_has(3);
   @$pb.TagNumber(4)
-  void clearBranches() => clearField(4);
-  @$pb.TagNumber(4)
-  BranchesPackage ensureBranches() => $_ensure(3);
+  void clearHiddenMessage() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.String get hiddenMessage => $_getSZ(4);
-  @$pb.TagNumber(5)
-  set hiddenMessage($core.String v) { $_setString(4, v); }
-  @$pb.TagNumber(5)
-  $core.bool hasHiddenMessage() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearHiddenMessage() => clearField(5);
+  $core.List<Branch> get branches => $_getList(4);
 }
 
 class ApplicationsPackage extends $pb.GeneratedMessage {
@@ -700,14 +692,14 @@ class ApplicationsPackage extends $pb.GeneratedMessage {
   $core.List<Application> get applications => $_getList(0);
 }
 
-class BetPackage extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BetPackage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
+class BetsPackage extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BetsPackage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
     ..pc<Bet>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bets', $pb.PbFieldType.PM, subBuilder: Bet.create)
     ..hasRequiredFields = false
   ;
 
-  BetPackage._() : super();
-  factory BetPackage({
+  BetsPackage._() : super();
+  factory BetsPackage({
     $core.Iterable<Bet>? bets,
   }) {
     final _result = create();
@@ -716,26 +708,26 @@ class BetPackage extends $pb.GeneratedMessage {
     }
     return _result;
   }
-  factory BetPackage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory BetPackage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory BetsPackage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory BetsPackage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  BetPackage clone() => BetPackage()..mergeFromMessage(this);
+  BetsPackage clone() => BetsPackage()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  BetPackage copyWith(void Function(BetPackage) updates) => super.copyWith((message) => updates(message as BetPackage)) as BetPackage; // ignore: deprecated_member_use
+  BetsPackage copyWith(void Function(BetsPackage) updates) => super.copyWith((message) => updates(message as BetsPackage)) as BetsPackage; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static BetPackage create() => BetPackage._();
-  BetPackage createEmptyInstance() => create();
-  static $pb.PbList<BetPackage> createRepeated() => $pb.PbList<BetPackage>();
+  static BetsPackage create() => BetsPackage._();
+  BetsPackage createEmptyInstance() => create();
+  static $pb.PbList<BetsPackage> createRepeated() => $pb.PbList<BetsPackage>();
   @$core.pragma('dart2js:noInline')
-  static BetPackage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BetPackage>(create);
-  static BetPackage? _defaultInstance;
+  static BetsPackage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BetsPackage>(create);
+  static BetsPackage? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<Bet> get bets => $_getList(0);
@@ -963,31 +955,28 @@ class Branch extends $pb.GeneratedMessage {
 class Coupon extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Coupon', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
-    ..aOM<BetPackage>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bets', subBuilder: BetPackage.create)
-    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'branchId', protoName: 'branchId')
-    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'applicationId', protoName: 'applicationId')
-    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'date')
-    ..aOB(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isVisible', protoName: 'isVisible')
-    ..aOB(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'end')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'branchId', protoName: 'branchId')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'applicationId', protoName: 'applicationId')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'date')
+    ..aOB(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isVisible', protoName: 'isVisible')
+    ..aOB(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'end')
+    ..aOM<BetsPackage>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'betsPackage', protoName: 'betsPackage', subBuilder: BetsPackage.create)
     ..hasRequiredFields = false
   ;
 
   Coupon._() : super();
   factory Coupon({
     $core.String? id,
-    BetPackage? bets,
     $core.String? branchId,
     $core.String? applicationId,
     $core.String? date,
     $core.bool? isVisible,
     $core.bool? end,
+    BetsPackage? betsPackage,
   }) {
     final _result = create();
     if (id != null) {
       _result.id = id;
-    }
-    if (bets != null) {
-      _result.bets = bets;
     }
     if (branchId != null) {
       _result.branchId = branchId;
@@ -1003,6 +992,9 @@ class Coupon extends $pb.GeneratedMessage {
     }
     if (end != null) {
       _result.end = end;
+    }
+    if (betsPackage != null) {
+      _result.betsPackage = betsPackage;
     }
     return _result;
   }
@@ -1037,60 +1029,60 @@ class Coupon extends $pb.GeneratedMessage {
   void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
-  BetPackage get bets => $_getN(1);
+  $core.String get branchId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set bets(BetPackage v) { setField(2, v); }
+  set branchId($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasBets() => $_has(1);
+  $core.bool hasBranchId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearBets() => clearField(2);
-  @$pb.TagNumber(2)
-  BetPackage ensureBets() => $_ensure(1);
+  void clearBranchId() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.String get branchId => $_getSZ(2);
+  $core.String get applicationId => $_getSZ(2);
   @$pb.TagNumber(3)
-  set branchId($core.String v) { $_setString(2, v); }
+  set applicationId($core.String v) { $_setString(2, v); }
   @$pb.TagNumber(3)
-  $core.bool hasBranchId() => $_has(2);
+  $core.bool hasApplicationId() => $_has(2);
   @$pb.TagNumber(3)
-  void clearBranchId() => clearField(3);
+  void clearApplicationId() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.String get applicationId => $_getSZ(3);
+  $core.String get date => $_getSZ(3);
   @$pb.TagNumber(4)
-  set applicationId($core.String v) { $_setString(3, v); }
+  set date($core.String v) { $_setString(3, v); }
   @$pb.TagNumber(4)
-  $core.bool hasApplicationId() => $_has(3);
+  $core.bool hasDate() => $_has(3);
   @$pb.TagNumber(4)
-  void clearApplicationId() => clearField(4);
+  void clearDate() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.String get date => $_getSZ(4);
+  $core.bool get isVisible => $_getBF(4);
   @$pb.TagNumber(5)
-  set date($core.String v) { $_setString(4, v); }
+  set isVisible($core.bool v) { $_setBool(4, v); }
   @$pb.TagNumber(5)
-  $core.bool hasDate() => $_has(4);
+  $core.bool hasIsVisible() => $_has(4);
   @$pb.TagNumber(5)
-  void clearDate() => clearField(5);
+  void clearIsVisible() => clearField(5);
 
   @$pb.TagNumber(6)
-  $core.bool get isVisible => $_getBF(5);
+  $core.bool get end => $_getBF(5);
   @$pb.TagNumber(6)
-  set isVisible($core.bool v) { $_setBool(5, v); }
+  set end($core.bool v) { $_setBool(5, v); }
   @$pb.TagNumber(6)
-  $core.bool hasIsVisible() => $_has(5);
+  $core.bool hasEnd() => $_has(5);
   @$pb.TagNumber(6)
-  void clearIsVisible() => clearField(6);
+  void clearEnd() => clearField(6);
 
   @$pb.TagNumber(7)
-  $core.bool get end => $_getBF(6);
+  BetsPackage get betsPackage => $_getN(6);
   @$pb.TagNumber(7)
-  set end($core.bool v) { $_setBool(6, v); }
+  set betsPackage(BetsPackage v) { setField(7, v); }
   @$pb.TagNumber(7)
-  $core.bool hasEnd() => $_has(6);
+  $core.bool hasBetsPackage() => $_has(6);
   @$pb.TagNumber(7)
-  void clearEnd() => clearField(7);
+  void clearBetsPackage() => clearField(7);
+  @$pb.TagNumber(7)
+  BetsPackage ensureBetsPackage() => $_ensure(6);
 }
 
 class CouponsPackage extends $pb.GeneratedMessage {

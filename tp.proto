@@ -65,13 +65,13 @@ message Application{
     string name=2;
     bool isActive=3;
     string hiddenMessage=4;
-    BranchesPackage branches=5;
+    repeated Branch branches=5;
 }
 message ApplicationsPackage {
     repeated Application applications=1;
 }
 
-message BetPackage{
+message BetsPackage{
     repeated Bet bets=1;
 }
 
@@ -95,13 +95,12 @@ message Branch{
 
 message Coupon{
     string id=1;
-    
     string branchId=2;
     string applicationId=3;
     string date=4;
     bool isVisible=5;
     optional bool end=6;
-    BetPackage bets=7;
+    BetsPackage betsPackage=7;
 }
 message CouponsPackage{
     repeated Coupon coupons=1;

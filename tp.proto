@@ -28,21 +28,24 @@ message Id{
 message Bool{
     bool value=1;
 }
-
+message LeaguesPackage{
+    repeated League leagues=1;
+}
 message League{
     string id = 1;
     string name = 2;
     string countryId = 3;
 }
-message LeaguesPackage{
-    repeated League leagues=1;
+message CountriesPackage {
+    repeated Country countries=1;
 }
-
 message Country{
     string id = 1;
     string name = 2;
 }
-
+message MatchesPackage{
+    repeated Match matches=1;
+}
 message Match{
     string id =1;
     string leagueId=2;
@@ -53,17 +56,15 @@ message Match{
     string result=7;
     bool end =8;
 }
-
+message ApplicationsPackage {
+    repeated Application applications=1;
+}
 message Application{
     string id=1;
     string name=2;
     repeated Branch branches=3;
     string hiddenMessage=4;
     bool isActive=5;
-}
-
-message ApplicationsPackage {
-    repeated Application applications=1;
 }
 
 message Bet{
@@ -79,7 +80,9 @@ message Branch{
     string name=2;
     string description=3;
 }
-
+message CouponsPackage {
+    repeated Coupon coupons=1;
+}
 message Coupon{
     string id=1;
     repeated Bet bets=2;

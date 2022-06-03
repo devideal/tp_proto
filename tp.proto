@@ -57,9 +57,9 @@ message Match{
 message Application{
     string id=1;
     string name=2;
-    bool isActive=3;
+    repeated Branch branches=3;
     string hiddenMessage=4;
-    repeated Branch branches=5;
+    bool isActive=5;
 }
 
 message ApplicationsPackage {

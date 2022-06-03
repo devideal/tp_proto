@@ -476,9 +476,9 @@ class Application extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Application', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
-    ..aOB(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isActive', protoName: 'isActive')
+    ..pc<Branch>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'branches', $pb.PbFieldType.PM, subBuilder: Branch.create)
     ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hiddenMessage', protoName: 'hiddenMessage')
-    ..pc<Branch>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'branches', $pb.PbFieldType.PM, subBuilder: Branch.create)
+    ..aOB(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isActive', protoName: 'isActive')
     ..hasRequiredFields = false
   ;
 
@@ -486,9 +486,9 @@ class Application extends $pb.GeneratedMessage {
   factory Application({
     $core.String? id,
     $core.String? name,
-    $core.bool? isActive,
-    $core.String? hiddenMessage,
     $core.Iterable<Branch>? branches,
+    $core.String? hiddenMessage,
+    $core.bool? isActive,
   }) {
     final _result = create();
     if (id != null) {
@@ -497,14 +497,14 @@ class Application extends $pb.GeneratedMessage {
     if (name != null) {
       _result.name = name;
     }
-    if (isActive != null) {
-      _result.isActive = isActive;
+    if (branches != null) {
+      _result.branches.addAll(branches);
     }
     if (hiddenMessage != null) {
       _result.hiddenMessage = hiddenMessage;
     }
-    if (branches != null) {
-      _result.branches.addAll(branches);
+    if (isActive != null) {
+      _result.isActive = isActive;
     }
     return _result;
   }
@@ -548,13 +548,7 @@ class Application extends $pb.GeneratedMessage {
   void clearName() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.bool get isActive => $_getBF(2);
-  @$pb.TagNumber(3)
-  set isActive($core.bool v) { $_setBool(2, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasIsActive() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearIsActive() => clearField(3);
+  $core.List<Branch> get branches => $_getList(2);
 
   @$pb.TagNumber(4)
   $core.String get hiddenMessage => $_getSZ(3);
@@ -566,7 +560,13 @@ class Application extends $pb.GeneratedMessage {
   void clearHiddenMessage() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.List<Branch> get branches => $_getList(4);
+  $core.bool get isActive => $_getBF(4);
+  @$pb.TagNumber(5)
+  set isActive($core.bool v) { $_setBool(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasIsActive() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearIsActive() => clearField(5);
 }
 
 class ApplicationsPackage extends $pb.GeneratedMessage {

@@ -326,53 +326,6 @@ func (x *Country) GetName() string {
 	return ""
 }
 
-type CountriesPackage struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Countries []*Country `protobuf:"bytes,1,rep,name=countries,proto3" json:"countries,omitempty"`
-}
-
-func (x *CountriesPackage) Reset() {
-	*x = CountriesPackage{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_tp_proto_msgTypes[6]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *CountriesPackage) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*CountriesPackage) ProtoMessage() {}
-
-func (x *CountriesPackage) ProtoReflect() protoreflect.Message {
-	mi := &file_tp_proto_msgTypes[6]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use CountriesPackage.ProtoReflect.Descriptor instead.
-func (*CountriesPackage) Descriptor() ([]byte, []int) {
-	return file_tp_proto_rawDescGZIP(), []int{6}
-}
-
-func (x *CountriesPackage) GetCountries() []*Country {
-	if x != nil {
-		return x.Countries
-	}
-	return nil
-}
-
 type Match struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -391,7 +344,7 @@ type Match struct {
 func (x *Match) Reset() {
 	*x = Match{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_tp_proto_msgTypes[7]
+		mi := &file_tp_proto_msgTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -404,7 +357,7 @@ func (x *Match) String() string {
 func (*Match) ProtoMessage() {}
 
 func (x *Match) ProtoReflect() protoreflect.Message {
-	mi := &file_tp_proto_msgTypes[7]
+	mi := &file_tp_proto_msgTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -417,7 +370,7 @@ func (x *Match) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Match.ProtoReflect.Descriptor instead.
 func (*Match) Descriptor() ([]byte, []int) {
-	return file_tp_proto_rawDescGZIP(), []int{7}
+	return file_tp_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *Match) GetId() string {
@@ -476,53 +429,6 @@ func (x *Match) GetEnd() bool {
 	return false
 }
 
-type MatchesPackage struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Matches []*Match `protobuf:"bytes,1,rep,name=matches,proto3" json:"matches,omitempty"`
-}
-
-func (x *MatchesPackage) Reset() {
-	*x = MatchesPackage{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_tp_proto_msgTypes[8]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *MatchesPackage) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*MatchesPackage) ProtoMessage() {}
-
-func (x *MatchesPackage) ProtoReflect() protoreflect.Message {
-	mi := &file_tp_proto_msgTypes[8]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use MatchesPackage.ProtoReflect.Descriptor instead.
-func (*MatchesPackage) Descriptor() ([]byte, []int) {
-	return file_tp_proto_rawDescGZIP(), []int{8}
-}
-
-func (x *MatchesPackage) GetMatches() []*Match {
-	if x != nil {
-		return x.Matches
-	}
-	return nil
-}
-
 type Application struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -538,7 +444,7 @@ type Application struct {
 func (x *Application) Reset() {
 	*x = Application{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_tp_proto_msgTypes[9]
+		mi := &file_tp_proto_msgTypes[7]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -551,7 +457,7 @@ func (x *Application) String() string {
 func (*Application) ProtoMessage() {}
 
 func (x *Application) ProtoReflect() protoreflect.Message {
-	mi := &file_tp_proto_msgTypes[9]
+	mi := &file_tp_proto_msgTypes[7]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -564,7 +470,7 @@ func (x *Application) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Application.ProtoReflect.Descriptor instead.
 func (*Application) Descriptor() ([]byte, []int) {
-	return file_tp_proto_rawDescGZIP(), []int{9}
+	return file_tp_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *Application) GetId() string {
@@ -602,6 +508,13 @@ func (x *Application) GetBranches() []*Branch {
 	return nil
 }
 
+func (x *Application) GetIsActive() bool {
+	if x != nil {
+		return x.IsActive
+	}
+	return false
+}
+
 type ApplicationsPackage struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -613,7 +526,7 @@ type ApplicationsPackage struct {
 func (x *ApplicationsPackage) Reset() {
 	*x = ApplicationsPackage{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_tp_proto_msgTypes[10]
+		mi := &file_tp_proto_msgTypes[8]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -626,7 +539,7 @@ func (x *ApplicationsPackage) String() string {
 func (*ApplicationsPackage) ProtoMessage() {}
 
 func (x *ApplicationsPackage) ProtoReflect() protoreflect.Message {
-	mi := &file_tp_proto_msgTypes[10]
+	mi := &file_tp_proto_msgTypes[8]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -639,7 +552,7 @@ func (x *ApplicationsPackage) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ApplicationsPackage.ProtoReflect.Descriptor instead.
 func (*ApplicationsPackage) Descriptor() ([]byte, []int) {
-	return file_tp_proto_rawDescGZIP(), []int{10}
+	return file_tp_proto_rawDescGZIP(), []int{8}
 }
 
 func (x *ApplicationsPackage) GetApplications() []*Application {
@@ -711,7 +624,7 @@ type Bet struct {
 func (x *Bet) Reset() {
 	*x = Bet{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_tp_proto_msgTypes[12]
+		mi := &file_tp_proto_msgTypes[9]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -724,7 +637,7 @@ func (x *Bet) String() string {
 func (*Bet) ProtoMessage() {}
 
 func (x *Bet) ProtoReflect() protoreflect.Message {
-	mi := &file_tp_proto_msgTypes[12]
+	mi := &file_tp_proto_msgTypes[9]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -737,7 +650,7 @@ func (x *Bet) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Bet.ProtoReflect.Descriptor instead.
 func (*Bet) Descriptor() ([]byte, []int) {
-	return file_tp_proto_rawDescGZIP(), []int{12}
+	return file_tp_proto_rawDescGZIP(), []int{9}
 }
 
 func (x *Bet) GetId() string {
@@ -775,53 +688,6 @@ func (x *Bet) GetWin() bool {
 	return false
 }
 
-type BranchesPackage struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Branches []*Branch `protobuf:"bytes,1,rep,name=branches,proto3" json:"branches,omitempty"`
-}
-
-func (x *BranchesPackage) Reset() {
-	*x = BranchesPackage{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_tp_proto_msgTypes[13]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *BranchesPackage) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*BranchesPackage) ProtoMessage() {}
-
-func (x *BranchesPackage) ProtoReflect() protoreflect.Message {
-	mi := &file_tp_proto_msgTypes[13]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use BranchesPackage.ProtoReflect.Descriptor instead.
-func (*BranchesPackage) Descriptor() ([]byte, []int) {
-	return file_tp_proto_rawDescGZIP(), []int{13}
-}
-
-func (x *BranchesPackage) GetBranches() []*Branch {
-	if x != nil {
-		return x.Branches
-	}
-	return nil
-}
-
 type Branch struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -835,7 +701,7 @@ type Branch struct {
 func (x *Branch) Reset() {
 	*x = Branch{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_tp_proto_msgTypes[14]
+		mi := &file_tp_proto_msgTypes[10]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -848,7 +714,7 @@ func (x *Branch) String() string {
 func (*Branch) ProtoMessage() {}
 
 func (x *Branch) ProtoReflect() protoreflect.Message {
-	mi := &file_tp_proto_msgTypes[14]
+	mi := &file_tp_proto_msgTypes[10]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -861,7 +727,7 @@ func (x *Branch) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Branch.ProtoReflect.Descriptor instead.
 func (*Branch) Descriptor() ([]byte, []int) {
-	return file_tp_proto_rawDescGZIP(), []int{14}
+	return file_tp_proto_rawDescGZIP(), []int{10}
 }
 
 func (x *Branch) GetId() string {
@@ -902,7 +768,7 @@ type Coupon struct {
 func (x *Coupon) Reset() {
 	*x = Coupon{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_tp_proto_msgTypes[15]
+		mi := &file_tp_proto_msgTypes[11]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -915,7 +781,7 @@ func (x *Coupon) String() string {
 func (*Coupon) ProtoMessage() {}
 
 func (x *Coupon) ProtoReflect() protoreflect.Message {
-	mi := &file_tp_proto_msgTypes[15]
+	mi := &file_tp_proto_msgTypes[11]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -928,7 +794,7 @@ func (x *Coupon) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Coupon.ProtoReflect.Descriptor instead.
 func (*Coupon) Descriptor() ([]byte, []int) {
-	return file_tp_proto_rawDescGZIP(), []int{15}
+	return file_tp_proto_rawDescGZIP(), []int{11}
 }
 
 func (x *Coupon) GetId() string {
@@ -1042,7 +908,7 @@ type User struct {
 func (x *User) Reset() {
 	*x = User{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_tp_proto_msgTypes[17]
+		mi := &file_tp_proto_msgTypes[12]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1055,7 +921,7 @@ func (x *User) String() string {
 func (*User) ProtoMessage() {}
 
 func (x *User) ProtoReflect() protoreflect.Message {
-	mi := &file_tp_proto_msgTypes[17]
+	mi := &file_tp_proto_msgTypes[12]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1068,7 +934,7 @@ func (x *User) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use User.ProtoReflect.Descriptor instead.
 func (*User) Descriptor() ([]byte, []int) {
-	return file_tp_proto_rawDescGZIP(), []int{17}
+	return file_tp_proto_rawDescGZIP(), []int{12}
 }
 
 func (x *User) GetId() string {
@@ -1261,7 +1127,7 @@ func file_tp_proto_rawDescGZIP() []byte {
 	return file_tp_proto_rawDescData
 }
 
-var file_tp_proto_msgTypes = make([]protoimpl.MessageInfo, 18)
+var file_tp_proto_msgTypes = make([]protoimpl.MessageInfo, 13)
 var file_tp_proto_goTypes = []interface{}{
 	(*Name)(nil),                // 0: tp_proto.Name
 	(*Id)(nil),                  // 1: tp_proto.Id
@@ -1400,18 +1266,6 @@ func file_tp_proto_init() {
 			}
 		}
 		file_tp_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*CountriesPackage); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_tp_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Match); i {
 			case 0:
 				return &v.state
@@ -1423,19 +1277,7 @@ func file_tp_proto_init() {
 				return nil
 			}
 		}
-		file_tp_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*MatchesPackage); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_tp_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+		file_tp_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Application); i {
 			case 0:
 				return &v.state
@@ -1447,7 +1289,7 @@ func file_tp_proto_init() {
 				return nil
 			}
 		}
-		file_tp_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+		file_tp_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ApplicationsPackage); i {
 			case 0:
 				return &v.state
@@ -1483,19 +1325,7 @@ func file_tp_proto_init() {
 				return nil
 			}
 		}
-		file_tp_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*BranchesPackage); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_tp_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
+		file_tp_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Branch); i {
 			case 0:
 				return &v.state
@@ -1507,7 +1337,7 @@ func file_tp_proto_init() {
 				return nil
 			}
 		}
-		file_tp_proto_msgTypes[15].Exporter = func(v interface{}, i int) interface{} {
+		file_tp_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Coupon); i {
 			case 0:
 				return &v.state
@@ -1519,19 +1349,7 @@ func file_tp_proto_init() {
 				return nil
 			}
 		}
-		file_tp_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*CouponsPackage); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_tp_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
+		file_tp_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*User); i {
 			case 0:
 				return &v.state
@@ -1544,15 +1362,15 @@ func file_tp_proto_init() {
 			}
 		}
 	}
-	file_tp_proto_msgTypes[12].OneofWrappers = []interface{}{}
-	file_tp_proto_msgTypes[15].OneofWrappers = []interface{}{}
+	file_tp_proto_msgTypes[9].OneofWrappers = []interface{}{}
+	file_tp_proto_msgTypes[11].OneofWrappers = []interface{}{}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_tp_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   18,
+			NumMessages:   13,
 			NumExtensions: 0,
 			NumServices:   1,
 		},

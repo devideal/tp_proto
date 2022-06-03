@@ -42,9 +42,6 @@ message Country{
     string id = 1;
     string name = 2;
 }
-message CountriesPackage{
-    repeated Country countries=1;
-}
 
 message Match{
     string id =1;
@@ -56,23 +53,17 @@ message Match{
     string result=7;
     bool end =8;
 }
-message MatchesPackage{
-    repeated Match matches=1;
-}
 
 message Application{
     string id=1;
     string name=2;
-    bool isActive=3;
+    repeated Branch branches=3;
     string hiddenMessage=4;
-    repeated Branch branches=5;
-}
-message ApplicationsPackage {
-    repeated Application applications=1;
+    bool isActive=5;
 }
 
-message BetsPackage{
-    repeated Bet bets=1;
+message ApplicationsPackage {
+    repeated Application applications=1;
 }
 
 message Bet{
@@ -83,10 +74,6 @@ message Bet{
     optional bool win=5;
 }
 
-message BranchesPackage{
-    repeated Branch branches=1;
-}
-
 message Branch{
     string id=1;
     string name=2;
@@ -95,15 +82,12 @@ message Branch{
 
 message Coupon{
     string id=1;
-    string branchId=2;
-    string applicationId=3;
-    string date=4;
-    bool isVisible=5;
-    optional bool end=6;
-    BetsPackage betsPackage=7;
-}
-message CouponsPackage{
-    repeated Coupon coupons=1;
+    repeated Bet bets=2;
+    string branchId=3;
+    string applicationId=4;
+    string date=5;
+    bool isVisible=6;
+    optional bool end=7;
 }
 
 message User{

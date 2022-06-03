@@ -327,47 +327,6 @@ class Country extends $pb.GeneratedMessage {
   void clearName() => clearField(2);
 }
 
-class CountriesPackage extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CountriesPackage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
-    ..pc<Country>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'countries', $pb.PbFieldType.PM, subBuilder: Country.create)
-    ..hasRequiredFields = false
-  ;
-
-  CountriesPackage._() : super();
-  factory CountriesPackage({
-    $core.Iterable<Country>? countries,
-  }) {
-    final _result = create();
-    if (countries != null) {
-      _result.countries.addAll(countries);
-    }
-    return _result;
-  }
-  factory CountriesPackage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory CountriesPackage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  CountriesPackage clone() => CountriesPackage()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  CountriesPackage copyWith(void Function(CountriesPackage) updates) => super.copyWith((message) => updates(message as CountriesPackage)) as CountriesPackage; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static CountriesPackage create() => CountriesPackage._();
-  CountriesPackage createEmptyInstance() => create();
-  static $pb.PbList<CountriesPackage> createRepeated() => $pb.PbList<CountriesPackage>();
-  @$core.pragma('dart2js:noInline')
-  static CountriesPackage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CountriesPackage>(create);
-  static CountriesPackage? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.List<Country> get countries => $_getList(0);
-}
-
 class Match extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Match', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
@@ -513,47 +472,6 @@ class Match extends $pb.GeneratedMessage {
   void clearEnd() => clearField(8);
 }
 
-class MatchesPackage extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MatchesPackage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
-    ..pc<Match>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'matches', $pb.PbFieldType.PM, subBuilder: Match.create)
-    ..hasRequiredFields = false
-  ;
-
-  MatchesPackage._() : super();
-  factory MatchesPackage({
-    $core.Iterable<Match>? matches,
-  }) {
-    final _result = create();
-    if (matches != null) {
-      _result.matches.addAll(matches);
-    }
-    return _result;
-  }
-  factory MatchesPackage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory MatchesPackage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  MatchesPackage clone() => MatchesPackage()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  MatchesPackage copyWith(void Function(MatchesPackage) updates) => super.copyWith((message) => updates(message as MatchesPackage)) as MatchesPackage; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static MatchesPackage create() => MatchesPackage._();
-  MatchesPackage createEmptyInstance() => create();
-  static $pb.PbList<MatchesPackage> createRepeated() => $pb.PbList<MatchesPackage>();
-  @$core.pragma('dart2js:noInline')
-  static MatchesPackage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MatchesPackage>(create);
-  static MatchesPackage? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.List<Match> get matches => $_getList(0);
-}
-
 class Application extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Application', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
@@ -630,13 +548,7 @@ class Application extends $pb.GeneratedMessage {
   void clearName() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.bool get isActive => $_getBF(2);
-  @$pb.TagNumber(3)
-  set isActive($core.bool v) { $_setBool(2, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasIsActive() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearIsActive() => clearField(3);
+  $core.List<Branch> get branches => $_getList(2);
 
   @$pb.TagNumber(4)
   $core.String get hiddenMessage => $_getSZ(3);
@@ -834,47 +746,6 @@ class Bet extends $pb.GeneratedMessage {
   $core.bool hasWin() => $_has(4);
   @$pb.TagNumber(5)
   void clearWin() => clearField(5);
-}
-
-class BranchesPackage extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BranchesPackage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
-    ..pc<Branch>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'branches', $pb.PbFieldType.PM, subBuilder: Branch.create)
-    ..hasRequiredFields = false
-  ;
-
-  BranchesPackage._() : super();
-  factory BranchesPackage({
-    $core.Iterable<Branch>? branches,
-  }) {
-    final _result = create();
-    if (branches != null) {
-      _result.branches.addAll(branches);
-    }
-    return _result;
-  }
-  factory BranchesPackage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory BranchesPackage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  BranchesPackage clone() => BranchesPackage()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  BranchesPackage copyWith(void Function(BranchesPackage) updates) => super.copyWith((message) => updates(message as BranchesPackage)) as BranchesPackage; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static BranchesPackage create() => BranchesPackage._();
-  BranchesPackage createEmptyInstance() => create();
-  static $pb.PbList<BranchesPackage> createRepeated() => $pb.PbList<BranchesPackage>();
-  @$core.pragma('dart2js:noInline')
-  static BranchesPackage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BranchesPackage>(create);
-  static BranchesPackage? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.List<Branch> get branches => $_getList(0);
 }
 
 class Branch extends $pb.GeneratedMessage {
@@ -1083,47 +954,6 @@ class Coupon extends $pb.GeneratedMessage {
   void clearBetsPackage() => clearField(7);
   @$pb.TagNumber(7)
   BetsPackage ensureBetsPackage() => $_ensure(6);
-}
-
-class CouponsPackage extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CouponsPackage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
-    ..pc<Coupon>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'coupons', $pb.PbFieldType.PM, subBuilder: Coupon.create)
-    ..hasRequiredFields = false
-  ;
-
-  CouponsPackage._() : super();
-  factory CouponsPackage({
-    $core.Iterable<Coupon>? coupons,
-  }) {
-    final _result = create();
-    if (coupons != null) {
-      _result.coupons.addAll(coupons);
-    }
-    return _result;
-  }
-  factory CouponsPackage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory CouponsPackage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  CouponsPackage clone() => CouponsPackage()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  CouponsPackage copyWith(void Function(CouponsPackage) updates) => super.copyWith((message) => updates(message as CouponsPackage)) as CouponsPackage; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static CouponsPackage create() => CouponsPackage._();
-  CouponsPackage createEmptyInstance() => create();
-  static $pb.PbList<CouponsPackage> createRepeated() => $pb.PbList<CouponsPackage>();
-  @$core.pragma('dart2js:noInline')
-  static CouponsPackage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CouponsPackage>(create);
-  static CouponsPackage? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.List<Coupon> get coupons => $_getList(0);
 }
 
 class User extends $pb.GeneratedMessage {

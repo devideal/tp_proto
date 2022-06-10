@@ -91,6 +91,7 @@ message Coupon{
     string date=5;
     bool isVisible=6;
     optional bool end=7;
+    string name=8;
 }
 
 message User{

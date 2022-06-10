@@ -920,6 +920,7 @@ class Coupon extends $pb.GeneratedMessage {
     ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'date')
     ..aOB(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isVisible', protoName: 'isVisible')
     ..aOB(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'end')
+    ..aOS(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
     ..hasRequiredFields = false
   ;
 
@@ -932,6 +933,7 @@ class Coupon extends $pb.GeneratedMessage {
     $core.String? date,
     $core.bool? isVisible,
     $core.bool? end,
+    $core.String? name,
   }) {
     final _result = create();
     if (id != null) {
@@ -954,6 +956,9 @@ class Coupon extends $pb.GeneratedMessage {
     }
     if (end != null) {
       _result.end = end;
+    }
+    if (name != null) {
+      _result.name = name;
     }
     return _result;
   }
@@ -1034,6 +1039,15 @@ class Coupon extends $pb.GeneratedMessage {
   $core.bool hasEnd() => $_has(6);
   @$pb.TagNumber(7)
   void clearEnd() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.String get name => $_getSZ(7);
+  @$pb.TagNumber(8)
+  set name($core.String v) { $_setString(7, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasName() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearName() => clearField(8);
 }
 
 class User extends $pb.GeneratedMessage {

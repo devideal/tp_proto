@@ -179,10 +179,10 @@ const Coupon$json = const {
     const {'1': 'bets', '3': 2, '4': 3, '5': 11, '6': '.tp_proto.Bet', '10': 'bets'},
     const {'1': 'branchId', '3': 3, '4': 1, '5': 9, '10': 'branchId'},
     const {'1': 'applicationId', '3': 4, '4': 1, '5': 9, '10': 'applicationId'},
-    const {'1': 'date', '3': 5, '4': 1, '5': 9, '10': 'date'},
-    const {'1': 'isVisible', '3': 6, '4': 1, '5': 8, '10': 'isVisible'},
-    const {'1': 'end', '3': 7, '4': 1, '5': 8, '9': 0, '10': 'end', '17': true},
-    const {'1': 'name', '3': 8, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'isVisible', '3': 5, '4': 1, '5': 8, '10': 'isVisible'},
+    const {'1': 'end', '3': 6, '4': 1, '5': 8, '9': 0, '10': 'end', '17': true},
+    const {'1': 'name', '3': 7, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'date', '3': 8, '4': 1, '5': 9, '10': 'date'},
   ],
   '8': const [
     const {'1': '_end'},
@@ -190,7 +190,7 @@ const Coupon$json = const {
 };
 
 /// Descriptor for `Coupon`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List couponDescriptor = $convert.base64Decode('CgZDb3Vwb24SDgoCaWQYASABKAlSAmlkEiEKBGJldHMYAiADKAsyDS50cF9wcm90by5CZXRSBGJldHMSGgoIYnJhbmNoSWQYAyABKAlSCGJyYW5jaElkEiQKDWFwcGxpY2F0aW9uSWQYBCABKAlSDWFwcGxpY2F0aW9uSWQSEgoEZGF0ZRgFIAEoCVIEZGF0ZRIcCglpc1Zpc2libGUYBiABKAhSCWlzVmlzaWJsZRIVCgNlbmQYByABKAhIAFIDZW5kiAEBEhIKBG5hbWUYCCABKAlSBG5hbWVCBgoEX2VuZA==');
+final $typed_data.Uint8List couponDescriptor = $convert.base64Decode('CgZDb3Vwb24SDgoCaWQYASABKAlSAmlkEiEKBGJldHMYAiADKAsyDS50cF9wcm90by5CZXRSBGJldHMSGgoIYnJhbmNoSWQYAyABKAlSCGJyYW5jaElkEiQKDWFwcGxpY2F0aW9uSWQYBCABKAlSDWFwcGxpY2F0aW9uSWQSHAoJaXNWaXNpYmxlGAUgASgIUglpc1Zpc2libGUSFQoDZW5kGAYgASgISABSA2VuZIgBARISCgRuYW1lGAcgASgJUgRuYW1lEhIKBGRhdGUYCCABKAlSBGRhdGVCBgoEX2VuZA==');
 @$core.Deprecated('Use userDescriptor instead')
 const User$json = const {
   '1': 'User',

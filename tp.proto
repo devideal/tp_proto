@@ -88,10 +88,10 @@ message Coupon{
     repeated Bet bets=2;
     string branchId=3;
     string applicationId=4;
-    string date=5;
-    bool isVisible=6;
-    optional bool end=7;
-    string name=8;
+    bool isVisible=5;
+    optional bool end=6;
+    string name=7;
+    string date=8;
 }
 
 message User{

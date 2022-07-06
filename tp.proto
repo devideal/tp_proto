@@ -53,8 +53,9 @@ message Match{
     string host =4;
     string guest =5;
     string date =6;
-    string result=7;
-    bool end =8;
+    string hour =7;
+    string result=8;
+    bool end =9;
 }
 message ApplicationsPackage {
     repeated Application applications=1;

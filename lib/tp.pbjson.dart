@@ -101,13 +101,14 @@ const Match$json = const {
     const {'1': 'host', '3': 4, '4': 1, '5': 9, '10': 'host'},
     const {'1': 'guest', '3': 5, '4': 1, '5': 9, '10': 'guest'},
     const {'1': 'date', '3': 6, '4': 1, '5': 9, '10': 'date'},
-    const {'1': 'result', '3': 7, '4': 1, '5': 9, '10': 'result'},
-    const {'1': 'end', '3': 8, '4': 1, '5': 8, '10': 'end'},
+    const {'1': 'hour', '3': 7, '4': 1, '5': 9, '10': 'hour'},
+    const {'1': 'result', '3': 8, '4': 1, '5': 9, '10': 'result'},
+    const {'1': 'end', '3': 9, '4': 1, '5': 8, '10': 'end'},
   ],
 };
 
 /// Descriptor for `Match`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List matchDescriptor = $convert.base64Decode('CgVNYXRjaBIOCgJpZBgBIAEoCVICaWQSGgoIbGVhZ3VlSWQYAiABKAlSCGxlYWd1ZUlkEhIKBHdlZWsYAyABKAVSBHdlZWsSEgoEaG9zdBgEIAEoCVIEaG9zdBIUCgVndWVzdBgFIAEoCVIFZ3Vlc3QSEgoEZGF0ZRgGIAEoCVIEZGF0ZRIWCgZyZXN1bHQYByABKAlSBnJlc3VsdBIQCgNlbmQYCCABKAhSA2VuZA==');
+final $typed_data.Uint8List matchDescriptor = $convert.base64Decode('CgVNYXRjaBIOCgJpZBgBIAEoCVICaWQSGgoIbGVhZ3VlSWQYAiABKAlSCGxlYWd1ZUlkEhIKBHdlZWsYAyABKAVSBHdlZWsSEgoEaG9zdBgEIAEoCVIEaG9zdBIUCgVndWVzdBgFIAEoCVIFZ3Vlc3QSEgoEZGF0ZRgGIAEoCVIEZGF0ZRISCgRob3VyGAcgASgJUgRob3VyEhYKBnJlc3VsdBgIIAEoCVIGcmVzdWx0EhAKA2VuZBgJIAEoCFIDZW5k');
 @$core.Deprecated('Use applicationsPackageDescriptor instead')
 const ApplicationsPackage$json = const {
   '1': 'ApplicationsPackage',

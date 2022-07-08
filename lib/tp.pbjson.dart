@@ -256,6 +256,16 @@ const MobileCoupon$json = const {
 
 /// Descriptor for `MobileCoupon`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List mobileCouponDescriptor = $convert.base64Decode('CgxNb2JpbGVDb3Vwb24SDgoCaWQYASABKAlSAmlkEicKBGJldHMYAiADKAsyEy50cF9wcm90by5Nb2JpbGVCZXRSBGJldHMSGgoIYnJhbmNoSWQYAyABKAlSCGJyYW5jaElkEiQKDWFwcGxpY2F0aW9uSWQYBCABKAlSDWFwcGxpY2F0aW9uSWQSHAoJaXNWaXNpYmxlGAUgASgIUglpc1Zpc2libGUSFQoDZW5kGAYgASgISABSA2VuZIgBARISCgRuYW1lGAcgASgJUgRuYW1lEhIKBGRhdGUYCCABKAlSBGRhdGVCBgoEX2VuZA==');
+@$core.Deprecated('Use mobileCouponsPackageDescriptor instead')
+const MobileCouponsPackage$json = const {
+  '1': 'MobileCouponsPackage',
+  '2': const [
+    const {'1': 'mobileCoupons', '3': 1, '4': 1, '5': 11, '6': '.tp_proto.MobileCoupon', '10': 'mobileCoupons'},
+  ],
+};
+
+/// Descriptor for `MobileCouponsPackage`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List mobileCouponsPackageDescriptor = $convert.base64Decode('ChRNb2JpbGVDb3Vwb25zUGFja2FnZRI8Cg1tb2JpbGVDb3Vwb25zGAEgASgLMhYudHBfcHJvdG8uTW9iaWxlQ291cG9uUg1tb2JpbGVDb3Vwb25z');
 @$core.Deprecated('Use mobileBetDescriptor instead')
 const MobileBet$json = const {
   '1': 'MobileBet',

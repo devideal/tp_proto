@@ -132,6 +132,9 @@ message MobileCoupon{
     string name=7;
     string date=8;
 }
+message MobileCouponsPackage{
+    MobileCoupon mobileCoupons=1;
+}
 message MobileBet{
     string id=1;
     MobileMatch match=2;

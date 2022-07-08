@@ -1542,6 +1542,55 @@ class MobileCoupon extends $pb.GeneratedMessage {
   void clearDate() => clearField(8);
 }
 
+class MobileCouponsPackage extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MobileCouponsPackage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
+    ..aOM<MobileCoupon>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mobileCoupons', protoName: 'mobileCoupons', subBuilder: MobileCoupon.create)
+    ..hasRequiredFields = false
+  ;
+
+  MobileCouponsPackage._() : super();
+  factory MobileCouponsPackage({
+    MobileCoupon? mobileCoupons,
+  }) {
+    final _result = create();
+    if (mobileCoupons != null) {
+      _result.mobileCoupons = mobileCoupons;
+    }
+    return _result;
+  }
+  factory MobileCouponsPackage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory MobileCouponsPackage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  MobileCouponsPackage clone() => MobileCouponsPackage()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  MobileCouponsPackage copyWith(void Function(MobileCouponsPackage) updates) => super.copyWith((message) => updates(message as MobileCouponsPackage)) as MobileCouponsPackage; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static MobileCouponsPackage create() => MobileCouponsPackage._();
+  MobileCouponsPackage createEmptyInstance() => create();
+  static $pb.PbList<MobileCouponsPackage> createRepeated() => $pb.PbList<MobileCouponsPackage>();
+  @$core.pragma('dart2js:noInline')
+  static MobileCouponsPackage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MobileCouponsPackage>(create);
+  static MobileCouponsPackage? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  MobileCoupon get mobileCoupons => $_getN(0);
+  @$pb.TagNumber(1)
+  set mobileCoupons(MobileCoupon v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasMobileCoupons() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMobileCoupons() => clearField(1);
+  @$pb.TagNumber(1)
+  MobileCoupon ensureMobileCoupons() => $_ensure(0);
+}
+
 class MobileBet extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MobileBet', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')

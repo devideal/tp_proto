@@ -1544,17 +1544,17 @@ class MobileCoupon extends $pb.GeneratedMessage {
 
 class MobileCouponsPackage extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MobileCouponsPackage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
-    ..aOM<MobileCoupon>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mobileCoupons', protoName: 'mobileCoupons', subBuilder: MobileCoupon.create)
+    ..pc<MobileCoupon>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mobileCoupons', $pb.PbFieldType.PM, protoName: 'mobileCoupons', subBuilder: MobileCoupon.create)
     ..hasRequiredFields = false
   ;
 
   MobileCouponsPackage._() : super();
   factory MobileCouponsPackage({
-    MobileCoupon? mobileCoupons,
+    $core.Iterable<MobileCoupon>? mobileCoupons,
   }) {
     final _result = create();
     if (mobileCoupons != null) {
-      _result.mobileCoupons = mobileCoupons;
+      _result.mobileCoupons.addAll(mobileCoupons);
     }
     return _result;
   }
@@ -1580,15 +1580,7 @@ class MobileCouponsPackage extends $pb.GeneratedMessage {
   static MobileCouponsPackage? _defaultInstance;
 
   @$pb.TagNumber(1)
-  MobileCoupon get mobileCoupons => $_getN(0);
-  @$pb.TagNumber(1)
-  set mobileCoupons(MobileCoupon v) { setField(1, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasMobileCoupons() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearMobileCoupons() => clearField(1);
-  @$pb.TagNumber(1)
-  MobileCoupon ensureMobileCoupons() => $_ensure(0);
+  $core.List<MobileCoupon> get mobileCoupons => $_getList(0);
 }
 
 class MobileBet extends $pb.GeneratedMessage {

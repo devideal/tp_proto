@@ -133,7 +133,7 @@ message MobileCoupon{
     string date=8;
 }
 message MobileCouponsPackage{
-    MobileCoupon mobileCoupons=1;
+    repeated MobileCoupon mobileCoupons=1;
 }
 message MobileBet{
     string id=1;

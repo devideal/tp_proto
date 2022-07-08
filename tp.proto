@@ -15,6 +15,8 @@ service TipsPanel{
     rpc AddApplication(Application) returns (Bool){}
     rpc AddCoupon(Coupon) returns (Bool){}
     rpc AddMatch(Match) returns (Bool){}
+    //mobile
+    rpc GetMobileCoupon(Id) returns (MobileCoupon){}
 }
 
 message Name{
@@ -100,4 +102,38 @@ message User{
     string username=3;
     string passwordhash=4;
     int32 role=5;
+}
+
+//mobile
+message MobileMatch{
+    string id =1;
+    MobileLeague league=2;
+    int32 week=3;
+    string host =4;
+    string guest =5;
+    string date =6;
+    string result=7;
+    bool end =8;
+}
+message MobileLeague{
+    string id = 1;
+    string name = 2;
+    string countryName = 3;
+}
+message MobileCoupon{
+    string id=1;
+    repeated MobileBet bets=2;
+    string branchId=3;
+    string applicationId=4;
+    bool isVisible=5;
+    optional bool end=6;
+    string name=7;
+    string date=8;
+}
+message MobileBet{
+    string id=1;
+    MobileMatch match=2;
+    string prediction=3;
+    double ratio=4;
+    optional bool win=5;
 }

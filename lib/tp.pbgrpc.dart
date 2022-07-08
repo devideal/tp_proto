@@ -58,6 +58,10 @@ class TipsPanelClient extends $grpc.Client {
       '/tp_proto.TipsPanel/AddMatch',
       ($0.Match value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Bool.fromBuffer(value));
+  static final _$getMobileCoupon = $grpc.ClientMethod<$0.Id, $0.MobileCoupon>(
+      '/tp_proto.TipsPanel/GetMobileCoupon',
+      ($0.Id value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.MobileCoupon.fromBuffer(value));
 
   TipsPanelClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -117,6 +121,11 @@ class TipsPanelClient extends $grpc.Client {
   $grpc.ResponseFuture<$0.Bool> addMatch($0.Match request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$addMatch, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.MobileCoupon> getMobileCoupon($0.Id request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getMobileCoupon, request, options: options);
   }
 }
 
@@ -201,6 +210,13 @@ abstract class TipsPanelServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.Match.fromBuffer(value),
         ($0.Bool value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.Id, $0.MobileCoupon>(
+        'GetMobileCoupon',
+        getMobileCoupon_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.Id.fromBuffer(value),
+        ($0.MobileCoupon value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.League> getLeague_Pre(
@@ -258,6 +274,11 @@ abstract class TipsPanelServiceBase extends $grpc.Service {
     return addMatch(call, await request);
   }
 
+  $async.Future<$0.MobileCoupon> getMobileCoupon_Pre(
+      $grpc.ServiceCall call, $async.Future<$0.Id> request) async {
+    return getMobileCoupon(call, await request);
+  }
+
   $async.Future<$0.League> getLeague($grpc.ServiceCall call, $0.Id request);
   $async.Future<$0.Country> getCountry($grpc.ServiceCall call, $0.Id request);
   $async.Future<$0.Match> getMatch($grpc.ServiceCall call, $0.Id request);
@@ -272,4 +293,6 @@ abstract class TipsPanelServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.Application request);
   $async.Future<$0.Bool> addCoupon($grpc.ServiceCall call, $0.Coupon request);
   $async.Future<$0.Bool> addMatch($grpc.ServiceCall call, $0.Match request);
+  $async.Future<$0.MobileCoupon> getMobileCoupon(
+      $grpc.ServiceCall call, $0.Id request);
 }

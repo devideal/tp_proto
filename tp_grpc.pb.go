@@ -33,6 +33,8 @@ type TipsPanelClient interface {
 	AddApplication(ctx context.Context, in *Application, opts ...grpc.CallOption) (*Bool, error)
 	AddCoupon(ctx context.Context, in *Coupon, opts ...grpc.CallOption) (*Bool, error)
 	AddMatch(ctx context.Context, in *Match, opts ...grpc.CallOption) (*Bool, error)
+	//mobile
+	GetMobileCoupon(ctx context.Context, in *Id, opts ...grpc.CallOption) (*MobileCoupon, error)
 }
 
 type tipsPanelClient struct {
@@ -142,6 +144,15 @@ func (c *tipsPanelClient) AddMatch(ctx context.Context, in *Match, opts ...grpc.
 	return out, nil
 }
 
+func (c *tipsPanelClient) GetMobileCoupon(ctx context.Context, in *Id, opts ...grpc.CallOption) (*MobileCoupon, error) {
+	out := new(MobileCoupon)
+	err := c.cc.Invoke(ctx, "/tp_proto.TipsPanel/GetMobileCoupon", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // TipsPanelServer is the server API for TipsPanel service.
 // All implementations must embed UnimplementedTipsPanelServer
 // for forward compatibility
@@ -157,6 +168,8 @@ type TipsPanelServer interface {
 	AddApplication(context.Context, *Application) (*Bool, error)
 	AddCoupon(context.Context, *Coupon) (*Bool, error)
 	AddMatch(context.Context, *Match) (*Bool, error)
+	//mobile
+	GetMobileCoupon(context.Context, *Id) (*MobileCoupon, error)
 	mustEmbedUnimplementedTipsPanelServer()
 }
 
@@ -196,6 +209,9 @@ func (UnimplementedTipsPanelServer) AddCoupon(context.Context, *Coupon) (*Bool, 
 }
 func (UnimplementedTipsPanelServer) AddMatch(context.Context, *Match) (*Bool, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AddMatch not implemented")
+}
+func (UnimplementedTipsPanelServer) GetMobileCoupon(context.Context, *Id) (*MobileCoupon, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetMobileCoupon not implemented")
 }
 func (UnimplementedTipsPanelServer) mustEmbedUnimplementedTipsPanelServer() {}
 
@@ -408,6 +424,24 @@ func _TipsPanel_AddMatch_Handler(srv interface{}, ctx context.Context, dec func(
 	return interceptor(ctx, in, info, handler)
 }
 
+func _TipsPanel_GetMobileCoupon_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Id)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TipsPanelServer).GetMobileCoupon(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/tp_proto.TipsPanel/GetMobileCoupon",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TipsPanelServer).GetMobileCoupon(ctx, req.(*Id))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // TipsPanel_ServiceDesc is the grpc.ServiceDesc for TipsPanel service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -458,6 +492,10 @@ var TipsPanel_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "AddMatch",
 			Handler:    _TipsPanel_AddMatch_Handler,
+		},
+		{
+			MethodName: "GetMobileCoupon",
+			Handler:    _TipsPanel_GetMobileCoupon_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

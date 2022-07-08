@@ -1153,3 +1153,469 @@ class User extends $pb.GeneratedMessage {
   void clearRole() => clearField(5);
 }
 
+class MobileMatch extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MobileMatch', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
+    ..aOM<MobileLeague>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'league', subBuilder: MobileLeague.create)
+    ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'week', $pb.PbFieldType.O3)
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'host')
+    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'guest')
+    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'date')
+    ..aOS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'result')
+    ..aOB(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'end')
+    ..hasRequiredFields = false
+  ;
+
+  MobileMatch._() : super();
+  factory MobileMatch({
+    $core.String? id,
+    MobileLeague? league,
+    $core.int? week,
+    $core.String? host,
+    $core.String? guest,
+    $core.String? date,
+    $core.String? result,
+    $core.bool? end,
+  }) {
+    final _result = create();
+    if (id != null) {
+      _result.id = id;
+    }
+    if (league != null) {
+      _result.league = league;
+    }
+    if (week != null) {
+      _result.week = week;
+    }
+    if (host != null) {
+      _result.host = host;
+    }
+    if (guest != null) {
+      _result.guest = guest;
+    }
+    if (date != null) {
+      _result.date = date;
+    }
+    if (result != null) {
+      _result.result = result;
+    }
+    if (end != null) {
+      _result.end = end;
+    }
+    return _result;
+  }
+  factory MobileMatch.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory MobileMatch.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  MobileMatch clone() => MobileMatch()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  MobileMatch copyWith(void Function(MobileMatch) updates) => super.copyWith((message) => updates(message as MobileMatch)) as MobileMatch; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static MobileMatch create() => MobileMatch._();
+  MobileMatch createEmptyInstance() => create();
+  static $pb.PbList<MobileMatch> createRepeated() => $pb.PbList<MobileMatch>();
+  @$core.pragma('dart2js:noInline')
+  static MobileMatch getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MobileMatch>(create);
+  static MobileMatch? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set id($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  MobileLeague get league => $_getN(1);
+  @$pb.TagNumber(2)
+  set league(MobileLeague v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasLeague() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearLeague() => clearField(2);
+  @$pb.TagNumber(2)
+  MobileLeague ensureLeague() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.int get week => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set week($core.int v) { $_setSignedInt32(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasWeek() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearWeek() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get host => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set host($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasHost() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearHost() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get guest => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set guest($core.String v) { $_setString(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasGuest() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearGuest() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get date => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set date($core.String v) { $_setString(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasDate() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearDate() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get result => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set result($core.String v) { $_setString(6, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasResult() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearResult() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.bool get end => $_getBF(7);
+  @$pb.TagNumber(8)
+  set end($core.bool v) { $_setBool(7, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasEnd() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearEnd() => clearField(8);
+}
+
+class MobileLeague extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MobileLeague', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'countryName', protoName: 'countryName')
+    ..hasRequiredFields = false
+  ;
+
+  MobileLeague._() : super();
+  factory MobileLeague({
+    $core.String? id,
+    $core.String? name,
+    $core.String? countryName,
+  }) {
+    final _result = create();
+    if (id != null) {
+      _result.id = id;
+    }
+    if (name != null) {
+      _result.name = name;
+    }
+    if (countryName != null) {
+      _result.countryName = countryName;
+    }
+    return _result;
+  }
+  factory MobileLeague.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory MobileLeague.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  MobileLeague clone() => MobileLeague()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  MobileLeague copyWith(void Function(MobileLeague) updates) => super.copyWith((message) => updates(message as MobileLeague)) as MobileLeague; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static MobileLeague create() => MobileLeague._();
+  MobileLeague createEmptyInstance() => create();
+  static $pb.PbList<MobileLeague> createRepeated() => $pb.PbList<MobileLeague>();
+  @$core.pragma('dart2js:noInline')
+  static MobileLeague getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MobileLeague>(create);
+  static MobileLeague? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set id($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get name => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set name($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearName() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get countryName => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set countryName($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasCountryName() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCountryName() => clearField(3);
+}
+
+class MobileCoupon extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MobileCoupon', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
+    ..pc<MobileBet>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bets', $pb.PbFieldType.PM, subBuilder: MobileBet.create)
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'branchId', protoName: 'branchId')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'applicationId', protoName: 'applicationId')
+    ..aOB(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isVisible', protoName: 'isVisible')
+    ..aOB(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'end')
+    ..aOS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..aOS(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'date')
+    ..hasRequiredFields = false
+  ;
+
+  MobileCoupon._() : super();
+  factory MobileCoupon({
+    $core.String? id,
+    $core.Iterable<MobileBet>? bets,
+    $core.String? branchId,
+    $core.String? applicationId,
+    $core.bool? isVisible,
+    $core.bool? end,
+    $core.String? name,
+    $core.String? date,
+  }) {
+    final _result = create();
+    if (id != null) {
+      _result.id = id;
+    }
+    if (bets != null) {
+      _result.bets.addAll(bets);
+    }
+    if (branchId != null) {
+      _result.branchId = branchId;
+    }
+    if (applicationId != null) {
+      _result.applicationId = applicationId;
+    }
+    if (isVisible != null) {
+      _result.isVisible = isVisible;
+    }
+    if (end != null) {
+      _result.end = end;
+    }
+    if (name != null) {
+      _result.name = name;
+    }
+    if (date != null) {
+      _result.date = date;
+    }
+    return _result;
+  }
+  factory MobileCoupon.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory MobileCoupon.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  MobileCoupon clone() => MobileCoupon()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  MobileCoupon copyWith(void Function(MobileCoupon) updates) => super.copyWith((message) => updates(message as MobileCoupon)) as MobileCoupon; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static MobileCoupon create() => MobileCoupon._();
+  MobileCoupon createEmptyInstance() => create();
+  static $pb.PbList<MobileCoupon> createRepeated() => $pb.PbList<MobileCoupon>();
+  @$core.pragma('dart2js:noInline')
+  static MobileCoupon getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MobileCoupon>(create);
+  static MobileCoupon? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set id($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<MobileBet> get bets => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.String get branchId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set branchId($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasBranchId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearBranchId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get applicationId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set applicationId($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasApplicationId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearApplicationId() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.bool get isVisible => $_getBF(4);
+  @$pb.TagNumber(5)
+  set isVisible($core.bool v) { $_setBool(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasIsVisible() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearIsVisible() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.bool get end => $_getBF(5);
+  @$pb.TagNumber(6)
+  set end($core.bool v) { $_setBool(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasEnd() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearEnd() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get name => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set name($core.String v) { $_setString(6, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasName() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearName() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.String get date => $_getSZ(7);
+  @$pb.TagNumber(8)
+  set date($core.String v) { $_setString(7, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasDate() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearDate() => clearField(8);
+}
+
+class MobileBet extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MobileBet', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
+    ..aOM<MobileMatch>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'match', subBuilder: MobileMatch.create)
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'prediction')
+    ..a<$core.double>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ratio', $pb.PbFieldType.OD)
+    ..aOB(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'win')
+    ..hasRequiredFields = false
+  ;
+
+  MobileBet._() : super();
+  factory MobileBet({
+    $core.String? id,
+    MobileMatch? match,
+    $core.String? prediction,
+    $core.double? ratio,
+    $core.bool? win,
+  }) {
+    final _result = create();
+    if (id != null) {
+      _result.id = id;
+    }
+    if (match != null) {
+      _result.match = match;
+    }
+    if (prediction != null) {
+      _result.prediction = prediction;
+    }
+    if (ratio != null) {
+      _result.ratio = ratio;
+    }
+    if (win != null) {
+      _result.win = win;
+    }
+    return _result;
+  }
+  factory MobileBet.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory MobileBet.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  MobileBet clone() => MobileBet()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  MobileBet copyWith(void Function(MobileBet) updates) => super.copyWith((message) => updates(message as MobileBet)) as MobileBet; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static MobileBet create() => MobileBet._();
+  MobileBet createEmptyInstance() => create();
+  static $pb.PbList<MobileBet> createRepeated() => $pb.PbList<MobileBet>();
+  @$core.pragma('dart2js:noInline')
+  static MobileBet getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MobileBet>(create);
+  static MobileBet? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set id($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  MobileMatch get match => $_getN(1);
+  @$pb.TagNumber(2)
+  set match(MobileMatch v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasMatch() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearMatch() => clearField(2);
+  @$pb.TagNumber(2)
+  MobileMatch ensureMatch() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.String get prediction => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set prediction($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasPrediction() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPrediction() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.double get ratio => $_getN(3);
+  @$pb.TagNumber(4)
+  set ratio($core.double v) { $_setDouble(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasRatio() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearRatio() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.bool get win => $_getBF(4);
+  @$pb.TagNumber(5)
+  set win($core.bool v) { $_setBool(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasWin() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearWin() => clearField(5);
+}
+

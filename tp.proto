@@ -56,7 +56,7 @@ message Match{
     string guest =5;
     string result=6;
     bool end =7;
-    int64 timestamp =8;
+    int32 timestamp =8;
 }
 message ApplicationsPackage {
     repeated Application applications=1;
@@ -93,7 +93,7 @@ message Coupon{
     bool isVisible=5;
     optional bool end=6;
     string name=7;
-    int64 timestamp=8;
+    int32 timestamp=8;
 }
 
 message User{
@@ -111,10 +111,10 @@ message MobileMatch{
     int32 week=3;
     string host =4;
     string guest =5;
-    string date =6;
-    string hour=7;
-    string result=8;
-    bool end =9;
+    string hour=6;
+    string result=7;
+    bool end =8;
+    int32 timestamp=9;
 }
 message MobileLeague{
     string id = 1;
@@ -129,7 +129,7 @@ message MobileCoupon{
     bool isVisible=5;
     optional bool end=6;
     string name=7;
-    string date=8;
+    int32 timestamp=8;
 }
 message MobileCouponsPackage{
     repeated MobileCoupon mobileCoupons=1;

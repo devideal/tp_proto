@@ -7,6 +7,7 @@
 
 import 'dart:core' as $core;
 
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class Name extends $pb.GeneratedMessage {
@@ -416,10 +417,9 @@ class Match extends $pb.GeneratedMessage {
     ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'week', $pb.PbFieldType.O3)
     ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'host')
     ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'guest')
-    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'date')
-    ..aOS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hour')
-    ..aOS(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'result')
-    ..aOB(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'end')
+    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'result')
+    ..aOB(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'end')
+    ..aInt64(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp')
     ..hasRequiredFields = false
   ;
 
@@ -430,10 +430,9 @@ class Match extends $pb.GeneratedMessage {
     $core.int? week,
     $core.String? host,
     $core.String? guest,
-    $core.String? date,
-    $core.String? hour,
     $core.String? result,
     $core.bool? end,
+    $fixnum.Int64? timestamp,
   }) {
     final _result = create();
     if (id != null) {
@@ -451,17 +450,14 @@ class Match extends $pb.GeneratedMessage {
     if (guest != null) {
       _result.guest = guest;
     }
-    if (date != null) {
-      _result.date = date;
-    }
-    if (hour != null) {
-      _result.hour = hour;
-    }
     if (result != null) {
       _result.result = result;
     }
     if (end != null) {
       _result.end = end;
+    }
+    if (timestamp != null) {
+      _result.timestamp = timestamp;
     }
     return _result;
   }
@@ -532,40 +528,31 @@ class Match extends $pb.GeneratedMessage {
   void clearGuest() => clearField(5);
 
   @$pb.TagNumber(6)
-  $core.String get date => $_getSZ(5);
+  $core.String get result => $_getSZ(5);
   @$pb.TagNumber(6)
-  set date($core.String v) { $_setString(5, v); }
+  set result($core.String v) { $_setString(5, v); }
   @$pb.TagNumber(6)
-  $core.bool hasDate() => $_has(5);
+  $core.bool hasResult() => $_has(5);
   @$pb.TagNumber(6)
-  void clearDate() => clearField(6);
+  void clearResult() => clearField(6);
 
   @$pb.TagNumber(7)
-  $core.String get hour => $_getSZ(6);
+  $core.bool get end => $_getBF(6);
   @$pb.TagNumber(7)
-  set hour($core.String v) { $_setString(6, v); }
+  set end($core.bool v) { $_setBool(6, v); }
   @$pb.TagNumber(7)
-  $core.bool hasHour() => $_has(6);
+  $core.bool hasEnd() => $_has(6);
   @$pb.TagNumber(7)
-  void clearHour() => clearField(7);
+  void clearEnd() => clearField(7);
 
   @$pb.TagNumber(8)
-  $core.String get result => $_getSZ(7);
+  $fixnum.Int64 get timestamp => $_getI64(7);
   @$pb.TagNumber(8)
-  set result($core.String v) { $_setString(7, v); }
+  set timestamp($fixnum.Int64 v) { $_setInt64(7, v); }
   @$pb.TagNumber(8)
-  $core.bool hasResult() => $_has(7);
+  $core.bool hasTimestamp() => $_has(7);
   @$pb.TagNumber(8)
-  void clearResult() => clearField(8);
-
-  @$pb.TagNumber(9)
-  $core.bool get end => $_getBF(8);
-  @$pb.TagNumber(9)
-  set end($core.bool v) { $_setBool(8, v); }
-  @$pb.TagNumber(9)
-  $core.bool hasEnd() => $_has(8);
-  @$pb.TagNumber(9)
-  void clearEnd() => clearField(9);
+  void clearTimestamp() => clearField(8);
 }
 
 class ApplicationsPackage extends $pb.GeneratedMessage {
@@ -934,7 +921,7 @@ class Coupon extends $pb.GeneratedMessage {
     ..aOB(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isVisible', protoName: 'isVisible')
     ..aOB(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'end')
     ..aOS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
-    ..aOS(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'date')
+    ..aInt64(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp')
     ..hasRequiredFields = false
   ;
 
@@ -947,7 +934,7 @@ class Coupon extends $pb.GeneratedMessage {
     $core.bool? isVisible,
     $core.bool? end,
     $core.String? name,
-    $core.String? date,
+    $fixnum.Int64? timestamp,
   }) {
     final _result = create();
     if (id != null) {
@@ -971,8 +958,8 @@ class Coupon extends $pb.GeneratedMessage {
     if (name != null) {
       _result.name = name;
     }
-    if (date != null) {
-      _result.date = date;
+    if (timestamp != null) {
+      _result.timestamp = timestamp;
     }
     return _result;
   }
@@ -1055,13 +1042,13 @@ class Coupon extends $pb.GeneratedMessage {
   void clearName() => clearField(7);
 
   @$pb.TagNumber(8)
-  $core.String get date => $_getSZ(7);
+  $fixnum.Int64 get timestamp => $_getI64(7);
   @$pb.TagNumber(8)
-  set date($core.String v) { $_setString(7, v); }
+  set timestamp($fixnum.Int64 v) { $_setInt64(7, v); }
   @$pb.TagNumber(8)
-  $core.bool hasDate() => $_has(7);
+  $core.bool hasTimestamp() => $_has(7);
   @$pb.TagNumber(8)
-  void clearDate() => clearField(8);
+  void clearTimestamp() => clearField(8);
 }
 
 class User extends $pb.GeneratedMessage {

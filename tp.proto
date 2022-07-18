@@ -81,6 +81,7 @@ message Branch{
     string id=1;
     string name=2;
     string description=3;
+    bool isVip=4;
 }
 message CouponsPackage {
     repeated Coupon coupons=1;

@@ -800,6 +800,7 @@ class Branch extends $pb.GeneratedMessage {
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'description')
+    ..aOB(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isVip', protoName: 'isVip')
     ..hasRequiredFields = false
   ;
 
@@ -808,6 +809,7 @@ class Branch extends $pb.GeneratedMessage {
     $core.String? id,
     $core.String? name,
     $core.String? description,
+    $core.bool? isVip,
   }) {
     final _result = create();
     if (id != null) {
@@ -818,6 +820,9 @@ class Branch extends $pb.GeneratedMessage {
     }
     if (description != null) {
       _result.description = description;
+    }
+    if (isVip != null) {
+      _result.isVip = isVip;
     }
     return _result;
   }
@@ -868,6 +873,15 @@ class Branch extends $pb.GeneratedMessage {
   $core.bool hasDescription() => $_has(2);
   @$pb.TagNumber(3)
   void clearDescription() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.bool get isVip => $_getBF(3);
+  @$pb.TagNumber(4)
+  set isVip($core.bool v) { $_setBool(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasIsVip() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearIsVip() => clearField(4);
 }
 
 class CouponsPackage extends $pb.GeneratedMessage {

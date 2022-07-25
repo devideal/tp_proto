@@ -211,7 +211,7 @@ const MobileMatch$json = const {
   '1': 'MobileMatch',
   '2': const [
     const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
-    const {'1': 'league', '3': 2, '4': 1, '5': 11, '6': '.tp_proto.MobileLeague', '10': 'league'},
+    const {'1': 'leagueId', '3': 2, '4': 1, '5': 9, '10': 'leagueId'},
     const {'1': 'week', '3': 3, '4': 1, '5': 5, '10': 'week'},
     const {'1': 'host', '3': 4, '4': 1, '5': 9, '10': 'host'},
     const {'1': 'guest', '3': 5, '4': 1, '5': 9, '10': 'guest'},
@@ -223,7 +223,7 @@ const MobileMatch$json = const {
 };
 
 /// Descriptor for `MobileMatch`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List mobileMatchDescriptor = $convert.base64Decode('CgtNb2JpbGVNYXRjaBIOCgJpZBgBIAEoCVICaWQSLgoGbGVhZ3VlGAIgASgLMhYudHBfcHJvdG8uTW9iaWxlTGVhZ3VlUgZsZWFndWUSEgoEd2VlaxgDIAEoBVIEd2VlaxISCgRob3N0GAQgASgJUgRob3N0EhQKBWd1ZXN0GAUgASgJUgVndWVzdBISCgRob3VyGAYgASgJUgRob3VyEhYKBnJlc3VsdBgHIAEoCVIGcmVzdWx0EhAKA2VuZBgIIAEoCFIDZW5kEhwKCXRpbWVzdGFtcBgJIAEoBVIJdGltZXN0YW1w');
+final $typed_data.Uint8List mobileMatchDescriptor = $convert.base64Decode('CgtNb2JpbGVNYXRjaBIOCgJpZBgBIAEoCVICaWQSGgoIbGVhZ3VlSWQYAiABKAlSCGxlYWd1ZUlkEhIKBHdlZWsYAyABKAVSBHdlZWsSEgoEaG9zdBgEIAEoCVIEaG9zdBIUCgVndWVzdBgFIAEoCVIFZ3Vlc3QSEgoEaG91chgGIAEoCVIEaG91chIWCgZyZXN1bHQYByABKAlSBnJlc3VsdBIQCgNlbmQYCCABKAhSA2VuZBIcCgl0aW1lc3RhbXAYCSABKAVSCXRpbWVzdGFtcA==');
 @$core.Deprecated('Use mobileLeagueDescriptor instead')
 const MobileLeague$json = const {
   '1': 'MobileLeague',

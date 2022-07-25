@@ -1170,7 +1170,7 @@ class User extends $pb.GeneratedMessage {
 class MobileMatch extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MobileMatch', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
-    ..aOM<MobileLeague>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'league', subBuilder: MobileLeague.create)
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'leagueId', protoName: 'leagueId')
     ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'week', $pb.PbFieldType.O3)
     ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'host')
     ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'guest')
@@ -1184,7 +1184,7 @@ class MobileMatch extends $pb.GeneratedMessage {
   MobileMatch._() : super();
   factory MobileMatch({
     $core.String? id,
-    MobileLeague? league,
+    $core.String? leagueId,
     $core.int? week,
     $core.String? host,
     $core.String? guest,
@@ -1197,8 +1197,8 @@ class MobileMatch extends $pb.GeneratedMessage {
     if (id != null) {
       _result.id = id;
     }
-    if (league != null) {
-      _result.league = league;
+    if (leagueId != null) {
+      _result.leagueId = leagueId;
     }
     if (week != null) {
       _result.week = week;
@@ -1254,15 +1254,13 @@ class MobileMatch extends $pb.GeneratedMessage {
   void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
-  MobileLeague get league => $_getN(1);
+  $core.String get leagueId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set league(MobileLeague v) { setField(2, v); }
+  set leagueId($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasLeague() => $_has(1);
+  $core.bool hasLeagueId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearLeague() => clearField(2);
-  @$pb.TagNumber(2)
-  MobileLeague ensureLeague() => $_ensure(1);
+  void clearLeagueId() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.int get week => $_getIZ(2);

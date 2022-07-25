@@ -108,7 +108,7 @@ message User{
 //mobile
 message MobileMatch{
     string id =1;
-    MobileLeague league=2;
+    string leagueId=2;
     int32 week=3;
     string host =4;
     string guest =5;

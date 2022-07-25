@@ -1170,25 +1170,23 @@ class User extends $pb.GeneratedMessage {
 class MobileMatch extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MobileMatch', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
-    ..aOM<MobileLeague>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'league', subBuilder: MobileLeague.create)
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'leagueId', protoName: 'leagueId')
     ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'week', $pb.PbFieldType.O3)
     ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'host')
     ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'guest')
-    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hour')
-    ..aOS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'result')
-    ..aOB(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'end')
-    ..a<$core.int>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', $pb.PbFieldType.O3)
+    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'result')
+    ..aOB(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'end')
+    ..a<$core.int>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', $pb.PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
   MobileMatch._() : super();
   factory MobileMatch({
     $core.String? id,
-    MobileLeague? league,
+    $core.String? leagueId,
     $core.int? week,
     $core.String? host,
     $core.String? guest,
-    $core.String? hour,
     $core.String? result,
     $core.bool? end,
     $core.int? timestamp,
@@ -1197,8 +1195,8 @@ class MobileMatch extends $pb.GeneratedMessage {
     if (id != null) {
       _result.id = id;
     }
-    if (league != null) {
-      _result.league = league;
+    if (leagueId != null) {
+      _result.leagueId = leagueId;
     }
     if (week != null) {
       _result.week = week;
@@ -1208,9 +1206,6 @@ class MobileMatch extends $pb.GeneratedMessage {
     }
     if (guest != null) {
       _result.guest = guest;
-    }
-    if (hour != null) {
-      _result.hour = hour;
     }
     if (result != null) {
       _result.result = result;
@@ -1254,15 +1249,13 @@ class MobileMatch extends $pb.GeneratedMessage {
   void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
-  MobileLeague get league => $_getN(1);
+  $core.String get leagueId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set league(MobileLeague v) { setField(2, v); }
+  set leagueId($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasLeague() => $_has(1);
+  $core.bool hasLeagueId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearLeague() => clearField(2);
-  @$pb.TagNumber(2)
-  MobileLeague ensureLeague() => $_ensure(1);
+  void clearLeagueId() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.int get week => $_getIZ(2);
@@ -1292,40 +1285,31 @@ class MobileMatch extends $pb.GeneratedMessage {
   void clearGuest() => clearField(5);
 
   @$pb.TagNumber(6)
-  $core.String get hour => $_getSZ(5);
+  $core.String get result => $_getSZ(5);
   @$pb.TagNumber(6)
-  set hour($core.String v) { $_setString(5, v); }
+  set result($core.String v) { $_setString(5, v); }
   @$pb.TagNumber(6)
-  $core.bool hasHour() => $_has(5);
+  $core.bool hasResult() => $_has(5);
   @$pb.TagNumber(6)
-  void clearHour() => clearField(6);
+  void clearResult() => clearField(6);
 
   @$pb.TagNumber(7)
-  $core.String get result => $_getSZ(6);
+  $core.bool get end => $_getBF(6);
   @$pb.TagNumber(7)
-  set result($core.String v) { $_setString(6, v); }
+  set end($core.bool v) { $_setBool(6, v); }
   @$pb.TagNumber(7)
-  $core.bool hasResult() => $_has(6);
+  $core.bool hasEnd() => $_has(6);
   @$pb.TagNumber(7)
-  void clearResult() => clearField(7);
+  void clearEnd() => clearField(7);
 
   @$pb.TagNumber(8)
-  $core.bool get end => $_getBF(7);
+  $core.int get timestamp => $_getIZ(7);
   @$pb.TagNumber(8)
-  set end($core.bool v) { $_setBool(7, v); }
+  set timestamp($core.int v) { $_setSignedInt32(7, v); }
   @$pb.TagNumber(8)
-  $core.bool hasEnd() => $_has(7);
+  $core.bool hasTimestamp() => $_has(7);
   @$pb.TagNumber(8)
-  void clearEnd() => clearField(8);
-
-  @$pb.TagNumber(9)
-  $core.int get timestamp => $_getIZ(8);
-  @$pb.TagNumber(9)
-  set timestamp($core.int v) { $_setSignedInt32(8, v); }
-  @$pb.TagNumber(9)
-  $core.bool hasTimestamp() => $_has(8);
-  @$pb.TagNumber(9)
-  void clearTimestamp() => clearField(9);
+  void clearTimestamp() => clearField(8);
 }
 
 class MobileLeague extends $pb.GeneratedMessage {

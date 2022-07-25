@@ -216,13 +216,12 @@ const MobileMatch$json = const {
     const {'1': 'host', '3': 4, '4': 1, '5': 9, '10': 'host'},
     const {'1': 'guest', '3': 5, '4': 1, '5': 9, '10': 'guest'},
     const {'1': 'result', '3': 6, '4': 1, '5': 9, '10': 'result'},
-    const {'1': 'end', '3': 7, '4': 1, '5': 8, '10': 'end'},
-    const {'1': 'timestamp', '3': 8, '4': 1, '5': 5, '10': 'timestamp'},
+    const {'1': 'timestamp', '3': 7, '4': 1, '5': 5, '10': 'timestamp'},
   ],
 };
 
 /// Descriptor for `MobileMatch`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List mobileMatchDescriptor = $convert.base64Decode('CgtNb2JpbGVNYXRjaBIOCgJpZBgBIAEoCVICaWQSGgoIbGVhZ3VlSWQYAiABKAlSCGxlYWd1ZUlkEhIKBHdlZWsYAyABKAVSBHdlZWsSEgoEaG9zdBgEIAEoCVIEaG9zdBIUCgVndWVzdBgFIAEoCVIFZ3Vlc3QSFgoGcmVzdWx0GAYgASgJUgZyZXN1bHQSEAoDZW5kGAcgASgIUgNlbmQSHAoJdGltZXN0YW1wGAggASgFUgl0aW1lc3RhbXA=');
+final $typed_data.Uint8List mobileMatchDescriptor = $convert.base64Decode('CgtNb2JpbGVNYXRjaBIOCgJpZBgBIAEoCVICaWQSGgoIbGVhZ3VlSWQYAiABKAlSCGxlYWd1ZUlkEhIKBHdlZWsYAyABKAVSBHdlZWsSEgoEaG9zdBgEIAEoCVIEaG9zdBIUCgVndWVzdBgFIAEoCVIFZ3Vlc3QSFgoGcmVzdWx0GAYgASgJUgZyZXN1bHQSHAoJdGltZXN0YW1wGAcgASgFUgl0aW1lc3RhbXA=');
 @$core.Deprecated('Use mobileLeagueDescriptor instead')
 const MobileLeague$json = const {
   '1': 'MobileLeague',
@@ -235,6 +234,16 @@ const MobileLeague$json = const {
 
 /// Descriptor for `MobileLeague`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List mobileLeagueDescriptor = $convert.base64Decode('CgxNb2JpbGVMZWFndWUSDgoCaWQYASABKAlSAmlkEhIKBG5hbWUYAiABKAlSBG5hbWUSIAoLY291bnRyeU5hbWUYAyABKAlSC2NvdW50cnlOYW1l');
+@$core.Deprecated('Use mobileLeaguesPackageDescriptor instead')
+const MobileLeaguesPackage$json = const {
+  '1': 'MobileLeaguesPackage',
+  '2': const [
+    const {'1': 'mobileLeagues', '3': 1, '4': 3, '5': 11, '6': '.tp_proto.MobileLeague', '10': 'mobileLeagues'},
+  ],
+};
+
+/// Descriptor for `MobileLeaguesPackage`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List mobileLeaguesPackageDescriptor = $convert.base64Decode('ChRNb2JpbGVMZWFndWVzUGFja2FnZRI8Cg1tb2JpbGVMZWFndWVzGAEgAygLMhYudHBfcHJvdG8uTW9iaWxlTGVhZ3VlUg1tb2JpbGVMZWFndWVz');
 @$core.Deprecated('Use mobileCouponDescriptor instead')
 const MobileCoupon$json = const {
   '1': 'MobileCoupon',

@@ -113,14 +113,18 @@ message MobileMatch{
     string host =4;
     string guest =5;
     string result=6;
-    bool end =7;
-    int32 timestamp=8;
+    int32 timestamp=7;
 }
 message MobileLeague{
     string id = 1;
     string name = 2;
     string countryName = 3;
 }
+
+message MobileLeaguesPackage{
+    repeated MobileLeague mobileLeagues=1;
+}
+
 message MobileCoupon{
     string id=1;
     repeated MobileBet bets=2;

@@ -1175,8 +1175,7 @@ class MobileMatch extends $pb.GeneratedMessage {
     ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'host')
     ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'guest')
     ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'result')
-    ..aOB(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'end')
-    ..a<$core.int>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', $pb.PbFieldType.O3)
+    ..a<$core.int>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', $pb.PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
@@ -1188,7 +1187,6 @@ class MobileMatch extends $pb.GeneratedMessage {
     $core.String? host,
     $core.String? guest,
     $core.String? result,
-    $core.bool? end,
     $core.int? timestamp,
   }) {
     final _result = create();
@@ -1209,9 +1207,6 @@ class MobileMatch extends $pb.GeneratedMessage {
     }
     if (result != null) {
       _result.result = result;
-    }
-    if (end != null) {
-      _result.end = end;
     }
     if (timestamp != null) {
       _result.timestamp = timestamp;
@@ -1294,22 +1289,13 @@ class MobileMatch extends $pb.GeneratedMessage {
   void clearResult() => clearField(6);
 
   @$pb.TagNumber(7)
-  $core.bool get end => $_getBF(6);
+  $core.int get timestamp => $_getIZ(6);
   @$pb.TagNumber(7)
-  set end($core.bool v) { $_setBool(6, v); }
+  set timestamp($core.int v) { $_setSignedInt32(6, v); }
   @$pb.TagNumber(7)
-  $core.bool hasEnd() => $_has(6);
+  $core.bool hasTimestamp() => $_has(6);
   @$pb.TagNumber(7)
-  void clearEnd() => clearField(7);
-
-  @$pb.TagNumber(8)
-  $core.int get timestamp => $_getIZ(7);
-  @$pb.TagNumber(8)
-  set timestamp($core.int v) { $_setSignedInt32(7, v); }
-  @$pb.TagNumber(8)
-  $core.bool hasTimestamp() => $_has(7);
-  @$pb.TagNumber(8)
-  void clearTimestamp() => clearField(8);
+  void clearTimestamp() => clearField(7);
 }
 
 class MobileLeague extends $pb.GeneratedMessage {
@@ -1385,6 +1371,47 @@ class MobileLeague extends $pb.GeneratedMessage {
   $core.bool hasCountryName() => $_has(2);
   @$pb.TagNumber(3)
   void clearCountryName() => clearField(3);
+}
+
+class MobileLeaguesPackage extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MobileLeaguesPackage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
+    ..pc<MobileLeague>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mobileLeagues', $pb.PbFieldType.PM, protoName: 'mobileLeagues', subBuilder: MobileLeague.create)
+    ..hasRequiredFields = false
+  ;
+
+  MobileLeaguesPackage._() : super();
+  factory MobileLeaguesPackage({
+    $core.Iterable<MobileLeague>? mobileLeagues,
+  }) {
+    final _result = create();
+    if (mobileLeagues != null) {
+      _result.mobileLeagues.addAll(mobileLeagues);
+    }
+    return _result;
+  }
+  factory MobileLeaguesPackage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory MobileLeaguesPackage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  MobileLeaguesPackage clone() => MobileLeaguesPackage()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  MobileLeaguesPackage copyWith(void Function(MobileLeaguesPackage) updates) => super.copyWith((message) => updates(message as MobileLeaguesPackage)) as MobileLeaguesPackage; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static MobileLeaguesPackage create() => MobileLeaguesPackage._();
+  MobileLeaguesPackage createEmptyInstance() => create();
+  static $pb.PbList<MobileLeaguesPackage> createRepeated() => $pb.PbList<MobileLeaguesPackage>();
+  @$core.pragma('dart2js:noInline')
+  static MobileLeaguesPackage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MobileLeaguesPackage>(create);
+  static MobileLeaguesPackage? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<MobileLeague> get mobileLeagues => $_getList(0);
 }
 
 class MobileCoupon extends $pb.GeneratedMessage {

@@ -158,11 +158,12 @@ const Branch$json = const {
     const {'1': 'description', '3': 3, '4': 1, '5': 9, '10': 'description'},
     const {'1': 'isVip', '3': 4, '4': 1, '5': 8, '10': 'isVip'},
     const {'1': 'revenueCatOfferingId', '3': 5, '4': 1, '5': 9, '10': 'revenueCatOfferingId'},
+    const {'1': 'revenueCatEntitlementId', '3': 6, '4': 1, '5': 9, '10': 'revenueCatEntitlementId'},
   ],
 };
 
 /// Descriptor for `Branch`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List branchDescriptor = $convert.base64Decode('CgZCcmFuY2gSDgoCaWQYASABKAlSAmlkEhIKBG5hbWUYAiABKAlSBG5hbWUSIAoLZGVzY3JpcHRpb24YAyABKAlSC2Rlc2NyaXB0aW9uEhQKBWlzVmlwGAQgASgIUgVpc1ZpcBIyChRyZXZlbnVlQ2F0T2ZmZXJpbmdJZBgFIAEoCVIUcmV2ZW51ZUNhdE9mZmVyaW5nSWQ=');
+final $typed_data.Uint8List branchDescriptor = $convert.base64Decode('CgZCcmFuY2gSDgoCaWQYASABKAlSAmlkEhIKBG5hbWUYAiABKAlSBG5hbWUSIAoLZGVzY3JpcHRpb24YAyABKAlSC2Rlc2NyaXB0aW9uEhQKBWlzVmlwGAQgASgIUgVpc1ZpcBIyChRyZXZlbnVlQ2F0T2ZmZXJpbmdJZBgFIAEoCVIUcmV2ZW51ZUNhdE9mZmVyaW5nSWQSOAoXcmV2ZW51ZUNhdEVudGl0bGVtZW50SWQYBiABKAlSF3JldmVudWVDYXRFbnRpdGxlbWVudElk');
 @$core.Deprecated('Use couponsPackageDescriptor instead')
 const CouponsPackage$json = const {
   '1': 'CouponsPackage',

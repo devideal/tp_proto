@@ -802,6 +802,7 @@ class Branch extends $pb.GeneratedMessage {
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'description')
     ..aOB(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isVip', protoName: 'isVip')
     ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'revenueCatOfferingId', protoName: 'revenueCatOfferingId')
+    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'revenueCatEntitlementId', protoName: 'revenueCatEntitlementId')
     ..hasRequiredFields = false
   ;
 
@@ -812,6 +813,7 @@ class Branch extends $pb.GeneratedMessage {
     $core.String? description,
     $core.bool? isVip,
     $core.String? revenueCatOfferingId,
+    $core.String? revenueCatEntitlementId,
   }) {
     final _result = create();
     if (id != null) {
@@ -828,6 +830,9 @@ class Branch extends $pb.GeneratedMessage {
     }
     if (revenueCatOfferingId != null) {
       _result.revenueCatOfferingId = revenueCatOfferingId;
+    }
+    if (revenueCatEntitlementId != null) {
+      _result.revenueCatEntitlementId = revenueCatEntitlementId;
     }
     return _result;
   }
@@ -896,6 +901,15 @@ class Branch extends $pb.GeneratedMessage {
   $core.bool hasRevenueCatOfferingId() => $_has(4);
   @$pb.TagNumber(5)
   void clearRevenueCatOfferingId() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get revenueCatEntitlementId => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set revenueCatEntitlementId($core.String v) { $_setString(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasRevenueCatEntitlementId() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearRevenueCatEntitlementId() => clearField(6);
 }
 
 class CouponsPackage extends $pb.GeneratedMessage {

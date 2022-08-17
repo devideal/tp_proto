@@ -196,6 +196,7 @@ class League extends $pb.GeneratedMessage {
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'countryId', protoName: 'countryId')
+    ..pPS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'teams')
     ..hasRequiredFields = false
   ;
 
@@ -204,6 +205,7 @@ class League extends $pb.GeneratedMessage {
     $core.String? id,
     $core.String? name,
     $core.String? countryId,
+    $core.Iterable<$core.String>? teams,
   }) {
     final _result = create();
     if (id != null) {
@@ -214,6 +216,9 @@ class League extends $pb.GeneratedMessage {
     }
     if (countryId != null) {
       _result.countryId = countryId;
+    }
+    if (teams != null) {
+      _result.teams.addAll(teams);
     }
     return _result;
   }
@@ -264,6 +269,9 @@ class League extends $pb.GeneratedMessage {
   $core.bool hasCountryId() => $_has(2);
   @$pb.TagNumber(3)
   void clearCountryId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.List<$core.String> get teams => $_getList(3);
 }
 
 class CountriesPackage extends $pb.GeneratedMessage {

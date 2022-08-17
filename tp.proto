@@ -37,6 +37,7 @@ message League{
     string id = 1;
     string name = 2;
     string countryId = 3;
+    repeated string teams = 4;
 }
 message CountriesPackage {
     repeated Country countries=1;

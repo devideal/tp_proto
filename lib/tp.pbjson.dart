@@ -87,11 +87,15 @@ const MatchesPackage$json = const {
   '1': 'MatchesPackage',
   '2': const [
     const {'1': 'matches', '3': 1, '4': 3, '5': 11, '6': '.tp_proto.Match', '10': 'matches'},
+    const {'1': 'end', '3': 2, '4': 1, '5': 8, '9': 0, '10': 'end', '17': true},
+  ],
+  '8': const [
+    const {'1': '_end'},
   ],
 };
 
 /// Descriptor for `MatchesPackage`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List matchesPackageDescriptor = $convert.base64Decode('Cg5NYXRjaGVzUGFja2FnZRIpCgdtYXRjaGVzGAEgAygLMg8udHBfcHJvdG8uTWF0Y2hSB21hdGNoZXM=');
+final $typed_data.Uint8List matchesPackageDescriptor = $convert.base64Decode('Cg5NYXRjaGVzUGFja2FnZRIpCgdtYXRjaGVzGAEgAygLMg8udHBfcHJvdG8uTWF0Y2hSB21hdGNoZXMSFQoDZW5kGAIgASgISABSA2VuZIgBAUIGCgRfZW5k');
 @$core.Deprecated('Use matchDescriptor instead')
 const Match$json = const {
   '1': 'Match',
@@ -170,11 +174,15 @@ const CouponsPackage$json = const {
   '1': 'CouponsPackage',
   '2': const [
     const {'1': 'coupons', '3': 1, '4': 3, '5': 11, '6': '.tp_proto.Coupon', '10': 'coupons'},
+    const {'1': 'end', '3': 2, '4': 1, '5': 8, '9': 0, '10': 'end', '17': true},
+  ],
+  '8': const [
+    const {'1': '_end'},
   ],
 };
 
 /// Descriptor for `CouponsPackage`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List couponsPackageDescriptor = $convert.base64Decode('Cg5Db3Vwb25zUGFja2FnZRIqCgdjb3Vwb25zGAEgAygLMhAudHBfcHJvdG8uQ291cG9uUgdjb3Vwb25z');
+final $typed_data.Uint8List couponsPackageDescriptor = $convert.base64Decode('Cg5Db3Vwb25zUGFja2FnZRIqCgdjb3Vwb25zGAEgAygLMhAudHBfcHJvdG8uQ291cG9uUgdjb3Vwb25zEhUKA2VuZBgCIAEoCEgAUgNlbmSIAQFCBgoEX2VuZA==');
 @$core.Deprecated('Use couponDescriptor instead')
 const Coupon$json = const {
   '1': 'Coupon',

@@ -379,16 +379,21 @@ class Country extends $pb.GeneratedMessage {
 class MatchesPackage extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MatchesPackage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
     ..pc<Match>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'matches', $pb.PbFieldType.PM, subBuilder: Match.create)
+    ..aOB(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'end')
     ..hasRequiredFields = false
   ;
 
   MatchesPackage._() : super();
   factory MatchesPackage({
     $core.Iterable<Match>? matches,
+    $core.bool? end,
   }) {
     final _result = create();
     if (matches != null) {
       _result.matches.addAll(matches);
+    }
+    if (end != null) {
+      _result.end = end;
     }
     return _result;
   }
@@ -415,6 +420,15 @@ class MatchesPackage extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(1)
   $core.List<Match> get matches => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.bool get end => $_getBF(1);
+  @$pb.TagNumber(2)
+  set end($core.bool v) { $_setBool(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasEnd() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEnd() => clearField(2);
 }
 
 class Match extends $pb.GeneratedMessage {
@@ -923,16 +937,21 @@ class Branch extends $pb.GeneratedMessage {
 class CouponsPackage extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CouponsPackage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
     ..pc<Coupon>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'coupons', $pb.PbFieldType.PM, subBuilder: Coupon.create)
+    ..aOB(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'end')
     ..hasRequiredFields = false
   ;
 
   CouponsPackage._() : super();
   factory CouponsPackage({
     $core.Iterable<Coupon>? coupons,
+    $core.bool? end,
   }) {
     final _result = create();
     if (coupons != null) {
       _result.coupons.addAll(coupons);
+    }
+    if (end != null) {
+      _result.end = end;
     }
     return _result;
   }
@@ -959,6 +978,15 @@ class CouponsPackage extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(1)
   $core.List<Coupon> get coupons => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.bool get end => $_getBF(1);
+  @$pb.TagNumber(2)
+  set end($core.bool v) { $_setBool(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasEnd() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEnd() => clearField(2);
 }
 
 class Coupon extends $pb.GeneratedMessage {

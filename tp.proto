@@ -61,7 +61,7 @@ message Match{
     bool end =7;
     int32 timestamp =8;
     string defaulfPrediction = 9;
-    string defaultOdds = 10;
+    double defaultOdds = 10;
 }
 message ApplicationsPackage {
     repeated Application applications=1;

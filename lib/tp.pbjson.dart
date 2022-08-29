@@ -55,12 +55,13 @@ const League$json = const {
     const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
     const {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
     const {'1': 'countryId', '3': 3, '4': 1, '5': 9, '10': 'countryId'},
-    const {'1': 'teams', '3': 4, '4': 3, '5': 9, '10': 'teams'},
+    const {'1': 'sportType', '3': 4, '4': 1, '5': 9, '10': 'sportType'},
+    const {'1': 'teams', '3': 5, '4': 3, '5': 9, '10': 'teams'},
   ],
 };
 
 /// Descriptor for `League`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List leagueDescriptor = $convert.base64Decode('CgZMZWFndWUSDgoCaWQYASABKAlSAmlkEhIKBG5hbWUYAiABKAlSBG5hbWUSHAoJY291bnRyeUlkGAMgASgJUgljb3VudHJ5SWQSFAoFdGVhbXMYBCADKAlSBXRlYW1z');
+final $typed_data.Uint8List leagueDescriptor = $convert.base64Decode('CgZMZWFndWUSDgoCaWQYASABKAlSAmlkEhIKBG5hbWUYAiABKAlSBG5hbWUSHAoJY291bnRyeUlkGAMgASgJUgljb3VudHJ5SWQSHAoJc3BvcnRUeXBlGAQgASgJUglzcG9ydFR5cGUSFAoFdGVhbXMYBSADKAlSBXRlYW1z');
 @$core.Deprecated('Use countriesPackageDescriptor instead')
 const CountriesPackage$json = const {
   '1': 'CountriesPackage',
@@ -108,11 +109,13 @@ const Match$json = const {
     const {'1': 'result', '3': 6, '4': 1, '5': 9, '10': 'result'},
     const {'1': 'end', '3': 7, '4': 1, '5': 8, '10': 'end'},
     const {'1': 'timestamp', '3': 8, '4': 1, '5': 5, '10': 'timestamp'},
+    const {'1': 'defaulfPrediction', '3': 9, '4': 1, '5': 9, '10': 'defaulfPrediction'},
+    const {'1': 'defaultOdds', '3': 10, '4': 1, '5': 9, '10': 'defaultOdds'},
   ],
 };
 
 /// Descriptor for `Match`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List matchDescriptor = $convert.base64Decode('CgVNYXRjaBIOCgJpZBgBIAEoCVICaWQSGgoIbGVhZ3VlSWQYAiABKAlSCGxlYWd1ZUlkEhIKBHdlZWsYAyABKAVSBHdlZWsSEgoEaG9zdBgEIAEoCVIEaG9zdBIUCgVndWVzdBgFIAEoCVIFZ3Vlc3QSFgoGcmVzdWx0GAYgASgJUgZyZXN1bHQSEAoDZW5kGAcgASgIUgNlbmQSHAoJdGltZXN0YW1wGAggASgFUgl0aW1lc3RhbXA=');
+final $typed_data.Uint8List matchDescriptor = $convert.base64Decode('CgVNYXRjaBIOCgJpZBgBIAEoCVICaWQSGgoIbGVhZ3VlSWQYAiABKAlSCGxlYWd1ZUlkEhIKBHdlZWsYAyABKAVSBHdlZWsSEgoEaG9zdBgEIAEoCVIEaG9zdBIUCgVndWVzdBgFIAEoCVIFZ3Vlc3QSFgoGcmVzdWx0GAYgASgJUgZyZXN1bHQSEAoDZW5kGAcgASgIUgNlbmQSHAoJdGltZXN0YW1wGAggASgFUgl0aW1lc3RhbXASLAoRZGVmYXVsZlByZWRpY3Rpb24YCSABKAlSEWRlZmF1bGZQcmVkaWN0aW9uEiAKC2RlZmF1bHRPZGRzGAogASgJUgtkZWZhdWx0T2Rkcw==');
 @$core.Deprecated('Use applicationsPackageDescriptor instead')
 const ApplicationsPackage$json = const {
   '1': 'ApplicationsPackage',
@@ -146,14 +149,16 @@ const Bet$json = const {
     const {'1': 'prediction', '3': 3, '4': 1, '5': 9, '10': 'prediction'},
     const {'1': 'ratio', '3': 4, '4': 1, '5': 1, '10': 'ratio'},
     const {'1': 'win', '3': 5, '4': 1, '5': 8, '9': 0, '10': 'win', '17': true},
+    const {'1': 'showResult', '3': 6, '4': 1, '5': 8, '9': 1, '10': 'showResult', '17': true},
   ],
   '8': const [
     const {'1': '_win'},
+    const {'1': '_showResult'},
   ],
 };
 
 /// Descriptor for `Bet`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List betDescriptor = $convert.base64Decode('CgNCZXQSDgoCaWQYASABKAlSAmlkEhgKB21hdGNoSWQYAiABKAlSB21hdGNoSWQSHgoKcHJlZGljdGlvbhgDIAEoCVIKcHJlZGljdGlvbhIUCgVyYXRpbxgEIAEoAVIFcmF0aW8SFQoDd2luGAUgASgISABSA3dpbogBAUIGCgRfd2lu');
+final $typed_data.Uint8List betDescriptor = $convert.base64Decode('CgNCZXQSDgoCaWQYASABKAlSAmlkEhgKB21hdGNoSWQYAiABKAlSB21hdGNoSWQSHgoKcHJlZGljdGlvbhgDIAEoCVIKcHJlZGljdGlvbhIUCgVyYXRpbxgEIAEoAVIFcmF0aW8SFQoDd2luGAUgASgISABSA3dpbogBARIjCgpzaG93UmVzdWx0GAYgASgISAFSCnNob3dSZXN1bHSIAQFCBgoEX3dpbkINCgtfc2hvd1Jlc3VsdA==');
 @$core.Deprecated('Use branchDescriptor instead')
 const Branch$json = const {
   '1': 'Branch',
@@ -240,11 +245,12 @@ const MobileLeague$json = const {
     const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
     const {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
     const {'1': 'countryName', '3': 3, '4': 1, '5': 9, '10': 'countryName'},
+    const {'1': 'sportType', '3': 4, '4': 1, '5': 9, '10': 'sportType'},
   ],
 };
 
 /// Descriptor for `MobileLeague`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List mobileLeagueDescriptor = $convert.base64Decode('CgxNb2JpbGVMZWFndWUSDgoCaWQYASABKAlSAmlkEhIKBG5hbWUYAiABKAlSBG5hbWUSIAoLY291bnRyeU5hbWUYAyABKAlSC2NvdW50cnlOYW1l');
+final $typed_data.Uint8List mobileLeagueDescriptor = $convert.base64Decode('CgxNb2JpbGVMZWFndWUSDgoCaWQYASABKAlSAmlkEhIKBG5hbWUYAiABKAlSBG5hbWUSIAoLY291bnRyeU5hbWUYAyABKAlSC2NvdW50cnlOYW1lEhwKCXNwb3J0VHlwZRgEIAEoCVIJc3BvcnRUeXBl');
 @$core.Deprecated('Use mobileLeaguesPackageDescriptor instead')
 const MobileLeaguesPackage$json = const {
   '1': 'MobileLeaguesPackage',
@@ -294,11 +300,13 @@ const MobileBet$json = const {
     const {'1': 'prediction', '3': 3, '4': 1, '5': 9, '10': 'prediction'},
     const {'1': 'ratio', '3': 4, '4': 1, '5': 1, '10': 'ratio'},
     const {'1': 'win', '3': 5, '4': 1, '5': 8, '9': 0, '10': 'win', '17': true},
+    const {'1': 'showReslut', '3': 6, '4': 1, '5': 8, '9': 1, '10': 'showReslut', '17': true},
   ],
   '8': const [
     const {'1': '_win'},
+    const {'1': '_showReslut'},
   ],
 };
 
 /// Descriptor for `MobileBet`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List mobileBetDescriptor = $convert.base64Decode('CglNb2JpbGVCZXQSDgoCaWQYASABKAlSAmlkEisKBW1hdGNoGAIgASgLMhUudHBfcHJvdG8uTW9iaWxlTWF0Y2hSBW1hdGNoEh4KCnByZWRpY3Rpb24YAyABKAlSCnByZWRpY3Rpb24SFAoFcmF0aW8YBCABKAFSBXJhdGlvEhUKA3dpbhgFIAEoCEgAUgN3aW6IAQFCBgoEX3dpbg==');
+final $typed_data.Uint8List mobileBetDescriptor = $convert.base64Decode('CglNb2JpbGVCZXQSDgoCaWQYASABKAlSAmlkEisKBW1hdGNoGAIgASgLMhUudHBfcHJvdG8uTW9iaWxlTWF0Y2hSBW1hdGNoEh4KCnByZWRpY3Rpb24YAyABKAlSCnByZWRpY3Rpb24SFAoFcmF0aW8YBCABKAFSBXJhdGlvEhUKA3dpbhgFIAEoCEgAUgN3aW6IAQESIwoKc2hvd1Jlc2x1dBgGIAEoCEgBUgpzaG93UmVzbHV0iAEBQgYKBF93aW5CDQoLX3Nob3dSZXNsdXQ=');

@@ -37,7 +37,8 @@ message League{
     string id = 1;
     string name = 2;
     string countryId = 3;
-    repeated string teams = 4;
+    string sportType = 4;
+    repeated string teams = 5;
 }
 message CountriesPackage {
     repeated Country countries=1;
@@ -59,6 +60,8 @@ message Match{
     string result=6;
     bool end =7;
     int32 timestamp =8;
+    string defaulfPrediction = 9;
+    string defaultOdds = 10;
 }
 message ApplicationsPackage {
     repeated Application applications=1;
@@ -77,6 +80,7 @@ message Bet{
     string prediction=3;
     double ratio=4;
     optional bool win=5;
+    optional bool showResult=6;
 }
 
 message Branch{
@@ -124,6 +128,7 @@ message MobileLeague{
     string id = 1;
     string name = 2;
     string countryName = 3;
+    string sportType = 4;
 }
 
 message MobileLeaguesPackage{
@@ -149,4 +154,5 @@ message MobileBet{
     string prediction=3;
     double ratio=4;
     optional bool win=5;
+    optional bool showReslut=6;
 }

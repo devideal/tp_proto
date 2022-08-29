@@ -449,16 +449,16 @@ type Match struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id                string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	LeagueId          string `protobuf:"bytes,2,opt,name=leagueId,proto3" json:"leagueId,omitempty"`
-	Week              int32  `protobuf:"varint,3,opt,name=week,proto3" json:"week,omitempty"`
-	Host              string `protobuf:"bytes,4,opt,name=host,proto3" json:"host,omitempty"`
-	Guest             string `protobuf:"bytes,5,opt,name=guest,proto3" json:"guest,omitempty"`
-	Result            string `protobuf:"bytes,6,opt,name=result,proto3" json:"result,omitempty"`
-	End               bool   `protobuf:"varint,7,opt,name=end,proto3" json:"end,omitempty"`
-	Timestamp         int32  `protobuf:"varint,8,opt,name=timestamp,proto3" json:"timestamp,omitempty"`
-	DefaulfPrediction string `protobuf:"bytes,9,opt,name=defaulfPrediction,proto3" json:"defaulfPrediction,omitempty"`
-	DefaultOdds       string `protobuf:"bytes,10,opt,name=defaultOdds,proto3" json:"defaultOdds,omitempty"`
+	Id                string  `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	LeagueId          string  `protobuf:"bytes,2,opt,name=leagueId,proto3" json:"leagueId,omitempty"`
+	Week              int32   `protobuf:"varint,3,opt,name=week,proto3" json:"week,omitempty"`
+	Host              string  `protobuf:"bytes,4,opt,name=host,proto3" json:"host,omitempty"`
+	Guest             string  `protobuf:"bytes,5,opt,name=guest,proto3" json:"guest,omitempty"`
+	Result            string  `protobuf:"bytes,6,opt,name=result,proto3" json:"result,omitempty"`
+	End               bool    `protobuf:"varint,7,opt,name=end,proto3" json:"end,omitempty"`
+	Timestamp         int32   `protobuf:"varint,8,opt,name=timestamp,proto3" json:"timestamp,omitempty"`
+	DefaulfPrediction string  `protobuf:"bytes,9,opt,name=defaulfPrediction,proto3" json:"defaulfPrediction,omitempty"`
+	DefaultOdds       float64 `protobuf:"fixed64,10,opt,name=defaultOdds,proto3" json:"defaultOdds,omitempty"`
 }
 
 func (x *Match) Reset() {
@@ -556,11 +556,11 @@ func (x *Match) GetDefaulfPrediction() string {
 	return ""
 }
 
-func (x *Match) GetDefaultOdds() string {
+func (x *Match) GetDefaultOdds() float64 {
 	if x != nil {
 		return x.DefaultOdds
 	}
-	return ""
+	return 0
 }
 
 type ApplicationsPackage struct {
@@ -1601,7 +1601,7 @@ var file_tp_proto_rawDesc = []byte{
 	0x66, 0x50, 0x72, 0x65, 0x64, 0x69, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x09, 0x20, 0x01, 0x28,
 	0x09, 0x52, 0x11, 0x64, 0x65, 0x66, 0x61, 0x75, 0x6c, 0x66, 0x50, 0x72, 0x65, 0x64, 0x69, 0x63,
 	0x74, 0x69, 0x6f, 0x6e, 0x12, 0x20, 0x0a, 0x0b, 0x64, 0x65, 0x66, 0x61, 0x75, 0x6c, 0x74, 0x4f,
-	0x64, 0x64, 0x73, 0x18, 0x0a, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x64, 0x65, 0x66, 0x61, 0x75,
+	0x64, 0x64, 0x73, 0x18, 0x0a, 0x20, 0x01, 0x28, 0x01, 0x52, 0x0b, 0x64, 0x65, 0x66, 0x61, 0x75,
 	0x6c, 0x74, 0x4f, 0x64, 0x64, 0x73, 0x22, 0x50, 0x0a, 0x13, 0x41, 0x70, 0x70, 0x6c, 0x69, 0x63,
 	0x61, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x50, 0x61, 0x63, 0x6b, 0x61, 0x67, 0x65, 0x12, 0x39, 0x0a,
 	0x0c, 0x61, 0x70, 0x70, 0x6c, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x18, 0x01, 0x20,

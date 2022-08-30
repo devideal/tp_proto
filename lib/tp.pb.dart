@@ -198,6 +198,7 @@ class League extends $pb.GeneratedMessage {
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'countryId', protoName: 'countryId')
     ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sportType', protoName: 'sportType')
     ..pPS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'teams')
+    ..aOB(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'customTeamNames', protoName: 'customTeamNames')
     ..hasRequiredFields = false
   ;
 
@@ -208,6 +209,7 @@ class League extends $pb.GeneratedMessage {
     $core.String? countryId,
     $core.String? sportType,
     $core.Iterable<$core.String>? teams,
+    $core.bool? customTeamNames,
   }) {
     final _result = create();
     if (id != null) {
@@ -224,6 +226,9 @@ class League extends $pb.GeneratedMessage {
     }
     if (teams != null) {
       _result.teams.addAll(teams);
+    }
+    if (customTeamNames != null) {
+      _result.customTeamNames = customTeamNames;
     }
     return _result;
   }
@@ -286,6 +291,15 @@ class League extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(5)
   $core.List<$core.String> get teams => $_getList(4);
+
+  @$pb.TagNumber(6)
+  $core.bool get customTeamNames => $_getBF(5);
+  @$pb.TagNumber(6)
+  set customTeamNames($core.bool v) { $_setBool(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasCustomTeamNames() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearCustomTeamNames() => clearField(6);
 }
 
 class CountriesPackage extends $pb.GeneratedMessage {

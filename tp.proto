@@ -39,6 +39,7 @@ message League{
     string countryId = 3;
     string sportType = 4;
     repeated string teams = 5;
+    optional bool customTeamNames =6;
 }
 message CountriesPackage {
     repeated Country countries=1;

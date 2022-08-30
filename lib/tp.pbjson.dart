@@ -57,11 +57,15 @@ const League$json = const {
     const {'1': 'countryId', '3': 3, '4': 1, '5': 9, '10': 'countryId'},
     const {'1': 'sportType', '3': 4, '4': 1, '5': 9, '10': 'sportType'},
     const {'1': 'teams', '3': 5, '4': 3, '5': 9, '10': 'teams'},
+    const {'1': 'customTeamNames', '3': 6, '4': 1, '5': 8, '9': 0, '10': 'customTeamNames', '17': true},
+  ],
+  '8': const [
+    const {'1': '_customTeamNames'},
   ],
 };
 
 /// Descriptor for `League`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List leagueDescriptor = $convert.base64Decode('CgZMZWFndWUSDgoCaWQYASABKAlSAmlkEhIKBG5hbWUYAiABKAlSBG5hbWUSHAoJY291bnRyeUlkGAMgASgJUgljb3VudHJ5SWQSHAoJc3BvcnRUeXBlGAQgASgJUglzcG9ydFR5cGUSFAoFdGVhbXMYBSADKAlSBXRlYW1z');
+final $typed_data.Uint8List leagueDescriptor = $convert.base64Decode('CgZMZWFndWUSDgoCaWQYASABKAlSAmlkEhIKBG5hbWUYAiABKAlSBG5hbWUSHAoJY291bnRyeUlkGAMgASgJUgljb3VudHJ5SWQSHAoJc3BvcnRUeXBlGAQgASgJUglzcG9ydFR5cGUSFAoFdGVhbXMYBSADKAlSBXRlYW1zEi0KD2N1c3RvbVRlYW1OYW1lcxgGIAEoCEgAUg9jdXN0b21UZWFtTmFtZXOIAQFCEgoQX2N1c3RvbVRlYW1OYW1lcw==');
 @$core.Deprecated('Use countriesPackageDescriptor instead')
 const CountriesPackage$json = const {
   '1': 'CountriesPackage',

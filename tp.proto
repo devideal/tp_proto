@@ -59,10 +59,9 @@ message Match{
     string host =4;
     string guest =5;
     string result=6;
-    bool end =7;
-    int32 timestamp =8;
-    string defaulfPrediction = 9;
-    double defaultOdds = 10;
+    int32 timestamp =7;
+    string defaulfPrediction = 8;
+    double defaultOdds = 9;
 }
 message ApplicationsPackage {
     repeated Application applications=1;
@@ -102,9 +101,8 @@ message Coupon{
     string branchId=3;
     string applicationId=4;
     bool isVisible=5;
-    optional bool end=6;
-    string name=7;
-    int32 timestamp=8;
+    string name=6;
+    int32 timestamp=7;
 }
 
 message User{

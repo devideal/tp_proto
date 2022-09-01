@@ -467,10 +467,9 @@ class Match extends $pb.GeneratedMessage {
     ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'host')
     ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'guest')
     ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'result')
-    ..aOB(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'end')
-    ..a<$core.int>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', $pb.PbFieldType.O3)
-    ..aOS(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'defaulfPrediction', protoName: 'defaulfPrediction')
-    ..a<$core.double>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'defaultOdds', $pb.PbFieldType.OD, protoName: 'defaultOdds')
+    ..a<$core.int>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', $pb.PbFieldType.O3)
+    ..aOS(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'defaulfPrediction', protoName: 'defaulfPrediction')
+    ..a<$core.double>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'defaultOdds', $pb.PbFieldType.OD, protoName: 'defaultOdds')
     ..hasRequiredFields = false
   ;
 
@@ -482,7 +481,6 @@ class Match extends $pb.GeneratedMessage {
     $core.String? host,
     $core.String? guest,
     $core.String? result,
-    $core.bool? end,
     $core.int? timestamp,
     $core.String? defaulfPrediction,
     $core.double? defaultOdds,
@@ -505,9 +503,6 @@ class Match extends $pb.GeneratedMessage {
     }
     if (result != null) {
       _result.result = result;
-    }
-    if (end != null) {
-      _result.end = end;
     }
     if (timestamp != null) {
       _result.timestamp = timestamp;
@@ -596,40 +591,31 @@ class Match extends $pb.GeneratedMessage {
   void clearResult() => clearField(6);
 
   @$pb.TagNumber(7)
-  $core.bool get end => $_getBF(6);
+  $core.int get timestamp => $_getIZ(6);
   @$pb.TagNumber(7)
-  set end($core.bool v) { $_setBool(6, v); }
+  set timestamp($core.int v) { $_setSignedInt32(6, v); }
   @$pb.TagNumber(7)
-  $core.bool hasEnd() => $_has(6);
+  $core.bool hasTimestamp() => $_has(6);
   @$pb.TagNumber(7)
-  void clearEnd() => clearField(7);
+  void clearTimestamp() => clearField(7);
 
   @$pb.TagNumber(8)
-  $core.int get timestamp => $_getIZ(7);
+  $core.String get defaulfPrediction => $_getSZ(7);
   @$pb.TagNumber(8)
-  set timestamp($core.int v) { $_setSignedInt32(7, v); }
+  set defaulfPrediction($core.String v) { $_setString(7, v); }
   @$pb.TagNumber(8)
-  $core.bool hasTimestamp() => $_has(7);
+  $core.bool hasDefaulfPrediction() => $_has(7);
   @$pb.TagNumber(8)
-  void clearTimestamp() => clearField(8);
+  void clearDefaulfPrediction() => clearField(8);
 
   @$pb.TagNumber(9)
-  $core.String get defaulfPrediction => $_getSZ(8);
+  $core.double get defaultOdds => $_getN(8);
   @$pb.TagNumber(9)
-  set defaulfPrediction($core.String v) { $_setString(8, v); }
+  set defaultOdds($core.double v) { $_setDouble(8, v); }
   @$pb.TagNumber(9)
-  $core.bool hasDefaulfPrediction() => $_has(8);
+  $core.bool hasDefaultOdds() => $_has(8);
   @$pb.TagNumber(9)
-  void clearDefaulfPrediction() => clearField(9);
-
-  @$pb.TagNumber(10)
-  $core.double get defaultOdds => $_getN(9);
-  @$pb.TagNumber(10)
-  set defaultOdds($core.double v) { $_setDouble(9, v); }
-  @$pb.TagNumber(10)
-  $core.bool hasDefaultOdds() => $_has(9);
-  @$pb.TagNumber(10)
-  void clearDefaultOdds() => clearField(10);
+  void clearDefaultOdds() => clearField(9);
 }
 
 class ApplicationsPackage extends $pb.GeneratedMessage {
@@ -1066,9 +1052,8 @@ class Coupon extends $pb.GeneratedMessage {
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'branchId', protoName: 'branchId')
     ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'applicationId', protoName: 'applicationId')
     ..aOB(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isVisible', protoName: 'isVisible')
-    ..aOB(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'end')
-    ..aOS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
-    ..a<$core.int>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', $pb.PbFieldType.O3)
+    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..a<$core.int>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', $pb.PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
@@ -1079,7 +1064,6 @@ class Coupon extends $pb.GeneratedMessage {
     $core.String? branchId,
     $core.String? applicationId,
     $core.bool? isVisible,
-    $core.bool? end,
     $core.String? name,
     $core.int? timestamp,
   }) {
@@ -1098,9 +1082,6 @@ class Coupon extends $pb.GeneratedMessage {
     }
     if (isVisible != null) {
       _result.isVisible = isVisible;
-    }
-    if (end != null) {
-      _result.end = end;
     }
     if (name != null) {
       _result.name = name;
@@ -1171,31 +1152,22 @@ class Coupon extends $pb.GeneratedMessage {
   void clearIsVisible() => clearField(5);
 
   @$pb.TagNumber(6)
-  $core.bool get end => $_getBF(5);
+  $core.String get name => $_getSZ(5);
   @$pb.TagNumber(6)
-  set end($core.bool v) { $_setBool(5, v); }
+  set name($core.String v) { $_setString(5, v); }
   @$pb.TagNumber(6)
-  $core.bool hasEnd() => $_has(5);
+  $core.bool hasName() => $_has(5);
   @$pb.TagNumber(6)
-  void clearEnd() => clearField(6);
+  void clearName() => clearField(6);
 
   @$pb.TagNumber(7)
-  $core.String get name => $_getSZ(6);
+  $core.int get timestamp => $_getIZ(6);
   @$pb.TagNumber(7)
-  set name($core.String v) { $_setString(6, v); }
+  set timestamp($core.int v) { $_setSignedInt32(6, v); }
   @$pb.TagNumber(7)
-  $core.bool hasName() => $_has(6);
+  $core.bool hasTimestamp() => $_has(6);
   @$pb.TagNumber(7)
-  void clearName() => clearField(7);
-
-  @$pb.TagNumber(8)
-  $core.int get timestamp => $_getIZ(7);
-  @$pb.TagNumber(8)
-  set timestamp($core.int v) { $_setSignedInt32(7, v); }
-  @$pb.TagNumber(8)
-  $core.bool hasTimestamp() => $_has(7);
-  @$pb.TagNumber(8)
-  void clearTimestamp() => clearField(8);
+  void clearTimestamp() => clearField(7);
 }
 
 class User extends $pb.GeneratedMessage {

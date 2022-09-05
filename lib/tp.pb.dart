@@ -455,7 +455,7 @@ class Match extends $pb.GeneratedMessage {
     ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'result')
     ..aOB(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'end')
     ..a<$core.int>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', $pb.PbFieldType.O3)
-    ..aOS(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'defaulfPrediction', protoName: 'defaulfPrediction')
+    ..aOS(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'defaultPrediction', protoName: 'defaultPrediction')
     ..a<$core.double>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'defaultOdds', $pb.PbFieldType.OD, protoName: 'defaultOdds')
     ..hasRequiredFields = false
   ;
@@ -470,7 +470,7 @@ class Match extends $pb.GeneratedMessage {
     $core.String? result,
     $core.bool? end,
     $core.int? timestamp,
-    $core.String? defaulfPrediction,
+    $core.String? defaultPrediction,
     $core.double? defaultOdds,
   }) {
     final _result = create();
@@ -498,8 +498,8 @@ class Match extends $pb.GeneratedMessage {
     if (timestamp != null) {
       _result.timestamp = timestamp;
     }
-    if (defaulfPrediction != null) {
-      _result.defaulfPrediction = defaulfPrediction;
+    if (defaultPrediction != null) {
+      _result.defaultPrediction = defaultPrediction;
     }
     if (defaultOdds != null) {
       _result.defaultOdds = defaultOdds;
@@ -600,13 +600,13 @@ class Match extends $pb.GeneratedMessage {
   void clearTimestamp() => clearField(8);
 
   @$pb.TagNumber(9)
-  $core.String get defaulfPrediction => $_getSZ(8);
+  $core.String get defaultPrediction => $_getSZ(8);
   @$pb.TagNumber(9)
-  set defaulfPrediction($core.String v) { $_setString(8, v); }
+  set defaultPrediction($core.String v) { $_setString(8, v); }
   @$pb.TagNumber(9)
-  $core.bool hasDefaulfPrediction() => $_has(8);
+  $core.bool hasDefaultPrediction() => $_has(8);
   @$pb.TagNumber(9)
-  void clearDefaulfPrediction() => clearField(9);
+  void clearDefaultPrediction() => clearField(9);
 
   @$pb.TagNumber(10)
   $core.double get defaultOdds => $_getN(9);

@@ -60,7 +60,7 @@ message Match{
     string result=6;
     bool end =7;
     int32 timestamp =8;
-    string defaulfPrediction = 9;
+    string defaultPrediction = 9;
     double defaultOdds = 10;
 }
 message ApplicationsPackage {

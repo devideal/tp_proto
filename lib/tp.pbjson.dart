@@ -109,13 +109,13 @@ const Match$json = const {
     const {'1': 'result', '3': 6, '4': 1, '5': 9, '10': 'result'},
     const {'1': 'end', '3': 7, '4': 1, '5': 8, '10': 'end'},
     const {'1': 'timestamp', '3': 8, '4': 1, '5': 5, '10': 'timestamp'},
-    const {'1': 'defaulfPrediction', '3': 9, '4': 1, '5': 9, '10': 'defaulfPrediction'},
+    const {'1': 'defaultPrediction', '3': 9, '4': 1, '5': 9, '10': 'defaultPrediction'},
     const {'1': 'defaultOdds', '3': 10, '4': 1, '5': 1, '10': 'defaultOdds'},
   ],
 };
 
 /// Descriptor for `Match`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List matchDescriptor = $convert.base64Decode('CgVNYXRjaBIOCgJpZBgBIAEoCVICaWQSGgoIbGVhZ3VlSWQYAiABKAlSCGxlYWd1ZUlkEhIKBHdlZWsYAyABKAVSBHdlZWsSEgoEaG9zdBgEIAEoCVIEaG9zdBIUCgVndWVzdBgFIAEoCVIFZ3Vlc3QSFgoGcmVzdWx0GAYgASgJUgZyZXN1bHQSEAoDZW5kGAcgASgIUgNlbmQSHAoJdGltZXN0YW1wGAggASgFUgl0aW1lc3RhbXASLAoRZGVmYXVsZlByZWRpY3Rpb24YCSABKAlSEWRlZmF1bGZQcmVkaWN0aW9uEiAKC2RlZmF1bHRPZGRzGAogASgBUgtkZWZhdWx0T2Rkcw==');
+final $typed_data.Uint8List matchDescriptor = $convert.base64Decode('CgVNYXRjaBIOCgJpZBgBIAEoCVICaWQSGgoIbGVhZ3VlSWQYAiABKAlSCGxlYWd1ZUlkEhIKBHdlZWsYAyABKAVSBHdlZWsSEgoEaG9zdBgEIAEoCVIEaG9zdBIUCgVndWVzdBgFIAEoCVIFZ3Vlc3QSFgoGcmVzdWx0GAYgASgJUgZyZXN1bHQSEAoDZW5kGAcgASgIUgNlbmQSHAoJdGltZXN0YW1wGAggASgFUgl0aW1lc3RhbXASLAoRZGVmYXVsdFByZWRpY3Rpb24YCSABKAlSEWRlZmF1bHRQcmVkaWN0aW9uEiAKC2RlZmF1bHRPZGRzGAogASgBUgtkZWZhdWx0T2Rkcw==');
 @$core.Deprecated('Use applicationsPackageDescriptor instead')
 const ApplicationsPackage$json = const {
   '1': 'ApplicationsPackage',

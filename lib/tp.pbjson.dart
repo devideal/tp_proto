@@ -53,12 +53,12 @@ const Club$json = const {
   '1': 'Club',
   '2': const [
     const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
-    const {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'clubName', '3': 2, '4': 1, '5': 9, '10': 'clubName'},
   ],
 };
 
 /// Descriptor for `Club`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List clubDescriptor = $convert.base64Decode('CgRDbHViEg4KAmlkGAEgASgJUgJpZBISCgRuYW1lGAIgASgJUgRuYW1l');
+final $typed_data.Uint8List clubDescriptor = $convert.base64Decode('CgRDbHViEg4KAmlkGAEgASgJUgJpZBIaCghjbHViTmFtZRgCIAEoCVIIY2x1Yk5hbWU=');
 @$core.Deprecated('Use leaguesPackageDescriptor instead')
 const LeaguesPackage$json = const {
   '1': 'LeaguesPackage',

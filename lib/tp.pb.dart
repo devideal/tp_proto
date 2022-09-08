@@ -194,21 +194,21 @@ class ClubsPackage extends $pb.GeneratedMessage {
 class Club extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Club', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'clubName', protoName: 'clubName')
     ..hasRequiredFields = false
   ;
 
   Club._() : super();
   factory Club({
     $core.String? id,
-    $core.String? name,
+    $core.String? clubName,
   }) {
     final _result = create();
     if (id != null) {
       _result.id = id;
     }
-    if (name != null) {
-      _result.name = name;
+    if (clubName != null) {
+      _result.clubName = clubName;
     }
     return _result;
   }
@@ -243,13 +243,13 @@ class Club extends $pb.GeneratedMessage {
   void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get name => $_getSZ(1);
+  $core.String get clubName => $_getSZ(1);
   @$pb.TagNumber(2)
-  set name($core.String v) { $_setString(1, v); }
+  set clubName($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasName() => $_has(1);
+  $core.bool hasClubName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearName() => clearField(2);
+  void clearClubName() => clearField(2);
 }
 
 class LeaguesPackage extends $pb.GeneratedMessage {

@@ -42,6 +42,10 @@ class TipsPanelClient extends $grpc.Client {
       '/tp_proto.TipsPanel/GetUserByUserName',
       ($0.Name value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.User.fromBuffer(value));
+  static final _$getClub = $grpc.ClientMethod<$0.Id, $0.Club>(
+      '/tp_proto.TipsPanel/GetClub',
+      ($0.Id value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Club.fromBuffer(value));
   static final _$addUser = $grpc.ClientMethod<$0.User, $0.Bool>(
       '/tp_proto.TipsPanel/AddUser',
       ($0.User value) => value.writeToBuffer(),
@@ -101,6 +105,11 @@ class TipsPanelClient extends $grpc.Client {
   $grpc.ResponseFuture<$0.User> getUserByUserName($0.Name request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getUserByUserName, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.Club> getClub($0.Id request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getClub, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Bool> addUser($0.User request,
@@ -182,6 +191,13 @@ abstract class TipsPanelServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.Name.fromBuffer(value),
         ($0.User value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.Id, $0.Club>(
+        'GetClub',
+        getClub_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.Id.fromBuffer(value),
+        ($0.Club value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.User, $0.Bool>(
         'AddUser',
         addUser_Pre,
@@ -254,6 +270,11 @@ abstract class TipsPanelServiceBase extends $grpc.Service {
     return getUserByUserName(call, await request);
   }
 
+  $async.Future<$0.Club> getClub_Pre(
+      $grpc.ServiceCall call, $async.Future<$0.Id> request) async {
+    return getClub(call, await request);
+  }
+
   $async.Future<$0.Bool> addUser_Pre(
       $grpc.ServiceCall call, $async.Future<$0.User> request) async {
     return addUser(call, await request);
@@ -288,6 +309,7 @@ abstract class TipsPanelServiceBase extends $grpc.Service {
   $async.Future<$0.User> getUser($grpc.ServiceCall call, $0.Id request);
   $async.Future<$0.User> getUserByUserName(
       $grpc.ServiceCall call, $0.Name request);
+  $async.Future<$0.Club> getClub($grpc.ServiceCall call, $0.Id request);
   $async.Future<$0.Bool> addUser($grpc.ServiceCall call, $0.User request);
   $async.Future<$0.Bool> addApplication(
       $grpc.ServiceCall call, $0.Application request);

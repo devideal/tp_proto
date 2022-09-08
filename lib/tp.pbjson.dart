@@ -38,6 +38,27 @@ const Bool$json = const {
 
 /// Descriptor for `Bool`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List boolDescriptor = $convert.base64Decode('CgRCb29sEhQKBXZhbHVlGAEgASgIUgV2YWx1ZQ==');
+@$core.Deprecated('Use clubsPackageDescriptor instead')
+const ClubsPackage$json = const {
+  '1': 'ClubsPackage',
+  '2': const [
+    const {'1': 'clubs', '3': 1, '4': 3, '5': 11, '6': '.tp_proto.Club', '10': 'clubs'},
+  ],
+};
+
+/// Descriptor for `ClubsPackage`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List clubsPackageDescriptor = $convert.base64Decode('CgxDbHVic1BhY2thZ2USJAoFY2x1YnMYASADKAsyDi50cF9wcm90by5DbHViUgVjbHVicw==');
+@$core.Deprecated('Use clubDescriptor instead')
+const Club$json = const {
+  '1': 'Club',
+  '2': const [
+    const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
+    const {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `Club`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List clubDescriptor = $convert.base64Decode('CgRDbHViEg4KAmlkGAEgASgJUgJpZBISCgRuYW1lGAIgASgJUgRuYW1l');
 @$core.Deprecated('Use leaguesPackageDescriptor instead')
 const LeaguesPackage$json = const {
   '1': 'LeaguesPackage',

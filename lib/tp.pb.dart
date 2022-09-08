@@ -150,6 +150,108 @@ class Bool extends $pb.GeneratedMessage {
   void clearValue() => clearField(1);
 }
 
+class ClubsPackage extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ClubsPackage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
+    ..pc<Club>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'clubs', $pb.PbFieldType.PM, subBuilder: Club.create)
+    ..hasRequiredFields = false
+  ;
+
+  ClubsPackage._() : super();
+  factory ClubsPackage({
+    $core.Iterable<Club>? clubs,
+  }) {
+    final _result = create();
+    if (clubs != null) {
+      _result.clubs.addAll(clubs);
+    }
+    return _result;
+  }
+  factory ClubsPackage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ClubsPackage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ClubsPackage clone() => ClubsPackage()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ClubsPackage copyWith(void Function(ClubsPackage) updates) => super.copyWith((message) => updates(message as ClubsPackage)) as ClubsPackage; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ClubsPackage create() => ClubsPackage._();
+  ClubsPackage createEmptyInstance() => create();
+  static $pb.PbList<ClubsPackage> createRepeated() => $pb.PbList<ClubsPackage>();
+  @$core.pragma('dart2js:noInline')
+  static ClubsPackage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ClubsPackage>(create);
+  static ClubsPackage? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<Club> get clubs => $_getList(0);
+}
+
+class Club extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Club', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..hasRequiredFields = false
+  ;
+
+  Club._() : super();
+  factory Club({
+    $core.String? id,
+    $core.String? name,
+  }) {
+    final _result = create();
+    if (id != null) {
+      _result.id = id;
+    }
+    if (name != null) {
+      _result.name = name;
+    }
+    return _result;
+  }
+  factory Club.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Club.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Club clone() => Club()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Club copyWith(void Function(Club) updates) => super.copyWith((message) => updates(message as Club)) as Club; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Club create() => Club._();
+  Club createEmptyInstance() => create();
+  static $pb.PbList<Club> createRepeated() => $pb.PbList<Club>();
+  @$core.pragma('dart2js:noInline')
+  static Club getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Club>(create);
+  static Club? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set id($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get name => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set name($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearName() => clearField(2);
+}
+
 class LeaguesPackage extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'LeaguesPackage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
     ..pc<League>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'leagues', $pb.PbFieldType.PM, subBuilder: League.create)

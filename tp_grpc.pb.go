@@ -29,6 +29,7 @@ type TipsPanelClient interface {
 	GetCoupon(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Coupon, error)
 	GetUser(ctx context.Context, in *Id, opts ...grpc.CallOption) (*User, error)
 	GetUserByUserName(ctx context.Context, in *Name, opts ...grpc.CallOption) (*User, error)
+	GetClub(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Club, error)
 	AddUser(ctx context.Context, in *User, opts ...grpc.CallOption) (*Bool, error)
 	AddApplication(ctx context.Context, in *Application, opts ...grpc.CallOption) (*Bool, error)
 	AddCoupon(ctx context.Context, in *Coupon, opts ...grpc.CallOption) (*Bool, error)
@@ -108,6 +109,15 @@ func (c *tipsPanelClient) GetUserByUserName(ctx context.Context, in *Name, opts 
 	return out, nil
 }
 
+func (c *tipsPanelClient) GetClub(ctx context.Context, in *Id, opts ...grpc.CallOption) (*Club, error) {
+	out := new(Club)
+	err := c.cc.Invoke(ctx, "/tp_proto.TipsPanel/GetClub", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *tipsPanelClient) AddUser(ctx context.Context, in *User, opts ...grpc.CallOption) (*Bool, error) {
 	out := new(Bool)
 	err := c.cc.Invoke(ctx, "/tp_proto.TipsPanel/AddUser", in, out, opts...)
@@ -164,6 +174,7 @@ type TipsPanelServer interface {
 	GetCoupon(context.Context, *Id) (*Coupon, error)
 	GetUser(context.Context, *Id) (*User, error)
 	GetUserByUserName(context.Context, *Name) (*User, error)
+	GetClub(context.Context, *Id) (*Club, error)
 	AddUser(context.Context, *User) (*Bool, error)
 	AddApplication(context.Context, *Application) (*Bool, error)
 	AddCoupon(context.Context, *Coupon) (*Bool, error)
@@ -197,6 +208,9 @@ func (UnimplementedTipsPanelServer) GetUser(context.Context, *Id) (*User, error)
 }
 func (UnimplementedTipsPanelServer) GetUserByUserName(context.Context, *Name) (*User, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetUserByUserName not implemented")
+}
+func (UnimplementedTipsPanelServer) GetClub(context.Context, *Id) (*Club, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetClub not implemented")
 }
 func (UnimplementedTipsPanelServer) AddUser(context.Context, *User) (*Bool, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AddUser not implemented")
@@ -352,6 +366,24 @@ func _TipsPanel_GetUserByUserName_Handler(srv interface{}, ctx context.Context, 
 	return interceptor(ctx, in, info, handler)
 }
 
+func _TipsPanel_GetClub_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Id)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TipsPanelServer).GetClub(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/tp_proto.TipsPanel/GetClub",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TipsPanelServer).GetClub(ctx, req.(*Id))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _TipsPanel_AddUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(User)
 	if err := dec(in); err != nil {
@@ -476,6 +508,10 @@ var TipsPanel_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetUserByUserName",
 			Handler:    _TipsPanel_GetUserByUserName_Handler,
+		},
+		{
+			MethodName: "GetClub",
+			Handler:    _TipsPanel_GetClub_Handler,
 		},
 		{
 			MethodName: "AddUser",

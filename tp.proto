@@ -11,6 +11,7 @@ service TipsPanel{
     rpc GetCoupon(Id) returns (Coupon){}
     rpc GetUser(Id) returns (User){}
     rpc GetUserByUserName(Name) returns (User){}
+    rpc GetClub(Id) returns (Club){}
     rpc AddUser(User) returns (Bool){}
     rpc AddApplication(Application) returns (Bool){}
     rpc AddCoupon(Coupon) returns (Bool){}
@@ -29,6 +30,13 @@ message Id{
 
 message Bool{
     bool value=1;
+}
+message ClubsPackage{
+    repeated Club clubs=1;
+}
+message Club{
+    string id = 1;
+    string name = 2;
 }
 message LeaguesPackage{
     repeated League leagues=1;

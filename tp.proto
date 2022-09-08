@@ -36,7 +36,7 @@ message ClubsPackage{
 }
 message Club{
     string id = 1;
-    string name = 2;
+    string clubName = 2;
 }
 message LeaguesPackage{
     repeated League leagues=1;

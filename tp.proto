@@ -132,8 +132,6 @@ message MobileMatch{
     string guest =5;
     string result=6;
     int32 timestamp=7;
-    string hostName=8;
-    string hostGuest=9;
 }
 message MobileLeague{
     string id = 1;

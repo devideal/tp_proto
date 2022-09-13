@@ -8,6 +8,18 @@
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
 import 'dart:typed_data' as $typed_data;
+@$core.Deprecated('Use isWinDescriptor instead')
+const IsWin$json = const {
+  '1': 'IsWin',
+  '2': const [
+    const {'1': 'LOST', '2': 0},
+    const {'1': 'UNKNOWN', '2': 1},
+    const {'1': 'WON', '2': 2},
+  ],
+};
+
+/// Descriptor for `IsWin`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List isWinDescriptor = $convert.base64Decode('CgVJc1dpbhIICgRMT1NUEAASCwoHVU5LTk9XThABEgcKA1dPThAC');
 @$core.Deprecated('Use nameDescriptor instead')
 const Name$json = const {
   '1': 'Name',
@@ -174,17 +186,16 @@ const Bet$json = const {
     const {'1': 'matchId', '3': 2, '4': 1, '5': 9, '10': 'matchId'},
     const {'1': 'prediction', '3': 3, '4': 1, '5': 9, '10': 'prediction'},
     const {'1': 'ratio', '3': 4, '4': 1, '5': 1, '10': 'ratio'},
-    const {'1': 'win', '3': 5, '4': 1, '5': 8, '9': 0, '10': 'win', '17': true},
-    const {'1': 'showResult', '3': 6, '4': 1, '5': 8, '9': 1, '10': 'showResult', '17': true},
+    const {'1': 'win', '3': 5, '4': 1, '5': 14, '6': '.tp_proto.IsWin', '10': 'win'},
+    const {'1': 'showResult', '3': 6, '4': 1, '5': 8, '9': 0, '10': 'showResult', '17': true},
   ],
   '8': const [
-    const {'1': '_win'},
     const {'1': '_showResult'},
   ],
 };
 
 /// Descriptor for `Bet`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List betDescriptor = $convert.base64Decode('CgNCZXQSDgoCaWQYASABKAlSAmlkEhgKB21hdGNoSWQYAiABKAlSB21hdGNoSWQSHgoKcHJlZGljdGlvbhgDIAEoCVIKcHJlZGljdGlvbhIUCgVyYXRpbxgEIAEoAVIFcmF0aW8SFQoDd2luGAUgASgISABSA3dpbogBARIjCgpzaG93UmVzdWx0GAYgASgISAFSCnNob3dSZXN1bHSIAQFCBgoEX3dpbkINCgtfc2hvd1Jlc3VsdA==');
+final $typed_data.Uint8List betDescriptor = $convert.base64Decode('CgNCZXQSDgoCaWQYASABKAlSAmlkEhgKB21hdGNoSWQYAiABKAlSB21hdGNoSWQSHgoKcHJlZGljdGlvbhgDIAEoCVIKcHJlZGljdGlvbhIUCgVyYXRpbxgEIAEoAVIFcmF0aW8SIQoDd2luGAUgASgOMg8udHBfcHJvdG8uSXNXaW5SA3dpbhIjCgpzaG93UmVzdWx0GAYgASgISABSCnNob3dSZXN1bHSIAQFCDQoLX3Nob3dSZXN1bHQ=');
 @$core.Deprecated('Use branchDescriptor instead')
 const Branch$json = const {
   '1': 'Branch',
@@ -292,17 +303,13 @@ const MobileCoupon$json = const {
     const {'1': 'branchId', '3': 3, '4': 1, '5': 9, '10': 'branchId'},
     const {'1': 'applicationId', '3': 4, '4': 1, '5': 9, '10': 'applicationId'},
     const {'1': 'isVisible', '3': 5, '4': 1, '5': 8, '10': 'isVisible'},
-    const {'1': 'end', '3': 6, '4': 1, '5': 8, '9': 0, '10': 'end', '17': true},
-    const {'1': 'name', '3': 7, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'timestamp', '3': 8, '4': 1, '5': 5, '10': 'timestamp'},
-  ],
-  '8': const [
-    const {'1': '_end'},
+    const {'1': 'name', '3': 6, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'timestamp', '3': 7, '4': 1, '5': 5, '10': 'timestamp'},
   ],
 };
 
 /// Descriptor for `MobileCoupon`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List mobileCouponDescriptor = $convert.base64Decode('CgxNb2JpbGVDb3Vwb24SDgoCaWQYASABKAlSAmlkEicKBGJldHMYAiADKAsyEy50cF9wcm90by5Nb2JpbGVCZXRSBGJldHMSGgoIYnJhbmNoSWQYAyABKAlSCGJyYW5jaElkEiQKDWFwcGxpY2F0aW9uSWQYBCABKAlSDWFwcGxpY2F0aW9uSWQSHAoJaXNWaXNpYmxlGAUgASgIUglpc1Zpc2libGUSFQoDZW5kGAYgASgISABSA2VuZIgBARISCgRuYW1lGAcgASgJUgRuYW1lEhwKCXRpbWVzdGFtcBgIIAEoBVIJdGltZXN0YW1wQgYKBF9lbmQ=');
+final $typed_data.Uint8List mobileCouponDescriptor = $convert.base64Decode('CgxNb2JpbGVDb3Vwb24SDgoCaWQYASABKAlSAmlkEicKBGJldHMYAiADKAsyEy50cF9wcm90by5Nb2JpbGVCZXRSBGJldHMSGgoIYnJhbmNoSWQYAyABKAlSCGJyYW5jaElkEiQKDWFwcGxpY2F0aW9uSWQYBCABKAlSDWFwcGxpY2F0aW9uSWQSHAoJaXNWaXNpYmxlGAUgASgIUglpc1Zpc2libGUSEgoEbmFtZRgGIAEoCVIEbmFtZRIcCgl0aW1lc3RhbXAYByABKAVSCXRpbWVzdGFtcA==');
 @$core.Deprecated('Use mobileCouponsPackageDescriptor instead')
 const MobileCouponsPackage$json = const {
   '1': 'MobileCouponsPackage',
@@ -321,14 +328,13 @@ const MobileBet$json = const {
     const {'1': 'match', '3': 2, '4': 1, '5': 11, '6': '.tp_proto.MobileMatch', '10': 'match'},
     const {'1': 'prediction', '3': 3, '4': 1, '5': 9, '10': 'prediction'},
     const {'1': 'ratio', '3': 4, '4': 1, '5': 1, '10': 'ratio'},
-    const {'1': 'win', '3': 5, '4': 1, '5': 8, '9': 0, '10': 'win', '17': true},
-    const {'1': 'showReslut', '3': 6, '4': 1, '5': 8, '9': 1, '10': 'showReslut', '17': true},
+    const {'1': 'win', '3': 5, '4': 1, '5': 14, '6': '.tp_proto.IsWin', '10': 'win'},
+    const {'1': 'showReslut', '3': 6, '4': 1, '5': 8, '9': 0, '10': 'showReslut', '17': true},
   ],
   '8': const [
-    const {'1': '_win'},
     const {'1': '_showReslut'},
   ],
 };
 
 /// Descriptor for `MobileBet`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List mobileBetDescriptor = $convert.base64Decode('CglNb2JpbGVCZXQSDgoCaWQYASABKAlSAmlkEisKBW1hdGNoGAIgASgLMhUudHBfcHJvdG8uTW9iaWxlTWF0Y2hSBW1hdGNoEh4KCnByZWRpY3Rpb24YAyABKAlSCnByZWRpY3Rpb24SFAoFcmF0aW8YBCABKAFSBXJhdGlvEhUKA3dpbhgFIAEoCEgAUgN3aW6IAQESIwoKc2hvd1Jlc2x1dBgGIAEoCEgBUgpzaG93UmVzbHV0iAEBQgYKBF93aW5CDQoLX3Nob3dSZXNsdXQ=');
+final $typed_data.Uint8List mobileBetDescriptor = $convert.base64Decode('CglNb2JpbGVCZXQSDgoCaWQYASABKAlSAmlkEisKBW1hdGNoGAIgASgLMhUudHBfcHJvdG8uTW9iaWxlTWF0Y2hSBW1hdGNoEh4KCnByZWRpY3Rpb24YAyABKAlSCnByZWRpY3Rpb24SFAoFcmF0aW8YBCABKAFSBXJhdGlvEiEKA3dpbhgFIAEoDjIPLnRwX3Byb3RvLklzV2luUgN3aW4SIwoKc2hvd1Jlc2x1dBgGIAEoCEgAUgpzaG93UmVzbHV0iAEBQg0KC19zaG93UmVzbHV0');

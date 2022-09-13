@@ -9,6 +9,10 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'tp.pbenum.dart';
+
+export 'tp.pbenum.dart';
+
 class Name extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Name', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value')
@@ -892,7 +896,7 @@ class Bet extends $pb.GeneratedMessage {
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'matchId', protoName: 'matchId')
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'prediction')
     ..a<$core.double>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ratio', $pb.PbFieldType.OD)
-    ..aOB(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'win')
+    ..e<IsWin>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'win', $pb.PbFieldType.OE, defaultOrMaker: IsWin.WON, valueOf: IsWin.valueOf, enumValues: IsWin.values)
     ..aOB(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'showResult', protoName: 'showResult')
     ..hasRequiredFields = false
   ;
@@ -903,7 +907,7 @@ class Bet extends $pb.GeneratedMessage {
     $core.String? matchId,
     $core.String? prediction,
     $core.double? ratio,
-    $core.bool? win,
+    IsWin? win,
     $core.bool? showResult,
   }) {
     final _result = create();
@@ -985,9 +989,9 @@ class Bet extends $pb.GeneratedMessage {
   void clearRatio() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.bool get win => $_getBF(4);
+  IsWin get win => $_getN(4);
   @$pb.TagNumber(5)
-  set win($core.bool v) { $_setBool(4, v); }
+  set win(IsWin v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasWin() => $_has(4);
   @$pb.TagNumber(5)
@@ -1671,9 +1675,8 @@ class MobileCoupon extends $pb.GeneratedMessage {
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'branchId', protoName: 'branchId')
     ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'applicationId', protoName: 'applicationId')
     ..aOB(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isVisible', protoName: 'isVisible')
-    ..aOB(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'end')
-    ..aOS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
-    ..a<$core.int>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', $pb.PbFieldType.O3)
+    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..a<$core.int>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', $pb.PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
@@ -1684,7 +1687,6 @@ class MobileCoupon extends $pb.GeneratedMessage {
     $core.String? branchId,
     $core.String? applicationId,
     $core.bool? isVisible,
-    $core.bool? end,
     $core.String? name,
     $core.int? timestamp,
   }) {
@@ -1703,9 +1705,6 @@ class MobileCoupon extends $pb.GeneratedMessage {
     }
     if (isVisible != null) {
       _result.isVisible = isVisible;
-    }
-    if (end != null) {
-      _result.end = end;
     }
     if (name != null) {
       _result.name = name;
@@ -1776,31 +1775,22 @@ class MobileCoupon extends $pb.GeneratedMessage {
   void clearIsVisible() => clearField(5);
 
   @$pb.TagNumber(6)
-  $core.bool get end => $_getBF(5);
+  $core.String get name => $_getSZ(5);
   @$pb.TagNumber(6)
-  set end($core.bool v) { $_setBool(5, v); }
+  set name($core.String v) { $_setString(5, v); }
   @$pb.TagNumber(6)
-  $core.bool hasEnd() => $_has(5);
+  $core.bool hasName() => $_has(5);
   @$pb.TagNumber(6)
-  void clearEnd() => clearField(6);
+  void clearName() => clearField(6);
 
   @$pb.TagNumber(7)
-  $core.String get name => $_getSZ(6);
+  $core.int get timestamp => $_getIZ(6);
   @$pb.TagNumber(7)
-  set name($core.String v) { $_setString(6, v); }
+  set timestamp($core.int v) { $_setSignedInt32(6, v); }
   @$pb.TagNumber(7)
-  $core.bool hasName() => $_has(6);
+  $core.bool hasTimestamp() => $_has(6);
   @$pb.TagNumber(7)
-  void clearName() => clearField(7);
-
-  @$pb.TagNumber(8)
-  $core.int get timestamp => $_getIZ(7);
-  @$pb.TagNumber(8)
-  set timestamp($core.int v) { $_setSignedInt32(7, v); }
-  @$pb.TagNumber(8)
-  $core.bool hasTimestamp() => $_has(7);
-  @$pb.TagNumber(8)
-  void clearTimestamp() => clearField(8);
+  void clearTimestamp() => clearField(7);
 }
 
 class MobileCouponsPackage extends $pb.GeneratedMessage {
@@ -1850,7 +1840,7 @@ class MobileBet extends $pb.GeneratedMessage {
     ..aOM<MobileMatch>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'match', subBuilder: MobileMatch.create)
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'prediction')
     ..a<$core.double>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ratio', $pb.PbFieldType.OD)
-    ..aOB(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'win')
+    ..e<IsWin>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'win', $pb.PbFieldType.OE, defaultOrMaker: IsWin.WON, valueOf: IsWin.valueOf, enumValues: IsWin.values)
     ..aOB(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'showReslut', protoName: 'showReslut')
     ..hasRequiredFields = false
   ;
@@ -1861,7 +1851,7 @@ class MobileBet extends $pb.GeneratedMessage {
     MobileMatch? match,
     $core.String? prediction,
     $core.double? ratio,
-    $core.bool? win,
+    IsWin? win,
     $core.bool? showReslut,
   }) {
     final _result = create();
@@ -1945,9 +1935,9 @@ class MobileBet extends $pb.GeneratedMessage {
   void clearRatio() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.bool get win => $_getBF(4);
+  IsWin get win => $_getN(4);
   @$pb.TagNumber(5)
-  set win($core.bool v) { $_setBool(4, v); }
+  set win(IsWin v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasWin() => $_has(4);
   @$pb.TagNumber(5)

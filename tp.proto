@@ -70,6 +70,8 @@ message Match{
     int32 timestamp =7;
     string defaultPrediction = 8;
     double defaultOdds = 9;
+    string hostName =10;
+    string guestName=11;
 }
 message ApplicationsPackage {
     repeated Application applications=1;
@@ -130,6 +132,8 @@ message MobileMatch{
     string guest =5;
     string result=6;
     int32 timestamp=7;
+    string hostName=8;
+    string hostGuest=9;
 }
 message MobileLeague{
     string id = 1;

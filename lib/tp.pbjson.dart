@@ -135,11 +135,13 @@ const Match$json = const {
     const {'1': 'timestamp', '3': 7, '4': 1, '5': 5, '10': 'timestamp'},
     const {'1': 'defaultPrediction', '3': 8, '4': 1, '5': 9, '10': 'defaultPrediction'},
     const {'1': 'defaultOdds', '3': 9, '4': 1, '5': 1, '10': 'defaultOdds'},
+    const {'1': 'hostName', '3': 10, '4': 1, '5': 9, '10': 'hostName'},
+    const {'1': 'guestName', '3': 11, '4': 1, '5': 9, '10': 'guestName'},
   ],
 };
 
 /// Descriptor for `Match`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List matchDescriptor = $convert.base64Decode('CgVNYXRjaBIOCgJpZBgBIAEoCVICaWQSGgoIbGVhZ3VlSWQYAiABKAlSCGxlYWd1ZUlkEhIKBHdlZWsYAyABKAVSBHdlZWsSEgoEaG9zdBgEIAEoCVIEaG9zdBIUCgVndWVzdBgFIAEoCVIFZ3Vlc3QSFgoGcmVzdWx0GAYgASgJUgZyZXN1bHQSHAoJdGltZXN0YW1wGAcgASgFUgl0aW1lc3RhbXASLAoRZGVmYXVsdFByZWRpY3Rpb24YCCABKAlSEWRlZmF1bHRQcmVkaWN0aW9uEiAKC2RlZmF1bHRPZGRzGAkgASgBUgtkZWZhdWx0T2Rkcw==');
+final $typed_data.Uint8List matchDescriptor = $convert.base64Decode('CgVNYXRjaBIOCgJpZBgBIAEoCVICaWQSGgoIbGVhZ3VlSWQYAiABKAlSCGxlYWd1ZUlkEhIKBHdlZWsYAyABKAVSBHdlZWsSEgoEaG9zdBgEIAEoCVIEaG9zdBIUCgVndWVzdBgFIAEoCVIFZ3Vlc3QSFgoGcmVzdWx0GAYgASgJUgZyZXN1bHQSHAoJdGltZXN0YW1wGAcgASgFUgl0aW1lc3RhbXASLAoRZGVmYXVsdFByZWRpY3Rpb24YCCABKAlSEWRlZmF1bHRQcmVkaWN0aW9uEiAKC2RlZmF1bHRPZGRzGAkgASgBUgtkZWZhdWx0T2RkcxIaCghob3N0TmFtZRgKIAEoCVIIaG9zdE5hbWUSHAoJZ3Vlc3ROYW1lGAsgASgJUglndWVzdE5hbWU=');
 @$core.Deprecated('Use applicationsPackageDescriptor instead')
 const ApplicationsPackage$json = const {
   '1': 'ApplicationsPackage',
@@ -253,11 +255,13 @@ const MobileMatch$json = const {
     const {'1': 'guest', '3': 5, '4': 1, '5': 9, '10': 'guest'},
     const {'1': 'result', '3': 6, '4': 1, '5': 9, '10': 'result'},
     const {'1': 'timestamp', '3': 7, '4': 1, '5': 5, '10': 'timestamp'},
+    const {'1': 'hostName', '3': 8, '4': 1, '5': 9, '10': 'hostName'},
+    const {'1': 'hostGuest', '3': 9, '4': 1, '5': 9, '10': 'hostGuest'},
   ],
 };
 
 /// Descriptor for `MobileMatch`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List mobileMatchDescriptor = $convert.base64Decode('CgtNb2JpbGVNYXRjaBIOCgJpZBgBIAEoCVICaWQSGgoIbGVhZ3VlSWQYAiABKAlSCGxlYWd1ZUlkEhIKBHdlZWsYAyABKAVSBHdlZWsSEgoEaG9zdBgEIAEoCVIEaG9zdBIUCgVndWVzdBgFIAEoCVIFZ3Vlc3QSFgoGcmVzdWx0GAYgASgJUgZyZXN1bHQSHAoJdGltZXN0YW1wGAcgASgFUgl0aW1lc3RhbXA=');
+final $typed_data.Uint8List mobileMatchDescriptor = $convert.base64Decode('CgtNb2JpbGVNYXRjaBIOCgJpZBgBIAEoCVICaWQSGgoIbGVhZ3VlSWQYAiABKAlSCGxlYWd1ZUlkEhIKBHdlZWsYAyABKAVSBHdlZWsSEgoEaG9zdBgEIAEoCVIEaG9zdBIUCgVndWVzdBgFIAEoCVIFZ3Vlc3QSFgoGcmVzdWx0GAYgASgJUgZyZXN1bHQSHAoJdGltZXN0YW1wGAcgASgFUgl0aW1lc3RhbXASGgoIaG9zdE5hbWUYCCABKAlSCGhvc3ROYW1lEhwKCWhvc3RHdWVzdBgJIAEoCVIJaG9zdEd1ZXN0');
 @$core.Deprecated('Use mobileLeagueDescriptor instead')
 const MobileLeague$json = const {
   '1': 'MobileLeague',

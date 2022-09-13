@@ -572,6 +572,8 @@ class Match extends $pb.GeneratedMessage {
     ..a<$core.int>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', $pb.PbFieldType.O3)
     ..aOS(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'defaultPrediction', protoName: 'defaultPrediction')
     ..a<$core.double>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'defaultOdds', $pb.PbFieldType.OD, protoName: 'defaultOdds')
+    ..aOS(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hostName', protoName: 'hostName')
+    ..aOS(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'guestName', protoName: 'guestName')
     ..hasRequiredFields = false
   ;
 
@@ -586,6 +588,8 @@ class Match extends $pb.GeneratedMessage {
     $core.int? timestamp,
     $core.String? defaultPrediction,
     $core.double? defaultOdds,
+    $core.String? hostName,
+    $core.String? guestName,
   }) {
     final _result = create();
     if (id != null) {
@@ -614,6 +618,12 @@ class Match extends $pb.GeneratedMessage {
     }
     if (defaultOdds != null) {
       _result.defaultOdds = defaultOdds;
+    }
+    if (hostName != null) {
+      _result.hostName = hostName;
+    }
+    if (guestName != null) {
+      _result.guestName = guestName;
     }
     return _result;
   }
@@ -718,6 +728,24 @@ class Match extends $pb.GeneratedMessage {
   $core.bool hasDefaultOdds() => $_has(8);
   @$pb.TagNumber(9)
   void clearDefaultOdds() => clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.String get hostName => $_getSZ(9);
+  @$pb.TagNumber(10)
+  set hostName($core.String v) { $_setString(9, v); }
+  @$pb.TagNumber(10)
+  $core.bool hasHostName() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearHostName() => clearField(10);
+
+  @$pb.TagNumber(11)
+  $core.String get guestName => $_getSZ(10);
+  @$pb.TagNumber(11)
+  set guestName($core.String v) { $_setString(10, v); }
+  @$pb.TagNumber(11)
+  $core.bool hasGuestName() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearGuestName() => clearField(11);
 }
 
 class ApplicationsPackage extends $pb.GeneratedMessage {
@@ -1384,6 +1412,8 @@ class MobileMatch extends $pb.GeneratedMessage {
     ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'guest')
     ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'result')
     ..a<$core.int>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', $pb.PbFieldType.O3)
+    ..aOS(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hostName', protoName: 'hostName')
+    ..aOS(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hostGuest', protoName: 'hostGuest')
     ..hasRequiredFields = false
   ;
 
@@ -1396,6 +1426,8 @@ class MobileMatch extends $pb.GeneratedMessage {
     $core.String? guest,
     $core.String? result,
     $core.int? timestamp,
+    $core.String? hostName,
+    $core.String? hostGuest,
   }) {
     final _result = create();
     if (id != null) {
@@ -1418,6 +1450,12 @@ class MobileMatch extends $pb.GeneratedMessage {
     }
     if (timestamp != null) {
       _result.timestamp = timestamp;
+    }
+    if (hostName != null) {
+      _result.hostName = hostName;
+    }
+    if (hostGuest != null) {
+      _result.hostGuest = hostGuest;
     }
     return _result;
   }
@@ -1504,6 +1542,24 @@ class MobileMatch extends $pb.GeneratedMessage {
   $core.bool hasTimestamp() => $_has(6);
   @$pb.TagNumber(7)
   void clearTimestamp() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.String get hostName => $_getSZ(7);
+  @$pb.TagNumber(8)
+  set hostName($core.String v) { $_setString(7, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasHostName() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearHostName() => clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.String get hostGuest => $_getSZ(8);
+  @$pb.TagNumber(9)
+  set hostGuest($core.String v) { $_setString(8, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasHostGuest() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearHostGuest() => clearField(9);
 }
 
 class MobileLeague extends $pb.GeneratedMessage {

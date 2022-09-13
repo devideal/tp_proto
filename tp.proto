@@ -166,6 +166,6 @@ message MobileBet{
     string prediction=3;
     double ratio=4;
     // IsWin win=5;
-    bool win=5;
+    int32 win=5;
     optional bool showReslut=6;
 }

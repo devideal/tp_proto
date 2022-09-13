@@ -1840,7 +1840,7 @@ class MobileBet extends $pb.GeneratedMessage {
     ..aOM<MobileMatch>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'match', subBuilder: MobileMatch.create)
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'prediction')
     ..a<$core.double>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ratio', $pb.PbFieldType.OD)
-    ..aOB(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'win')
+    ..a<$core.int>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'win', $pb.PbFieldType.O3)
     ..aOB(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'showReslut', protoName: 'showReslut')
     ..hasRequiredFields = false
   ;
@@ -1851,7 +1851,7 @@ class MobileBet extends $pb.GeneratedMessage {
     MobileMatch? match,
     $core.String? prediction,
     $core.double? ratio,
-    $core.bool? win,
+    $core.int? win,
     $core.bool? showReslut,
   }) {
     final _result = create();
@@ -1935,9 +1935,9 @@ class MobileBet extends $pb.GeneratedMessage {
   void clearRatio() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.bool get win => $_getBF(4);
+  $core.int get win => $_getIZ(4);
   @$pb.TagNumber(5)
-  set win($core.bool v) { $_setBool(4, v); }
+  set win($core.int v) { $_setSignedInt32(4, v); }
   @$pb.TagNumber(5)
   $core.bool hasWin() => $_has(4);
   @$pb.TagNumber(5)

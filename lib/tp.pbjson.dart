@@ -8,18 +8,6 @@
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
 import 'dart:typed_data' as $typed_data;
-@$core.Deprecated('Use isWinDescriptor instead')
-const IsWin$json = const {
-  '1': 'IsWin',
-  '2': const [
-    const {'1': 'LOST', '2': 0},
-    const {'1': 'UNKNOWN', '2': 1},
-    const {'1': 'WON', '2': 2},
-  ],
-};
-
-/// Descriptor for `IsWin`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List isWinDescriptor = $convert.base64Decode('CgVJc1dpbhIICgRMT1NUEAASCwoHVU5LTk9XThABEgcKA1dPThAC');
 @$core.Deprecated('Use nameDescriptor instead')
 const Name$json = const {
   '1': 'Name',
@@ -186,7 +174,7 @@ const Bet$json = const {
     const {'1': 'matchId', '3': 2, '4': 1, '5': 9, '10': 'matchId'},
     const {'1': 'prediction', '3': 3, '4': 1, '5': 9, '10': 'prediction'},
     const {'1': 'ratio', '3': 4, '4': 1, '5': 1, '10': 'ratio'},
-    const {'1': 'win', '3': 5, '4': 1, '5': 14, '6': '.tp_proto.IsWin', '10': 'win'},
+    const {'1': 'win', '3': 5, '4': 1, '5': 5, '10': 'win'},
     const {'1': 'showResult', '3': 6, '4': 1, '5': 8, '9': 0, '10': 'showResult', '17': true},
   ],
   '8': const [
@@ -195,7 +183,7 @@ const Bet$json = const {
 };
 
 /// Descriptor for `Bet`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List betDescriptor = $convert.base64Decode('CgNCZXQSDgoCaWQYASABKAlSAmlkEhgKB21hdGNoSWQYAiABKAlSB21hdGNoSWQSHgoKcHJlZGljdGlvbhgDIAEoCVIKcHJlZGljdGlvbhIUCgVyYXRpbxgEIAEoAVIFcmF0aW8SIQoDd2luGAUgASgOMg8udHBfcHJvdG8uSXNXaW5SA3dpbhIjCgpzaG93UmVzdWx0GAYgASgISABSCnNob3dSZXN1bHSIAQFCDQoLX3Nob3dSZXN1bHQ=');
+final $typed_data.Uint8List betDescriptor = $convert.base64Decode('CgNCZXQSDgoCaWQYASABKAlSAmlkEhgKB21hdGNoSWQYAiABKAlSB21hdGNoSWQSHgoKcHJlZGljdGlvbhgDIAEoCVIKcHJlZGljdGlvbhIUCgVyYXRpbxgEIAEoAVIFcmF0aW8SEAoDd2luGAUgASgFUgN3aW4SIwoKc2hvd1Jlc3VsdBgGIAEoCEgAUgpzaG93UmVzdWx0iAEBQg0KC19zaG93UmVzdWx0');
 @$core.Deprecated('Use branchDescriptor instead')
 const Branch$json = const {
   '1': 'Branch',

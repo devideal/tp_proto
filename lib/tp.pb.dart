@@ -9,10 +9,6 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'tp.pbenum.dart';
-
-export 'tp.pbenum.dart';
-
 class Name extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Name', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value')
@@ -896,7 +892,7 @@ class Bet extends $pb.GeneratedMessage {
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'matchId', protoName: 'matchId')
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'prediction')
     ..a<$core.double>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ratio', $pb.PbFieldType.OD)
-    ..e<IsWin>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'win', $pb.PbFieldType.OE, defaultOrMaker: IsWin.LOST, valueOf: IsWin.valueOf, enumValues: IsWin.values)
+    ..a<$core.int>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'win', $pb.PbFieldType.O3)
     ..aOB(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'showResult', protoName: 'showResult')
     ..hasRequiredFields = false
   ;
@@ -907,7 +903,7 @@ class Bet extends $pb.GeneratedMessage {
     $core.String? matchId,
     $core.String? prediction,
     $core.double? ratio,
-    IsWin? win,
+    $core.int? win,
     $core.bool? showResult,
   }) {
     final _result = create();
@@ -989,9 +985,9 @@ class Bet extends $pb.GeneratedMessage {
   void clearRatio() => clearField(4);
 
   @$pb.TagNumber(5)
-  IsWin get win => $_getN(4);
+  $core.int get win => $_getIZ(4);
   @$pb.TagNumber(5)
-  set win(IsWin v) { setField(5, v); }
+  set win($core.int v) { $_setSignedInt32(4, v); }
   @$pb.TagNumber(5)
   $core.bool hasWin() => $_has(4);
   @$pb.TagNumber(5)

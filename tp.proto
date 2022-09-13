@@ -89,7 +89,7 @@ message Bet{
     string matchId=2;
     string prediction=3;
     double ratio=4;
-    IsWin win=5;
+    int32 win=5;
     optional bool showResult=6;
 }
 
@@ -122,11 +122,11 @@ message User{
     string passwordhash=4;
     int32 role=5;
 }
-enum IsWin{
-    LOST = 0;
-    UNKNOWN = 1;
-    WON = 2;
-}
+// enum IsWin{
+//     LOST = 0;
+//     UNKNOWN = 1;
+//     WON = 2;
+// }
 //mobile
 message MobileMatch{
     string id =1;
@@ -165,7 +165,6 @@ message MobileBet{
     MobileMatch match=2;
     string prediction=3;
     double ratio=4;
-    // IsWin win=5;
     int32 win=5;
     optional bool showReslut=6;
 }

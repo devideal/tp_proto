@@ -316,13 +316,14 @@ const MobileBet$json = const {
     const {'1': 'match', '3': 2, '4': 1, '5': 11, '6': '.tp_proto.MobileMatch', '10': 'match'},
     const {'1': 'prediction', '3': 3, '4': 1, '5': 9, '10': 'prediction'},
     const {'1': 'ratio', '3': 4, '4': 1, '5': 1, '10': 'ratio'},
-    const {'1': 'win', '3': 5, '4': 1, '5': 5, '10': 'win'},
-    const {'1': 'showReslut', '3': 6, '4': 1, '5': 8, '9': 0, '10': 'showReslut', '17': true},
+    const {'1': 'win', '3': 5, '4': 1, '5': 8, '9': 0, '10': 'win', '17': true},
+    const {'1': 'showReslut', '3': 6, '4': 1, '5': 8, '9': 1, '10': 'showReslut', '17': true},
   ],
   '8': const [
+    const {'1': '_win'},
     const {'1': '_showReslut'},
   ],
 };
 
 /// Descriptor for `MobileBet`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List mobileBetDescriptor = $convert.base64Decode('CglNb2JpbGVCZXQSDgoCaWQYASABKAlSAmlkEisKBW1hdGNoGAIgASgLMhUudHBfcHJvdG8uTW9iaWxlTWF0Y2hSBW1hdGNoEh4KCnByZWRpY3Rpb24YAyABKAlSCnByZWRpY3Rpb24SFAoFcmF0aW8YBCABKAFSBXJhdGlvEhAKA3dpbhgFIAEoBVIDd2luEiMKCnNob3dSZXNsdXQYBiABKAhIAFIKc2hvd1Jlc2x1dIgBAUINCgtfc2hvd1Jlc2x1dA==');
+final $typed_data.Uint8List mobileBetDescriptor = $convert.base64Decode('CglNb2JpbGVCZXQSDgoCaWQYASABKAlSAmlkEisKBW1hdGNoGAIgASgLMhUudHBfcHJvdG8uTW9iaWxlTWF0Y2hSBW1hdGNoEh4KCnByZWRpY3Rpb24YAyABKAlSCnByZWRpY3Rpb24SFAoFcmF0aW8YBCABKAFSBXJhdGlvEhUKA3dpbhgFIAEoCEgAUgN3aW6IAQESIwoKc2hvd1Jlc2x1dBgGIAEoCEgBUgpzaG93UmVzbHV0iAEBQgYKBF93aW5CDQoLX3Nob3dSZXNsdXQ=');

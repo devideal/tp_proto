@@ -165,6 +165,6 @@ message MobileBet{
     MobileMatch match=2;
     string prediction=3;
     double ratio=4;
-    int32 win=5;
+    optional bool win=5;
     optional bool showReslut=6;
 }

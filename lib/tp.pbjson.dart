@@ -127,7 +127,7 @@ const Match$json = const {
   '1': 'Match',
   '2': const [
     const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
-    const {'1': 'leagueId', '3': 2, '4': 1, '5': 9, '10': 'leagueId'},
+    const {'1': 'leagueId', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'leagueId', '17': true},
     const {'1': 'week', '3': 3, '4': 1, '5': 5, '10': 'week'},
     const {'1': 'host', '3': 4, '4': 1, '5': 9, '10': 'host'},
     const {'1': 'guest', '3': 5, '4': 1, '5': 9, '10': 'guest'},
@@ -138,10 +138,13 @@ const Match$json = const {
     const {'1': 'hostName', '3': 10, '4': 1, '5': 9, '10': 'hostName'},
     const {'1': 'guestName', '3': 11, '4': 1, '5': 9, '10': 'guestName'},
   ],
+  '8': const [
+    const {'1': '_leagueId'},
+  ],
 };
 
 /// Descriptor for `Match`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List matchDescriptor = $convert.base64Decode('CgVNYXRjaBIOCgJpZBgBIAEoCVICaWQSGgoIbGVhZ3VlSWQYAiABKAlSCGxlYWd1ZUlkEhIKBHdlZWsYAyABKAVSBHdlZWsSEgoEaG9zdBgEIAEoCVIEaG9zdBIUCgVndWVzdBgFIAEoCVIFZ3Vlc3QSFgoGcmVzdWx0GAYgASgJUgZyZXN1bHQSHAoJdGltZXN0YW1wGAcgASgFUgl0aW1lc3RhbXASLAoRZGVmYXVsdFByZWRpY3Rpb24YCCABKAlSEWRlZmF1bHRQcmVkaWN0aW9uEiAKC2RlZmF1bHRPZGRzGAkgASgBUgtkZWZhdWx0T2RkcxIaCghob3N0TmFtZRgKIAEoCVIIaG9zdE5hbWUSHAoJZ3Vlc3ROYW1lGAsgASgJUglndWVzdE5hbWU=');
+final $typed_data.Uint8List matchDescriptor = $convert.base64Decode('CgVNYXRjaBIOCgJpZBgBIAEoCVICaWQSHwoIbGVhZ3VlSWQYAiABKAlIAFIIbGVhZ3VlSWSIAQESEgoEd2VlaxgDIAEoBVIEd2VlaxISCgRob3N0GAQgASgJUgRob3N0EhQKBWd1ZXN0GAUgASgJUgVndWVzdBIWCgZyZXN1bHQYBiABKAlSBnJlc3VsdBIcCgl0aW1lc3RhbXAYByABKAVSCXRpbWVzdGFtcBIsChFkZWZhdWx0UHJlZGljdGlvbhgIIAEoCVIRZGVmYXVsdFByZWRpY3Rpb24SIAoLZGVmYXVsdE9kZHMYCSABKAFSC2RlZmF1bHRPZGRzEhoKCGhvc3ROYW1lGAogASgJUghob3N0TmFtZRIcCglndWVzdE5hbWUYCyABKAlSCWd1ZXN0TmFtZUILCglfbGVhZ3VlSWQ=');
 @$core.Deprecated('Use applicationsPackageDescriptor instead')
 const ApplicationsPackage$json = const {
   '1': 'ApplicationsPackage',

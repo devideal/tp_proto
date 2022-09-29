@@ -55,6 +55,7 @@ message CountriesPackage {
 message Country{
     string id = 1;
     string name = 2;
+    optional string code2 = 3;
 }
 message MatchesPackage{
     repeated Match matches=1;

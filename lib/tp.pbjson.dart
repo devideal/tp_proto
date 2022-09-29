@@ -268,13 +268,13 @@ const MobileLeague$json = const {
   '2': const [
     const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
     const {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'countryName', '3': 3, '4': 1, '5': 9, '10': 'countryName'},
+    const {'1': 'countrId', '3': 3, '4': 1, '5': 9, '10': 'countrId'},
     const {'1': 'sportType', '3': 4, '4': 1, '5': 9, '10': 'sportType'},
   ],
 };
 
 /// Descriptor for `MobileLeague`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List mobileLeagueDescriptor = $convert.base64Decode('CgxNb2JpbGVMZWFndWUSDgoCaWQYASABKAlSAmlkEhIKBG5hbWUYAiABKAlSBG5hbWUSIAoLY291bnRyeU5hbWUYAyABKAlSC2NvdW50cnlOYW1lEhwKCXNwb3J0VHlwZRgEIAEoCVIJc3BvcnRUeXBl');
+final $typed_data.Uint8List mobileLeagueDescriptor = $convert.base64Decode('CgxNb2JpbGVMZWFndWUSDgoCaWQYASABKAlSAmlkEhIKBG5hbWUYAiABKAlSBG5hbWUSGgoIY291bnRySWQYAyABKAlSCGNvdW50cklkEhwKCXNwb3J0VHlwZRgEIAEoCVIJc3BvcnRUeXBl');
 @$core.Deprecated('Use mobileLeaguesPackageDescriptor instead')
 const MobileLeaguesPackage$json = const {
   '1': 'MobileLeaguesPackage',

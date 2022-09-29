@@ -140,7 +140,7 @@ message MobileMatch{
 message MobileLeague{
     string id = 1;
     string name = 2;
-    string countrId = 3;
+    string countryId = 3;
     string sportType = 4;
 }
 

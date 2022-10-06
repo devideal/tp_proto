@@ -449,6 +449,7 @@ class Country extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Country', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'code2')
     ..hasRequiredFields = false
   ;
 
@@ -456,6 +457,7 @@ class Country extends $pb.GeneratedMessage {
   factory Country({
     $core.String? id,
     $core.String? name,
+    $core.String? code2,
   }) {
     final _result = create();
     if (id != null) {
@@ -463,6 +465,9 @@ class Country extends $pb.GeneratedMessage {
     }
     if (name != null) {
       _result.name = name;
+    }
+    if (code2 != null) {
+      _result.code2 = code2;
     }
     return _result;
   }
@@ -504,6 +509,15 @@ class Country extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(1);
   @$pb.TagNumber(2)
   void clearName() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get code2 => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set code2($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasCode2() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCode2() => clearField(3);
 }
 
 class MatchesPackage extends $pb.GeneratedMessage {
@@ -1538,7 +1552,7 @@ class MobileLeague extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MobileLeague', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
-    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'countryName', protoName: 'countryName')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'countryId', protoName: 'countryId')
     ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sportType', protoName: 'sportType')
     ..hasRequiredFields = false
   ;
@@ -1547,7 +1561,7 @@ class MobileLeague extends $pb.GeneratedMessage {
   factory MobileLeague({
     $core.String? id,
     $core.String? name,
-    $core.String? countryName,
+    $core.String? countryId,
     $core.String? sportType,
   }) {
     final _result = create();
@@ -1557,8 +1571,8 @@ class MobileLeague extends $pb.GeneratedMessage {
     if (name != null) {
       _result.name = name;
     }
-    if (countryName != null) {
-      _result.countryName = countryName;
+    if (countryId != null) {
+      _result.countryId = countryId;
     }
     if (sportType != null) {
       _result.sportType = sportType;
@@ -1605,13 +1619,13 @@ class MobileLeague extends $pb.GeneratedMessage {
   void clearName() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.String get countryName => $_getSZ(2);
+  $core.String get countryId => $_getSZ(2);
   @$pb.TagNumber(3)
-  set countryName($core.String v) { $_setString(2, v); }
+  set countryId($core.String v) { $_setString(2, v); }
   @$pb.TagNumber(3)
-  $core.bool hasCountryName() => $_has(2);
+  $core.bool hasCountryId() => $_has(2);
   @$pb.TagNumber(3)
-  void clearCountryName() => clearField(3);
+  void clearCountryId() => clearField(3);
 
   @$pb.TagNumber(4)
   $core.String get sportType => $_getSZ(3);

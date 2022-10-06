@@ -55,6 +55,7 @@ message CountriesPackage {
 message Country{
     string id = 1;
     string name = 2;
+    optional string code2 = 3;
 }
 message MatchesPackage{
     repeated Match matches=1;
@@ -62,7 +63,7 @@ message MatchesPackage{
 }
 message Match{
     string id =1;
-    string leagueId=2;
+    optional string leagueId=2;
     int32 week=3;
     string host =4;
     string guest =5;
@@ -140,7 +141,7 @@ message MobileMatch{
 message MobileLeague{
     string id = 1;
     string name = 2;
-    string countryName = 3;
+    string countryId = 3;
     string sportType = 4;
 }
 

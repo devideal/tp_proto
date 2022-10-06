@@ -1837,7 +1837,7 @@ class MobileBet extends $pb.GeneratedMessage {
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'prediction')
     ..a<$core.double>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ratio', $pb.PbFieldType.OD)
     ..a<$core.int>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'win', $pb.PbFieldType.O3)
-    ..aOB(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'showReslut', protoName: 'showReslut')
+    ..aOB(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'showResult', protoName: 'showResult')
     ..hasRequiredFields = false
   ;
 
@@ -1848,7 +1848,7 @@ class MobileBet extends $pb.GeneratedMessage {
     $core.String? prediction,
     $core.double? ratio,
     $core.int? win,
-    $core.bool? showReslut,
+    $core.bool? showResult,
   }) {
     final _result = create();
     if (id != null) {
@@ -1866,8 +1866,8 @@ class MobileBet extends $pb.GeneratedMessage {
     if (win != null) {
       _result.win = win;
     }
-    if (showReslut != null) {
-      _result.showReslut = showReslut;
+    if (showResult != null) {
+      _result.showResult = showResult;
     }
     return _result;
   }
@@ -1940,12 +1940,12 @@ class MobileBet extends $pb.GeneratedMessage {
   void clearWin() => clearField(5);
 
   @$pb.TagNumber(6)
-  $core.bool get showReslut => $_getBF(5);
+  $core.bool get showResult => $_getBF(5);
   @$pb.TagNumber(6)
-  set showReslut($core.bool v) { $_setBool(5, v); }
+  set showResult($core.bool v) { $_setBool(5, v); }
   @$pb.TagNumber(6)
-  $core.bool hasShowReslut() => $_has(5);
+  $core.bool hasShowResult() => $_has(5);
   @$pb.TagNumber(6)
-  void clearShowReslut() => clearField(6);
+  void clearShowResult() => clearField(6);
 }
 

@@ -182,15 +182,12 @@ const Bet$json = const {
     const {'1': 'prediction', '3': 3, '4': 1, '5': 9, '10': 'prediction'},
     const {'1': 'ratio', '3': 4, '4': 1, '5': 1, '10': 'ratio'},
     const {'1': 'win', '3': 5, '4': 1, '5': 5, '10': 'win'},
-    const {'1': 'showResult', '3': 6, '4': 1, '5': 8, '9': 0, '10': 'showResult', '17': true},
-  ],
-  '8': const [
-    const {'1': '_showResult'},
+    const {'1': 'showResult', '3': 6, '4': 1, '5': 8, '10': 'showResult'},
   ],
 };
 
 /// Descriptor for `Bet`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List betDescriptor = $convert.base64Decode('CgNCZXQSDgoCaWQYASABKAlSAmlkEhgKB21hdGNoSWQYAiABKAlSB21hdGNoSWQSHgoKcHJlZGljdGlvbhgDIAEoCVIKcHJlZGljdGlvbhIUCgVyYXRpbxgEIAEoAVIFcmF0aW8SEAoDd2luGAUgASgFUgN3aW4SIwoKc2hvd1Jlc3VsdBgGIAEoCEgAUgpzaG93UmVzdWx0iAEBQg0KC19zaG93UmVzdWx0');
+final $typed_data.Uint8List betDescriptor = $convert.base64Decode('CgNCZXQSDgoCaWQYASABKAlSAmlkEhgKB21hdGNoSWQYAiABKAlSB21hdGNoSWQSHgoKcHJlZGljdGlvbhgDIAEoCVIKcHJlZGljdGlvbhIUCgVyYXRpbxgEIAEoAVIFcmF0aW8SEAoDd2luGAUgASgFUgN3aW4SHgoKc2hvd1Jlc3VsdBgGIAEoCFIKc2hvd1Jlc3VsdA==');
 @$core.Deprecated('Use branchDescriptor instead')
 const Branch$json = const {
   '1': 'Branch',
@@ -324,12 +321,9 @@ const MobileBet$json = const {
     const {'1': 'prediction', '3': 3, '4': 1, '5': 9, '10': 'prediction'},
     const {'1': 'ratio', '3': 4, '4': 1, '5': 1, '10': 'ratio'},
     const {'1': 'win', '3': 5, '4': 1, '5': 5, '10': 'win'},
-    const {'1': 'showResult', '3': 6, '4': 1, '5': 8, '9': 0, '10': 'showResult', '17': true},
-  ],
-  '8': const [
-    const {'1': '_showResult'},
+    const {'1': 'showResult', '3': 6, '4': 1, '5': 8, '10': 'showResult'},
   ],
 };
 
 /// Descriptor for `MobileBet`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List mobileBetDescriptor = $convert.base64Decode('CglNb2JpbGVCZXQSDgoCaWQYASABKAlSAmlkEisKBW1hdGNoGAIgASgLMhUudHBfcHJvdG8uTW9iaWxlTWF0Y2hSBW1hdGNoEh4KCnByZWRpY3Rpb24YAyABKAlSCnByZWRpY3Rpb24SFAoFcmF0aW8YBCABKAFSBXJhdGlvEhAKA3dpbhgFIAEoBVIDd2luEiMKCnNob3dSZXN1bHQYBiABKAhIAFIKc2hvd1Jlc3VsdIgBAUINCgtfc2hvd1Jlc3VsdA==');
+final $typed_data.Uint8List mobileBetDescriptor = $convert.base64Decode('CglNb2JpbGVCZXQSDgoCaWQYASABKAlSAmlkEisKBW1hdGNoGAIgASgLMhUudHBfcHJvdG8uTW9iaWxlTWF0Y2hSBW1hdGNoEh4KCnByZWRpY3Rpb24YAyABKAlSCnByZWRpY3Rpb24SFAoFcmF0aW8YBCABKAFSBXJhdGlvEhAKA3dpbhgFIAEoBVIDd2luEh4KCnNob3dSZXN1bHQYBiABKAhSCnNob3dSZXN1bHQ=');

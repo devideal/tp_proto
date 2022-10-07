@@ -91,7 +91,7 @@ message Bet{
     string prediction=3;
     double ratio=4;
     int32 win=5;
-    optional bool showResult=6;
+    bool showResult=6;
 }
 
 message Branch{
@@ -167,5 +167,5 @@ message MobileBet{
     string prediction=3;
     double ratio=4;
     int32 win=5;
-    optional bool showResult=6;
+    bool showResult=6;
 }

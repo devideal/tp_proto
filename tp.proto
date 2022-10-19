@@ -169,3 +169,7 @@ message MobileBet{
     int32 win=5;
     optional bool showResult=6;
 }
+message DatabaseInfo{
+    string version=1;
+    int32 lastUpdated=2;
+}

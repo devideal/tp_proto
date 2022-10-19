@@ -333,3 +333,14 @@ const MobileBet$json = const {
 
 /// Descriptor for `MobileBet`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List mobileBetDescriptor = $convert.base64Decode('CglNb2JpbGVCZXQSDgoCaWQYASABKAlSAmlkEisKBW1hdGNoGAIgASgLMhUudHBfcHJvdG8uTW9iaWxlTWF0Y2hSBW1hdGNoEh4KCnByZWRpY3Rpb24YAyABKAlSCnByZWRpY3Rpb24SFAoFcmF0aW8YBCABKAFSBXJhdGlvEhAKA3dpbhgFIAEoBVIDd2luEiMKCnNob3dSZXN1bHQYBiABKAhIAFIKc2hvd1Jlc3VsdIgBAUINCgtfc2hvd1Jlc3VsdA==');
+@$core.Deprecated('Use databaseInfoDescriptor instead')
+const DatabaseInfo$json = const {
+  '1': 'DatabaseInfo',
+  '2': const [
+    const {'1': 'version', '3': 1, '4': 1, '5': 9, '10': 'version'},
+    const {'1': 'lastUpdated', '3': 2, '4': 1, '5': 5, '10': 'lastUpdated'},
+  ],
+};
+
+/// Descriptor for `DatabaseInfo`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List databaseInfoDescriptor = $convert.base64Decode('CgxEYXRhYmFzZUluZm8SGAoHdmVyc2lvbhgBIAEoCVIHdmVyc2lvbhIgCgtsYXN0VXBkYXRlZBgCIAEoBVILbGFzdFVwZGF0ZWQ=');

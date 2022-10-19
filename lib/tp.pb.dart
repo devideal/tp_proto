@@ -1963,3 +1963,64 @@ class MobileBet extends $pb.GeneratedMessage {
   void clearShowResult() => clearField(6);
 }
 
+class DatabaseInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DatabaseInfo', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tp_proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'version')
+    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lastUpdated', $pb.PbFieldType.O3, protoName: 'lastUpdated')
+    ..hasRequiredFields = false
+  ;
+
+  DatabaseInfo._() : super();
+  factory DatabaseInfo({
+    $core.String? version,
+    $core.int? lastUpdated,
+  }) {
+    final _result = create();
+    if (version != null) {
+      _result.version = version;
+    }
+    if (lastUpdated != null) {
+      _result.lastUpdated = lastUpdated;
+    }
+    return _result;
+  }
+  factory DatabaseInfo.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory DatabaseInfo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  DatabaseInfo clone() => DatabaseInfo()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  DatabaseInfo copyWith(void Function(DatabaseInfo) updates) => super.copyWith((message) => updates(message as DatabaseInfo)) as DatabaseInfo; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static DatabaseInfo create() => DatabaseInfo._();
+  DatabaseInfo createEmptyInstance() => create();
+  static $pb.PbList<DatabaseInfo> createRepeated() => $pb.PbList<DatabaseInfo>();
+  @$core.pragma('dart2js:noInline')
+  static DatabaseInfo getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DatabaseInfo>(create);
+  static DatabaseInfo? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get version => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set version($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasVersion() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearVersion() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get lastUpdated => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set lastUpdated($core.int v) { $_setSignedInt32(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasLastUpdated() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearLastUpdated() => clearField(2);
+}
+

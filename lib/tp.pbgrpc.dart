@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: tp.proto
 //
-// @dart = 2.12
+// @dart = 2.7
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:async' as $async;
@@ -68,72 +68,72 @@ class TipsPanelClient extends $grpc.Client {
       ($core.List<$core.int> value) => $0.MobileCoupon.fromBuffer(value));
 
   TipsPanelClient($grpc.ClientChannel channel,
-      {$grpc.CallOptions? options,
-      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      {$grpc.CallOptions options,
+      $core.Iterable<$grpc.ClientInterceptor> interceptors})
       : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$0.League> getLeague($0.Id request,
-      {$grpc.CallOptions? options}) {
+      {$grpc.CallOptions options}) {
     return $createUnaryCall(_$getLeague, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Country> getCountry($0.Id request,
-      {$grpc.CallOptions? options}) {
+      {$grpc.CallOptions options}) {
     return $createUnaryCall(_$getCountry, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Match> getMatch($0.Id request,
-      {$grpc.CallOptions? options}) {
+      {$grpc.CallOptions options}) {
     return $createUnaryCall(_$getMatch, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Application> getApplication($0.Id request,
-      {$grpc.CallOptions? options}) {
+      {$grpc.CallOptions options}) {
     return $createUnaryCall(_$getApplication, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Coupon> getCoupon($0.Id request,
-      {$grpc.CallOptions? options}) {
+      {$grpc.CallOptions options}) {
     return $createUnaryCall(_$getCoupon, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.User> getUser($0.Id request,
-      {$grpc.CallOptions? options}) {
+      {$grpc.CallOptions options}) {
     return $createUnaryCall(_$getUser, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.User> getUserByUserName($0.Name request,
-      {$grpc.CallOptions? options}) {
+      {$grpc.CallOptions options}) {
     return $createUnaryCall(_$getUserByUserName, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Club> getClub($0.Id request,
-      {$grpc.CallOptions? options}) {
+      {$grpc.CallOptions options}) {
     return $createUnaryCall(_$getClub, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Bool> addUser($0.User request,
-      {$grpc.CallOptions? options}) {
+      {$grpc.CallOptions options}) {
     return $createUnaryCall(_$addUser, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Bool> addApplication($0.Application request,
-      {$grpc.CallOptions? options}) {
+      {$grpc.CallOptions options}) {
     return $createUnaryCall(_$addApplication, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Bool> addCoupon($0.Coupon request,
-      {$grpc.CallOptions? options}) {
+      {$grpc.CallOptions options}) {
     return $createUnaryCall(_$addCoupon, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Bool> addMatch($0.Match request,
-      {$grpc.CallOptions? options}) {
+      {$grpc.CallOptions options}) {
     return $createUnaryCall(_$addMatch, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.MobileCoupon> getMobileCoupon($0.Id request,
-      {$grpc.CallOptions? options}) {
+      {$grpc.CallOptions options}) {
     return $createUnaryCall(_$getMobileCoupon, request, options: options);
   }
 }

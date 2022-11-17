@@ -101,6 +101,7 @@ message Branch{
     bool isVip=4;
     string revenueCatOfferingId=5;
     string revenueCatEntitlementId=6;
+    optional string branchMessage=7;
 }
 message CouponsPackage {
     repeated Coupon coupons=1;

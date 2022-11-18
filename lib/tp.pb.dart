@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: tp.proto
 //
-// @dart = 2.7
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -17,7 +17,7 @@ class Name extends $pb.GeneratedMessage {
 
   Name._() : super();
   factory Name({
-    $core.String value,
+    $core.String? value,
   }) {
     final _result = create();
     if (value != null) {
@@ -44,7 +44,7 @@ class Name extends $pb.GeneratedMessage {
   static $pb.PbList<Name> createRepeated() => $pb.PbList<Name>();
   @$core.pragma('dart2js:noInline')
   static Name getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Name>(create);
-  static Name _defaultInstance;
+  static Name? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get value => $_getSZ(0);
@@ -64,7 +64,7 @@ class Id extends $pb.GeneratedMessage {
 
   Id._() : super();
   factory Id({
-    $core.String value,
+    $core.String? value,
   }) {
     final _result = create();
     if (value != null) {
@@ -91,7 +91,7 @@ class Id extends $pb.GeneratedMessage {
   static $pb.PbList<Id> createRepeated() => $pb.PbList<Id>();
   @$core.pragma('dart2js:noInline')
   static Id getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Id>(create);
-  static Id _defaultInstance;
+  static Id? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get value => $_getSZ(0);
@@ -111,7 +111,7 @@ class Bool extends $pb.GeneratedMessage {
 
   Bool._() : super();
   factory Bool({
-    $core.bool value,
+    $core.bool? value,
   }) {
     final _result = create();
     if (value != null) {
@@ -138,7 +138,7 @@ class Bool extends $pb.GeneratedMessage {
   static $pb.PbList<Bool> createRepeated() => $pb.PbList<Bool>();
   @$core.pragma('dart2js:noInline')
   static Bool getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Bool>(create);
-  static Bool _defaultInstance;
+  static Bool? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.bool get value => $_getBF(0);
@@ -158,7 +158,7 @@ class ClubsPackage extends $pb.GeneratedMessage {
 
   ClubsPackage._() : super();
   factory ClubsPackage({
-    $core.Iterable<Club> clubs,
+    $core.Iterable<Club>? clubs,
   }) {
     final _result = create();
     if (clubs != null) {
@@ -185,7 +185,7 @@ class ClubsPackage extends $pb.GeneratedMessage {
   static $pb.PbList<ClubsPackage> createRepeated() => $pb.PbList<ClubsPackage>();
   @$core.pragma('dart2js:noInline')
   static ClubsPackage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ClubsPackage>(create);
-  static ClubsPackage _defaultInstance;
+  static ClubsPackage? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<Club> get clubs => $_getList(0);
@@ -200,8 +200,8 @@ class Club extends $pb.GeneratedMessage {
 
   Club._() : super();
   factory Club({
-    $core.String id,
-    $core.String clubName,
+    $core.String? id,
+    $core.String? clubName,
   }) {
     final _result = create();
     if (id != null) {
@@ -231,7 +231,7 @@ class Club extends $pb.GeneratedMessage {
   static $pb.PbList<Club> createRepeated() => $pb.PbList<Club>();
   @$core.pragma('dart2js:noInline')
   static Club getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Club>(create);
-  static Club _defaultInstance;
+  static Club? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
@@ -260,7 +260,7 @@ class LeaguesPackage extends $pb.GeneratedMessage {
 
   LeaguesPackage._() : super();
   factory LeaguesPackage({
-    $core.Iterable<League> leagues,
+    $core.Iterable<League>? leagues,
   }) {
     final _result = create();
     if (leagues != null) {
@@ -287,7 +287,7 @@ class LeaguesPackage extends $pb.GeneratedMessage {
   static $pb.PbList<LeaguesPackage> createRepeated() => $pb.PbList<LeaguesPackage>();
   @$core.pragma('dart2js:noInline')
   static LeaguesPackage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<LeaguesPackage>(create);
-  static LeaguesPackage _defaultInstance;
+  static LeaguesPackage? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<League> get leagues => $_getList(0);
@@ -306,12 +306,12 @@ class League extends $pb.GeneratedMessage {
 
   League._() : super();
   factory League({
-    $core.String id,
-    $core.String name,
-    $core.String countryId,
-    $core.String sportType,
-    $core.Iterable<$core.String> teams,
-    $core.bool customTeamNames,
+    $core.String? id,
+    $core.String? name,
+    $core.String? countryId,
+    $core.String? sportType,
+    $core.Iterable<$core.String>? teams,
+    $core.bool? customTeamNames,
   }) {
     final _result = create();
     if (id != null) {
@@ -353,7 +353,7 @@ class League extends $pb.GeneratedMessage {
   static $pb.PbList<League> createRepeated() => $pb.PbList<League>();
   @$core.pragma('dart2js:noInline')
   static League getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<League>(create);
-  static League _defaultInstance;
+  static League? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
@@ -412,7 +412,7 @@ class CountriesPackage extends $pb.GeneratedMessage {
 
   CountriesPackage._() : super();
   factory CountriesPackage({
-    $core.Iterable<Country> countries,
+    $core.Iterable<Country>? countries,
   }) {
     final _result = create();
     if (countries != null) {
@@ -439,7 +439,7 @@ class CountriesPackage extends $pb.GeneratedMessage {
   static $pb.PbList<CountriesPackage> createRepeated() => $pb.PbList<CountriesPackage>();
   @$core.pragma('dart2js:noInline')
   static CountriesPackage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CountriesPackage>(create);
-  static CountriesPackage _defaultInstance;
+  static CountriesPackage? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<Country> get countries => $_getList(0);
@@ -455,9 +455,9 @@ class Country extends $pb.GeneratedMessage {
 
   Country._() : super();
   factory Country({
-    $core.String id,
-    $core.String name,
-    $core.String code2,
+    $core.String? id,
+    $core.String? name,
+    $core.String? code2,
   }) {
     final _result = create();
     if (id != null) {
@@ -490,7 +490,7 @@ class Country extends $pb.GeneratedMessage {
   static $pb.PbList<Country> createRepeated() => $pb.PbList<Country>();
   @$core.pragma('dart2js:noInline')
   static Country getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Country>(create);
-  static Country _defaultInstance;
+  static Country? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
@@ -529,8 +529,8 @@ class MatchesPackage extends $pb.GeneratedMessage {
 
   MatchesPackage._() : super();
   factory MatchesPackage({
-    $core.Iterable<Match> matches,
-    $core.bool end,
+    $core.Iterable<Match>? matches,
+    $core.bool? end,
   }) {
     final _result = create();
     if (matches != null) {
@@ -560,7 +560,7 @@ class MatchesPackage extends $pb.GeneratedMessage {
   static $pb.PbList<MatchesPackage> createRepeated() => $pb.PbList<MatchesPackage>();
   @$core.pragma('dart2js:noInline')
   static MatchesPackage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MatchesPackage>(create);
-  static MatchesPackage _defaultInstance;
+  static MatchesPackage? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<Match> get matches => $_getList(0);
@@ -593,17 +593,17 @@ class Match extends $pb.GeneratedMessage {
 
   Match._() : super();
   factory Match({
-    $core.String id,
-    $core.String leagueId,
-    $core.int week,
-    $core.String host,
-    $core.String guest,
-    $core.String result,
-    $core.int timestamp,
-    $core.String defaultPrediction,
-    $core.double defaultOdds,
-    $core.String hostName,
-    $core.String guestName,
+    $core.String? id,
+    $core.String? leagueId,
+    $core.int? week,
+    $core.String? host,
+    $core.String? guest,
+    $core.String? result,
+    $core.int? timestamp,
+    $core.String? defaultPrediction,
+    $core.double? defaultOdds,
+    $core.String? hostName,
+    $core.String? guestName,
   }) {
     final _result = create();
     if (id != null) {
@@ -660,7 +660,7 @@ class Match extends $pb.GeneratedMessage {
   static $pb.PbList<Match> createRepeated() => $pb.PbList<Match>();
   @$core.pragma('dart2js:noInline')
   static Match getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Match>(create);
-  static Match _defaultInstance;
+  static Match? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
@@ -770,7 +770,7 @@ class ApplicationsPackage extends $pb.GeneratedMessage {
 
   ApplicationsPackage._() : super();
   factory ApplicationsPackage({
-    $core.Iterable<Application> applications,
+    $core.Iterable<Application>? applications,
   }) {
     final _result = create();
     if (applications != null) {
@@ -797,7 +797,7 @@ class ApplicationsPackage extends $pb.GeneratedMessage {
   static $pb.PbList<ApplicationsPackage> createRepeated() => $pb.PbList<ApplicationsPackage>();
   @$core.pragma('dart2js:noInline')
   static ApplicationsPackage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ApplicationsPackage>(create);
-  static ApplicationsPackage _defaultInstance;
+  static ApplicationsPackage? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<Application> get applications => $_getList(0);
@@ -815,11 +815,11 @@ class Application extends $pb.GeneratedMessage {
 
   Application._() : super();
   factory Application({
-    $core.String id,
-    $core.String name,
-    $core.Iterable<Branch> branches,
-    $core.String hiddenMessage,
-    $core.bool isActive,
+    $core.String? id,
+    $core.String? name,
+    $core.Iterable<Branch>? branches,
+    $core.String? hiddenMessage,
+    $core.bool? isActive,
   }) {
     final _result = create();
     if (id != null) {
@@ -858,7 +858,7 @@ class Application extends $pb.GeneratedMessage {
   static $pb.PbList<Application> createRepeated() => $pb.PbList<Application>();
   @$core.pragma('dart2js:noInline')
   static Application getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Application>(create);
-  static Application _defaultInstance;
+  static Application? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
@@ -913,12 +913,12 @@ class Bet extends $pb.GeneratedMessage {
 
   Bet._() : super();
   factory Bet({
-    $core.String id,
-    $core.String matchId,
-    $core.String prediction,
-    $core.double ratio,
-    $core.int win,
-    $core.bool showResult,
+    $core.String? id,
+    $core.String? matchId,
+    $core.String? prediction,
+    $core.double? ratio,
+    $core.int? win,
+    $core.bool? showResult,
   }) {
     final _result = create();
     if (id != null) {
@@ -960,7 +960,7 @@ class Bet extends $pb.GeneratedMessage {
   static $pb.PbList<Bet> createRepeated() => $pb.PbList<Bet>();
   @$core.pragma('dart2js:noInline')
   static Bet getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Bet>(create);
-  static Bet _defaultInstance;
+  static Bet? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
@@ -1031,13 +1031,13 @@ class Branch extends $pb.GeneratedMessage {
 
   Branch._() : super();
   factory Branch({
-    $core.String id,
-    $core.String name,
-    $core.String description,
-    $core.bool isVip,
-    $core.String revenueCatOfferingId,
-    $core.String revenueCatEntitlementId,
-    $core.String branchMessage,
+    $core.String? id,
+    $core.String? name,
+    $core.String? description,
+    $core.bool? isVip,
+    $core.String? revenueCatOfferingId,
+    $core.String? revenueCatEntitlementId,
+    $core.String? branchMessage,
   }) {
     final _result = create();
     if (id != null) {
@@ -1082,7 +1082,7 @@ class Branch extends $pb.GeneratedMessage {
   static $pb.PbList<Branch> createRepeated() => $pb.PbList<Branch>();
   @$core.pragma('dart2js:noInline')
   static Branch getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Branch>(create);
-  static Branch _defaultInstance;
+  static Branch? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
@@ -1157,8 +1157,8 @@ class CouponsPackage extends $pb.GeneratedMessage {
 
   CouponsPackage._() : super();
   factory CouponsPackage({
-    $core.Iterable<Coupon> coupons,
-    $core.bool end,
+    $core.Iterable<Coupon>? coupons,
+    $core.bool? end,
   }) {
     final _result = create();
     if (coupons != null) {
@@ -1188,7 +1188,7 @@ class CouponsPackage extends $pb.GeneratedMessage {
   static $pb.PbList<CouponsPackage> createRepeated() => $pb.PbList<CouponsPackage>();
   @$core.pragma('dart2js:noInline')
   static CouponsPackage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CouponsPackage>(create);
-  static CouponsPackage _defaultInstance;
+  static CouponsPackage? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<Coupon> get coupons => $_getList(0);
@@ -1217,13 +1217,13 @@ class Coupon extends $pb.GeneratedMessage {
 
   Coupon._() : super();
   factory Coupon({
-    $core.String id,
-    $core.Iterable<Bet> bets,
-    $core.String branchId,
-    $core.String applicationId,
-    $core.bool isVisible,
-    $core.String name,
-    $core.int timestamp,
+    $core.String? id,
+    $core.Iterable<Bet>? bets,
+    $core.String? branchId,
+    $core.String? applicationId,
+    $core.bool? isVisible,
+    $core.String? name,
+    $core.int? timestamp,
   }) {
     final _result = create();
     if (id != null) {
@@ -1268,7 +1268,7 @@ class Coupon extends $pb.GeneratedMessage {
   static $pb.PbList<Coupon> createRepeated() => $pb.PbList<Coupon>();
   @$core.pragma('dart2js:noInline')
   static Coupon getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Coupon>(create);
-  static Coupon _defaultInstance;
+  static Coupon? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
@@ -1340,11 +1340,11 @@ class User extends $pb.GeneratedMessage {
 
   User._() : super();
   factory User({
-    $core.String id,
-    $core.String email,
-    $core.String username,
-    $core.String passwordhash,
-    $core.int role,
+    $core.String? id,
+    $core.String? email,
+    $core.String? username,
+    $core.String? passwordhash,
+    $core.int? role,
   }) {
     final _result = create();
     if (id != null) {
@@ -1383,7 +1383,7 @@ class User extends $pb.GeneratedMessage {
   static $pb.PbList<User> createRepeated() => $pb.PbList<User>();
   @$core.pragma('dart2js:noInline')
   static User getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<User>(create);
-  static User _defaultInstance;
+  static User? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
@@ -1445,13 +1445,13 @@ class MobileMatch extends $pb.GeneratedMessage {
 
   MobileMatch._() : super();
   factory MobileMatch({
-    $core.String id,
-    $core.String leagueId,
-    $core.int week,
-    $core.String host,
-    $core.String guest,
-    $core.String result,
-    $core.int timestamp,
+    $core.String? id,
+    $core.String? leagueId,
+    $core.int? week,
+    $core.String? host,
+    $core.String? guest,
+    $core.String? result,
+    $core.int? timestamp,
   }) {
     final _result = create();
     if (id != null) {
@@ -1496,7 +1496,7 @@ class MobileMatch extends $pb.GeneratedMessage {
   static $pb.PbList<MobileMatch> createRepeated() => $pb.PbList<MobileMatch>();
   @$core.pragma('dart2js:noInline')
   static MobileMatch getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MobileMatch>(create);
-  static MobileMatch _defaultInstance;
+  static MobileMatch? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
@@ -1573,10 +1573,10 @@ class MobileLeague extends $pb.GeneratedMessage {
 
   MobileLeague._() : super();
   factory MobileLeague({
-    $core.String id,
-    $core.String name,
-    $core.String countryId,
-    $core.String sportType,
+    $core.String? id,
+    $core.String? name,
+    $core.String? countryId,
+    $core.String? sportType,
   }) {
     final _result = create();
     if (id != null) {
@@ -1612,7 +1612,7 @@ class MobileLeague extends $pb.GeneratedMessage {
   static $pb.PbList<MobileLeague> createRepeated() => $pb.PbList<MobileLeague>();
   @$core.pragma('dart2js:noInline')
   static MobileLeague getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MobileLeague>(create);
-  static MobileLeague _defaultInstance;
+  static MobileLeague? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
@@ -1659,7 +1659,7 @@ class MobileLeaguesPackage extends $pb.GeneratedMessage {
 
   MobileLeaguesPackage._() : super();
   factory MobileLeaguesPackage({
-    $core.Iterable<MobileLeague> mobileLeagues,
+    $core.Iterable<MobileLeague>? mobileLeagues,
   }) {
     final _result = create();
     if (mobileLeagues != null) {
@@ -1686,7 +1686,7 @@ class MobileLeaguesPackage extends $pb.GeneratedMessage {
   static $pb.PbList<MobileLeaguesPackage> createRepeated() => $pb.PbList<MobileLeaguesPackage>();
   @$core.pragma('dart2js:noInline')
   static MobileLeaguesPackage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MobileLeaguesPackage>(create);
-  static MobileLeaguesPackage _defaultInstance;
+  static MobileLeaguesPackage? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<MobileLeague> get mobileLeagues => $_getList(0);
@@ -1706,13 +1706,13 @@ class MobileCoupon extends $pb.GeneratedMessage {
 
   MobileCoupon._() : super();
   factory MobileCoupon({
-    $core.String id,
-    $core.Iterable<MobileBet> bets,
-    $core.String branchId,
-    $core.String applicationId,
-    $core.bool isVisible,
-    $core.String name,
-    $core.int timestamp,
+    $core.String? id,
+    $core.Iterable<MobileBet>? bets,
+    $core.String? branchId,
+    $core.String? applicationId,
+    $core.bool? isVisible,
+    $core.String? name,
+    $core.int? timestamp,
   }) {
     final _result = create();
     if (id != null) {
@@ -1757,7 +1757,7 @@ class MobileCoupon extends $pb.GeneratedMessage {
   static $pb.PbList<MobileCoupon> createRepeated() => $pb.PbList<MobileCoupon>();
   @$core.pragma('dart2js:noInline')
   static MobileCoupon getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MobileCoupon>(create);
-  static MobileCoupon _defaultInstance;
+  static MobileCoupon? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
@@ -1825,7 +1825,7 @@ class MobileCouponsPackage extends $pb.GeneratedMessage {
 
   MobileCouponsPackage._() : super();
   factory MobileCouponsPackage({
-    $core.Iterable<MobileCoupon> mobileCoupons,
+    $core.Iterable<MobileCoupon>? mobileCoupons,
   }) {
     final _result = create();
     if (mobileCoupons != null) {
@@ -1852,7 +1852,7 @@ class MobileCouponsPackage extends $pb.GeneratedMessage {
   static $pb.PbList<MobileCouponsPackage> createRepeated() => $pb.PbList<MobileCouponsPackage>();
   @$core.pragma('dart2js:noInline')
   static MobileCouponsPackage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MobileCouponsPackage>(create);
-  static MobileCouponsPackage _defaultInstance;
+  static MobileCouponsPackage? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<MobileCoupon> get mobileCoupons => $_getList(0);
@@ -1871,12 +1871,12 @@ class MobileBet extends $pb.GeneratedMessage {
 
   MobileBet._() : super();
   factory MobileBet({
-    $core.String id,
-    MobileMatch match,
-    $core.String prediction,
-    $core.double ratio,
-    $core.int win,
-    $core.bool showResult,
+    $core.String? id,
+    MobileMatch? match,
+    $core.String? prediction,
+    $core.double? ratio,
+    $core.int? win,
+    $core.bool? showResult,
   }) {
     final _result = create();
     if (id != null) {
@@ -1918,7 +1918,7 @@ class MobileBet extends $pb.GeneratedMessage {
   static $pb.PbList<MobileBet> createRepeated() => $pb.PbList<MobileBet>();
   @$core.pragma('dart2js:noInline')
   static MobileBet getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MobileBet>(create);
-  static MobileBet _defaultInstance;
+  static MobileBet? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
@@ -1986,8 +1986,8 @@ class DatabaseInfo extends $pb.GeneratedMessage {
 
   DatabaseInfo._() : super();
   factory DatabaseInfo({
-    $core.String version,
-    $core.int lastUpdated,
+    $core.String? version,
+    $core.int? lastUpdated,
   }) {
     final _result = create();
     if (version != null) {
@@ -2017,7 +2017,7 @@ class DatabaseInfo extends $pb.GeneratedMessage {
   static $pb.PbList<DatabaseInfo> createRepeated() => $pb.PbList<DatabaseInfo>();
   @$core.pragma('dart2js:noInline')
   static DatabaseInfo getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DatabaseInfo>(create);
-  static DatabaseInfo _defaultInstance;
+  static DatabaseInfo? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get version => $_getSZ(0);

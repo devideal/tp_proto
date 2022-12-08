@@ -199,6 +199,7 @@ const Branch$json = const {
     const {'1': 'revenueCatOfferingId', '3': 5, '4': 1, '5': 9, '10': 'revenueCatOfferingId'},
     const {'1': 'revenueCatEntitlementId', '3': 6, '4': 1, '5': 9, '10': 'revenueCatEntitlementId'},
     const {'1': 'branchMessage', '3': 7, '4': 1, '5': 9, '9': 0, '10': 'branchMessage', '17': true},
+    const {'1': 'isSpecialOffer', '3': 8, '4': 1, '5': 8, '10': 'isSpecialOffer'},
   ],
   '8': const [
     const {'1': '_branchMessage'},
@@ -206,7 +207,7 @@ const Branch$json = const {
 };
 
 /// Descriptor for `Branch`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List branchDescriptor = $convert.base64Decode('CgZCcmFuY2gSDgoCaWQYASABKAlSAmlkEhIKBG5hbWUYAiABKAlSBG5hbWUSIAoLZGVzY3JpcHRpb24YAyABKAlSC2Rlc2NyaXB0aW9uEhQKBWlzVmlwGAQgASgIUgVpc1ZpcBIyChRyZXZlbnVlQ2F0T2ZmZXJpbmdJZBgFIAEoCVIUcmV2ZW51ZUNhdE9mZmVyaW5nSWQSOAoXcmV2ZW51ZUNhdEVudGl0bGVtZW50SWQYBiABKAlSF3JldmVudWVDYXRFbnRpdGxlbWVudElkEikKDWJyYW5jaE1lc3NhZ2UYByABKAlIAFINYnJhbmNoTWVzc2FnZYgBAUIQCg5fYnJhbmNoTWVzc2FnZQ==');
+final $typed_data.Uint8List branchDescriptor = $convert.base64Decode('CgZCcmFuY2gSDgoCaWQYASABKAlSAmlkEhIKBG5hbWUYAiABKAlSBG5hbWUSIAoLZGVzY3JpcHRpb24YAyABKAlSC2Rlc2NyaXB0aW9uEhQKBWlzVmlwGAQgASgIUgVpc1ZpcBIyChRyZXZlbnVlQ2F0T2ZmZXJpbmdJZBgFIAEoCVIUcmV2ZW51ZUNhdE9mZmVyaW5nSWQSOAoXcmV2ZW51ZUNhdEVudGl0bGVtZW50SWQYBiABKAlSF3JldmVudWVDYXRFbnRpdGxlbWVudElkEikKDWJyYW5jaE1lc3NhZ2UYByABKAlIAFINYnJhbmNoTWVzc2FnZYgBARImCg5pc1NwZWNpYWxPZmZlchgIIAEoCFIOaXNTcGVjaWFsT2ZmZXJCEAoOX2JyYW5jaE1lc3NhZ2U=');
 @$core.Deprecated('Use couponsPackageDescriptor instead')
 const CouponsPackage$json = const {
   '1': 'CouponsPackage',

@@ -1026,6 +1026,7 @@ class Branch extends $pb.GeneratedMessage {
     ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'revenueCatOfferingId', protoName: 'revenueCatOfferingId')
     ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'revenueCatEntitlementId', protoName: 'revenueCatEntitlementId')
     ..aOS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'branchMessage', protoName: 'branchMessage')
+    ..aOB(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isSpecialOffer', protoName: 'isSpecialOffer')
     ..hasRequiredFields = false
   ;
 
@@ -1038,6 +1039,7 @@ class Branch extends $pb.GeneratedMessage {
     $core.String? revenueCatOfferingId,
     $core.String? revenueCatEntitlementId,
     $core.String? branchMessage,
+    $core.bool? isSpecialOffer,
   }) {
     final _result = create();
     if (id != null) {
@@ -1060,6 +1062,9 @@ class Branch extends $pb.GeneratedMessage {
     }
     if (branchMessage != null) {
       _result.branchMessage = branchMessage;
+    }
+    if (isSpecialOffer != null) {
+      _result.isSpecialOffer = isSpecialOffer;
     }
     return _result;
   }
@@ -1146,6 +1151,15 @@ class Branch extends $pb.GeneratedMessage {
   $core.bool hasBranchMessage() => $_has(6);
   @$pb.TagNumber(7)
   void clearBranchMessage() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.bool get isSpecialOffer => $_getBF(7);
+  @$pb.TagNumber(8)
+  set isSpecialOffer($core.bool v) { $_setBool(7, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasIsSpecialOffer() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearIsSpecialOffer() => clearField(8);
 }
 
 class CouponsPackage extends $pb.GeneratedMessage {

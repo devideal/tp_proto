@@ -141,14 +141,18 @@ const Match$json = const {
     const {'1': 'defaultOdds', '3': 9, '4': 1, '5': 1, '10': 'defaultOdds'},
     const {'1': 'hostName', '3': 10, '4': 1, '5': 9, '10': 'hostName'},
     const {'1': 'guestName', '3': 11, '4': 1, '5': 9, '10': 'guestName'},
+    const {'1': 'user', '3': 12, '4': 1, '5': 9, '9': 1, '10': 'user', '17': true},
+    const {'1': 'editionTimestamp', '3': 13, '4': 1, '5': 5, '9': 2, '10': 'editionTimestamp', '17': true},
   ],
   '8': const [
     const {'1': '_leagueId'},
+    const {'1': '_user'},
+    const {'1': '_editionTimestamp'},
   ],
 };
 
 /// Descriptor for `Match`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List matchDescriptor = $convert.base64Decode('CgVNYXRjaBIOCgJpZBgBIAEoCVICaWQSHwoIbGVhZ3VlSWQYAiABKAlIAFIIbGVhZ3VlSWSIAQESEgoEd2VlaxgDIAEoBVIEd2VlaxISCgRob3N0GAQgASgJUgRob3N0EhQKBWd1ZXN0GAUgASgJUgVndWVzdBIWCgZyZXN1bHQYBiABKAlSBnJlc3VsdBIcCgl0aW1lc3RhbXAYByABKAVSCXRpbWVzdGFtcBIsChFkZWZhdWx0UHJlZGljdGlvbhgIIAEoCVIRZGVmYXVsdFByZWRpY3Rpb24SIAoLZGVmYXVsdE9kZHMYCSABKAFSC2RlZmF1bHRPZGRzEhoKCGhvc3ROYW1lGAogASgJUghob3N0TmFtZRIcCglndWVzdE5hbWUYCyABKAlSCWd1ZXN0TmFtZUILCglfbGVhZ3VlSWQ=');
+final $typed_data.Uint8List matchDescriptor = $convert.base64Decode('CgVNYXRjaBIOCgJpZBgBIAEoCVICaWQSHwoIbGVhZ3VlSWQYAiABKAlIAFIIbGVhZ3VlSWSIAQESEgoEd2VlaxgDIAEoBVIEd2VlaxISCgRob3N0GAQgASgJUgRob3N0EhQKBWd1ZXN0GAUgASgJUgVndWVzdBIWCgZyZXN1bHQYBiABKAlSBnJlc3VsdBIcCgl0aW1lc3RhbXAYByABKAVSCXRpbWVzdGFtcBIsChFkZWZhdWx0UHJlZGljdGlvbhgIIAEoCVIRZGVmYXVsdFByZWRpY3Rpb24SIAoLZGVmYXVsdE9kZHMYCSABKAFSC2RlZmF1bHRPZGRzEhoKCGhvc3ROYW1lGAogASgJUghob3N0TmFtZRIcCglndWVzdE5hbWUYCyABKAlSCWd1ZXN0TmFtZRIXCgR1c2VyGAwgASgJSAFSBHVzZXKIAQESLwoQZWRpdGlvblRpbWVzdGFtcBgNIAEoBUgCUhBlZGl0aW9uVGltZXN0YW1wiAEBQgsKCV9sZWFndWVJZEIHCgVfdXNlckITChFfZWRpdGlvblRpbWVzdGFtcA==');
 @$core.Deprecated('Use applicationsPackageDescriptor instead')
 const ApplicationsPackage$json = const {
   '1': 'ApplicationsPackage',
@@ -233,11 +237,17 @@ const Coupon$json = const {
     const {'1': 'isVisible', '3': 5, '4': 1, '5': 8, '10': 'isVisible'},
     const {'1': 'name', '3': 6, '4': 1, '5': 9, '10': 'name'},
     const {'1': 'timestamp', '3': 7, '4': 1, '5': 5, '10': 'timestamp'},
+    const {'1': 'user', '3': 8, '4': 1, '5': 9, '9': 0, '10': 'user', '17': true},
+    const {'1': 'editionTimestamp', '3': 9, '4': 1, '5': 5, '9': 1, '10': 'editionTimestamp', '17': true},
+  ],
+  '8': const [
+    const {'1': '_user'},
+    const {'1': '_editionTimestamp'},
   ],
 };
 
 /// Descriptor for `Coupon`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List couponDescriptor = $convert.base64Decode('CgZDb3Vwb24SDgoCaWQYASABKAlSAmlkEiEKBGJldHMYAiADKAsyDS50cF9wcm90by5CZXRSBGJldHMSGgoIYnJhbmNoSWQYAyABKAlSCGJyYW5jaElkEiQKDWFwcGxpY2F0aW9uSWQYBCABKAlSDWFwcGxpY2F0aW9uSWQSHAoJaXNWaXNpYmxlGAUgASgIUglpc1Zpc2libGUSEgoEbmFtZRgGIAEoCVIEbmFtZRIcCgl0aW1lc3RhbXAYByABKAVSCXRpbWVzdGFtcA==');
+final $typed_data.Uint8List couponDescriptor = $convert.base64Decode('CgZDb3Vwb24SDgoCaWQYASABKAlSAmlkEiEKBGJldHMYAiADKAsyDS50cF9wcm90by5CZXRSBGJldHMSGgoIYnJhbmNoSWQYAyABKAlSCGJyYW5jaElkEiQKDWFwcGxpY2F0aW9uSWQYBCABKAlSDWFwcGxpY2F0aW9uSWQSHAoJaXNWaXNpYmxlGAUgASgIUglpc1Zpc2libGUSEgoEbmFtZRgGIAEoCVIEbmFtZRIcCgl0aW1lc3RhbXAYByABKAVSCXRpbWVzdGFtcBIXCgR1c2VyGAggASgJSABSBHVzZXKIAQESLwoQZWRpdGlvblRpbWVzdGFtcBgJIAEoBUgBUhBlZGl0aW9uVGltZXN0YW1wiAEBQgcKBV91c2VyQhMKEV9lZGl0aW9uVGltZXN0YW1w');
 @$core.Deprecated('Use userDescriptor instead')
 const User$json = const {
   '1': 'User',
@@ -343,3 +353,43 @@ const DatabaseInfo$json = const {
 
 /// Descriptor for `DatabaseInfo`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List databaseInfoDescriptor = $convert.base64Decode('CgxEYXRhYmFzZUluZm8SGAoHdmVyc2lvbhgBIAEoCVIHdmVyc2lvbhIgCgtsYXN0VXBkYXRlZBgCIAEoBVILbGFzdFVwZGF0ZWQ=');
+const $core.Map<$core.String, $core.dynamic> TipsPanelServiceBase$json = const {
+  '1': 'TipsPanel',
+  '2': const [
+    const {'1': 'GetLeague', '2': '.tp_proto.Id', '3': '.tp_proto.League', '4': const {}},
+    const {'1': 'GetCountry', '2': '.tp_proto.Id', '3': '.tp_proto.Country', '4': const {}},
+    const {'1': 'GetMatch', '2': '.tp_proto.Id', '3': '.tp_proto.Match', '4': const {}},
+    const {'1': 'GetApplication', '2': '.tp_proto.Id', '3': '.tp_proto.Application', '4': const {}},
+    const {'1': 'GetCoupon', '2': '.tp_proto.Id', '3': '.tp_proto.Coupon', '4': const {}},
+    const {'1': 'GetUser', '2': '.tp_proto.Id', '3': '.tp_proto.User', '4': const {}},
+    const {'1': 'GetUserByUserName', '2': '.tp_proto.Name', '3': '.tp_proto.User', '4': const {}},
+    const {'1': 'GetClub', '2': '.tp_proto.Id', '3': '.tp_proto.Club', '4': const {}},
+    const {'1': 'AddUser', '2': '.tp_proto.User', '3': '.tp_proto.Bool', '4': const {}},
+    const {'1': 'AddApplication', '2': '.tp_proto.Application', '3': '.tp_proto.Bool', '4': const {}},
+    const {'1': 'AddCoupon', '2': '.tp_proto.Coupon', '3': '.tp_proto.Bool', '4': const {}},
+    const {'1': 'AddMatch', '2': '.tp_proto.Match', '3': '.tp_proto.Bool', '4': const {}},
+    const {'1': 'GetMobileCoupon', '2': '.tp_proto.Id', '3': '.tp_proto.MobileCoupon', '4': const {}},
+  ],
+};
+
+@$core.Deprecated('Use tipsPanelServiceDescriptor instead')
+const $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> TipsPanelServiceBase$messageJson = const {
+  '.tp_proto.Id': Id$json,
+  '.tp_proto.League': League$json,
+  '.tp_proto.Country': Country$json,
+  '.tp_proto.Match': Match$json,
+  '.tp_proto.Application': Application$json,
+  '.tp_proto.Branch': Branch$json,
+  '.tp_proto.Coupon': Coupon$json,
+  '.tp_proto.Bet': Bet$json,
+  '.tp_proto.User': User$json,
+  '.tp_proto.Name': Name$json,
+  '.tp_proto.Club': Club$json,
+  '.tp_proto.Bool': Bool$json,
+  '.tp_proto.MobileCoupon': MobileCoupon$json,
+  '.tp_proto.MobileBet': MobileBet$json,
+  '.tp_proto.MobileMatch': MobileMatch$json,
+};
+
+/// Descriptor for `TipsPanel`. Decode as a `google.protobuf.ServiceDescriptorProto`.
+final $typed_data.Uint8List tipsPanelServiceDescriptor = $convert.base64Decode('CglUaXBzUGFuZWwSLQoJR2V0TGVhZ3VlEgwudHBfcHJvdG8uSWQaEC50cF9wcm90by5MZWFndWUiABIvCgpHZXRDb3VudHJ5EgwudHBfcHJvdG8uSWQaES50cF9wcm90by5Db3VudHJ5IgASKwoIR2V0TWF0Y2gSDC50cF9wcm90by5JZBoPLnRwX3Byb3RvLk1hdGNoIgASNwoOR2V0QXBwbGljYXRpb24SDC50cF9wcm90by5JZBoVLnRwX3Byb3RvLkFwcGxpY2F0aW9uIgASLQoJR2V0Q291cG9uEgwudHBfcHJvdG8uSWQaEC50cF9wcm90by5Db3Vwb24iABIpCgdHZXRVc2VyEgwudHBfcHJvdG8uSWQaDi50cF9wcm90by5Vc2VyIgASNQoRR2V0VXNlckJ5VXNlck5hbWUSDi50cF9wcm90by5OYW1lGg4udHBfcHJvdG8uVXNlciIAEikKB0dldENsdWISDC50cF9wcm90by5JZBoOLnRwX3Byb3RvLkNsdWIiABIrCgdBZGRVc2VyEg4udHBfcHJvdG8uVXNlchoOLnRwX3Byb3RvLkJvb2wiABI5Cg5BZGRBcHBsaWNhdGlvbhIVLnRwX3Byb3RvLkFwcGxpY2F0aW9uGg4udHBfcHJvdG8uQm9vbCIAEi8KCUFkZENvdXBvbhIQLnRwX3Byb3RvLkNvdXBvbhoOLnRwX3Byb3RvLkJvb2wiABItCghBZGRNYXRjaBIPLnRwX3Byb3RvLk1hdGNoGg4udHBfcHJvdG8uQm9vbCIAEjkKD0dldE1vYmlsZUNvdXBvbhIMLnRwX3Byb3RvLklkGhYudHBfcHJvdG8uTW9iaWxlQ291cG9uIgA=');

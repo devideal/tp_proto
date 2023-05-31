@@ -34,7 +34,7 @@ type TipsPanelClient interface {
 	AddApplication(ctx context.Context, in *Application, opts ...grpc.CallOption) (*Bool, error)
 	AddCoupon(ctx context.Context, in *Coupon, opts ...grpc.CallOption) (*Bool, error)
 	AddMatch(ctx context.Context, in *Match, opts ...grpc.CallOption) (*Bool, error)
-	//mobile
+	// mobile
 	GetMobileCoupon(ctx context.Context, in *Id, opts ...grpc.CallOption) (*MobileCoupon, error)
 }
 
@@ -179,7 +179,7 @@ type TipsPanelServer interface {
 	AddApplication(context.Context, *Application) (*Bool, error)
 	AddCoupon(context.Context, *Coupon) (*Bool, error)
 	AddMatch(context.Context, *Match) (*Bool, error)
-	//mobile
+	// mobile
 	GetMobileCoupon(context.Context, *Id) (*MobileCoupon, error)
 	mustEmbedUnimplementedTipsPanelServer()
 }

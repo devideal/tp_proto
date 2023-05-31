@@ -3,175 +3,161 @@ syntax = "proto3";
 option go_package = "github.com/devideal/tp_proto";
 package tp_proto;
 
-service TipsPanel{
-    rpc GetLeague(Id) returns (League){}
-    rpc GetCountry(Id) returns (Country){}
-    rpc GetMatch(Id) returns (Match){}
-    rpc GetApplication(Id) returns (Application){}
-    rpc GetCoupon(Id) returns (Coupon){}
-    rpc GetUser(Id) returns (User){}
-    rpc GetUserByUserName(Name) returns (User){}
-    rpc GetClub(Id) returns (Club){}
-    rpc AddUser(User) returns (Bool){}
-    rpc AddApplication(Application) returns (Bool){}
-    rpc AddCoupon(Coupon) returns (Bool){}
-    rpc AddMatch(Match) returns (Bool){}
-    //mobile
-    rpc GetMobileCoupon(Id) returns (MobileCoupon){}
+service TipsPanel {
+  rpc GetLeague(Id) returns (League) {}
+  rpc GetCountry(Id) returns (Country) {}
+  rpc GetMatch(Id) returns (Match) {}
+  rpc GetApplication(Id) returns (Application) {}
+  rpc GetCoupon(Id) returns (Coupon) {}
+  rpc GetUser(Id) returns (User) {}
+  rpc GetUserByUserName(Name) returns (User) {}
+  rpc GetClub(Id) returns (Club) {}
+  rpc AddUser(User) returns (Bool) {}
+  rpc AddApplication(Application) returns (Bool) {}
+  rpc AddCoupon(Coupon) returns (Bool) {}
+  rpc AddMatch(Match) returns (Bool) {}
+  // mobile
+  rpc GetMobileCoupon(Id) returns (MobileCoupon) {}
 }
 
-message Name{
-    string value = 1;
+message Name { string value = 1; }
+
+message Id { string value = 1; }
+
+message Bool { bool value = 1; }
+message ClubsPackage { repeated Club clubs = 1; }
+message Club {
+  string id = 1;
+  string clubName = 2;
+}
+message LeaguesPackage { repeated League leagues = 1; }
+message League {
+  string id = 1;
+  string name = 2;
+  string countryId = 3;
+  string sportType = 4;
+  repeated string teams = 5;
+  optional bool customTeamNames = 6;
+}
+message CountriesPackage { repeated Country countries = 1; }
+message Country {
+  string id = 1;
+  string name = 2;
+  optional string code2 = 3;
+}
+message MatchesPackage {
+  repeated Match matches = 1;
+  optional bool end = 2;
+}
+message Match {
+  string id = 1;
+  optional string leagueId = 2;
+  int32 week = 3;
+  string host = 4;
+  string guest = 5;
+  string result = 6;
+  int32 timestamp = 7;
+  string defaultPrediction = 8;
+  double defaultOdds = 9;
+  string hostName = 10;
+  string guestName = 11;
+  optional string user = 12;
+  optional int32 editionTimestamp = 13;
+}
+message ApplicationsPackage { repeated Application applications = 1; }
+message Application {
+  string id = 1;
+  string name = 2;
+  repeated Branch branches = 3;
+  string hiddenMessage = 4;
+  bool isActive = 5;
 }
 
-message Id{
-    string value =1;
+message Bet {
+  string id = 1;
+  string matchId = 2;
+  string prediction = 3;
+  double ratio = 4;
+  int32 win = 5;
+  bool showResult = 6;
 }
 
-message Bool{
-    bool value=1;
-}
-message ClubsPackage{
-    repeated Club clubs=1;
-}
-message Club{
-    string id = 1;
-    string clubName = 2;
-}
-message LeaguesPackage{
-    repeated League leagues=1;
-}
-message League{
-    string id = 1;
-    string name = 2;
-    string countryId = 3;
-    string sportType = 4;
-    repeated string teams = 5;
-    optional bool customTeamNames =6;
-}
-message CountriesPackage {
-    repeated Country countries=1;
-}
-message Country{
-    string id = 1;
-    string name = 2;
-    optional string code2 = 3;
-}
-message MatchesPackage{
-    repeated Match matches=1;
-    optional bool end=2;
-}
-message Match{
-    string id =1;
-    optional string leagueId=2;
-    int32 week=3;
-    string host =4;
-    string guest =5;
-    string result=6;
-    int32 timestamp =7;
-    string defaultPrediction = 8;
-    double defaultOdds = 9;
-    string hostName =10;
-    string guestName=11;
-}
-message ApplicationsPackage {
-    repeated Application applications=1;
-}
-message Application{
-    string id=1;
-    string name=2;
-    repeated Branch branches=3;
-    string hiddenMessage=4;
-    bool isActive=5;
-}
-
-message Bet{
-    string id=1;
-    string matchId=2;
-    string prediction=3;
-    double ratio=4;
-    int32 win=5;
-    bool showResult=6;
-}
-
-message Branch{
-    string id=1;
-    string name=2;
-    string description=3;
-    bool isVip=4;
-    string revenueCatOfferingId=5;
-    string revenueCatEntitlementId=6;
-    optional string branchMessage=7;
-    bool isSpecialOffer=8;
+message Branch {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  bool isVip = 4;
+  string revenueCatOfferingId = 5;
+  string revenueCatEntitlementId = 6;
+  optional string branchMessage = 7;
+  bool isSpecialOffer = 8;
 }
 message CouponsPackage {
-    repeated Coupon coupons=1;
-    optional bool end=2;
+  repeated Coupon coupons = 1;
+  optional bool end = 2;
 }
-message Coupon{
-    string id=1;
-    repeated Bet bets=2;
-    string branchId=3;
-    string applicationId=4;
-    bool isVisible=5;
-    string name=6;
-    int32 timestamp=7;
+message Coupon {
+  string id = 1;
+  repeated Bet bets = 2;
+  string branchId = 3;
+  string applicationId = 4;
+  bool isVisible = 5;
+  string name = 6;
+  int32 timestamp = 7;
+  optional string user = 8;
+  optional int32 editionTimestamp = 9;
 }
 
-message User{
-    string id=1;
-    string email=2;
-    string username=3;
-    string passwordhash=4;
-    int32 role=5;
+message User {
+  string id = 1;
+  string email = 2;
+  string username = 3;
+  string passwordhash = 4;
+  int32 role = 5;
 }
 // enum IsWin{
 //     LOST = 0;
 //     UNKNOWN = 1;
 //     WON = 2;
 // }
-//mobile
-message MobileMatch{
-    string id =1;
-    string leagueId=2;
-    int32 week=3;
-    string host =4;
-    string guest =5;
-    string result=6;
-    int32 timestamp=7;
+// mobile
+message MobileMatch {
+  string id = 1;
+  string leagueId = 2;
+  int32 week = 3;
+  string host = 4;
+  string guest = 5;
+  string result = 6;
+  int32 timestamp = 7;
 }
-message MobileLeague{
-    string id = 1;
-    string name = 2;
-    string countryId = 3;
-    string sportType = 4;
-}
-
-message MobileLeaguesPackage{
-    repeated MobileLeague mobileLeagues=1;
+message MobileLeague {
+  string id = 1;
+  string name = 2;
+  string countryId = 3;
+  string sportType = 4;
 }
 
-message MobileCoupon{
-    string id=1;
-    repeated MobileBet bets=2;
-    string branchId=3;
-    string applicationId=4;
-    bool isVisible=5;
-    string name=6;
-    int32 timestamp=7;
+message MobileLeaguesPackage { repeated MobileLeague mobileLeagues = 1; }
+
+message MobileCoupon {
+  string id = 1;
+  repeated MobileBet bets = 2;
+  string branchId = 3;
+  string applicationId = 4;
+  bool isVisible = 5;
+  string name = 6;
+  int32 timestamp = 7;
 }
-message MobileCouponsPackage{
-    repeated MobileCoupon mobileCoupons=1;
+message MobileCouponsPackage { repeated MobileCoupon mobileCoupons = 1; }
+message MobileBet {
+  string id = 1;
+  MobileMatch match = 2;
+  string prediction = 3;
+  double ratio = 4;
+  int32 win = 5;
+  bool showResult = 6;
 }
-message MobileBet{
-    string id=1;
-    MobileMatch match=2;
-    string prediction=3;
-    double ratio=4;
-    int32 win=5;
-    bool showResult=6;
-}
-message DatabaseInfo{
-    string version=1;
-    int32 lastUpdated=2;
+message DatabaseInfo {
+  string version = 1;
+  int32 lastUpdated = 2;
 }

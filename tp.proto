@@ -163,7 +163,8 @@ message DatabaseInfo {
 }
 
 message UserAttributes {
-  string phoneNumber = 1;
-  string appId = 2;
-  string revenueCatId = 3;
+  string id = 1;
+  string phoneNumber = 2;
+  string appId = 3;
+  string revenueCatId = 4;
 }

@@ -161,3 +161,9 @@ message DatabaseInfo {
   string version = 1;
   int32 lastUpdated = 2;
 }
+
+message UserAttributes {
+  string phoneNumber = 1;
+  string appId = 2;
+  string revenueCatId = 3;
+}

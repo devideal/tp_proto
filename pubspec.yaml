@@ -1,7 +1,7 @@
 name: tp_proto
 
 environment:
-  sdk: '>=2.16.0 <3.0.0'
+  sdk: '>=2.16.0 <4.0.0'
 
 dependencies: 
   grpc: ^3.0.2

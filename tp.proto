@@ -167,4 +167,5 @@ message UserAttributes {
   string phoneNumber = 2;
   string appId = 3;
   string revenueCatId = 4;
+  string email = 5;
 }

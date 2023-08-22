@@ -461,6 +461,7 @@ const UserAttributes$json = {
     {'1': 'phoneNumber', '3': 2, '4': 1, '5': 9, '10': 'phoneNumber'},
     {'1': 'appId', '3': 3, '4': 1, '5': 9, '10': 'appId'},
     {'1': 'revenueCatId', '3': 4, '4': 1, '5': 9, '10': 'revenueCatId'},
+    {'1': 'email', '3': 5, '4': 1, '5': 9, '10': 'email'},
   ],
 };
 
@@ -468,7 +469,7 @@ const UserAttributes$json = {
 final $typed_data.Uint8List userAttributesDescriptor = $convert.base64Decode(
     'Cg5Vc2VyQXR0cmlidXRlcxIOCgJpZBgBIAEoCVICaWQSIAoLcGhvbmVOdW1iZXIYAiABKAlSC3'
     'Bob25lTnVtYmVyEhQKBWFwcElkGAMgASgJUgVhcHBJZBIiCgxyZXZlbnVlQ2F0SWQYBCABKAlS'
-    'DHJldmVudWVDYXRJZA==');
+    'DHJldmVudWVDYXRJZBIUCgVlbWFpbBgFIAEoCVIFZW1haWw=');
 
 const $core.Map<$core.String, $core.dynamic> TipsPanelServiceBase$json = {
   '1': 'TipsPanel',
